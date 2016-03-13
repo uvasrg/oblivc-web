@@ -60,8 +60,8 @@ Jose, CA. 23-25 May 2016.
 [David Evans](https://www.cs.virginia.edu/evans), Faculty Advisor  
 [Samuel Havron](https://github.com/samuelhavron), Undergraduate Researcher  
 
-Past contributors: Natnatee ("Ko") Dokmai, [Richard
-Li](https://github.com/Lichard), Michael Mahoney.
+Past contributors: [Natnatee ("Ko") Dokmai](https://github.com/ndokmai), [Richard
+Li](https://github.com/Lichard), [Michael Mahoney](https://github.com/mdh3hc), [Xiao Wang](https://github.com/wangxiao1254).
 
 
 
