@@ -29,6 +29,12 @@ parties. Only the outputs are finally shared.&lt;/p&gt;
 
 &lt;h3 id=&#34;paper:379caad01b6ea305187be199bcac1370&#34;&gt;Paper&lt;/h3&gt;
 
+&lt;p&gt;Samee Zahur and David Evans. &lt;a href=&#34;http://eprint.iacr.org/2015/1153.pdf&#34;&gt;&lt;em&gt;Obliv-C: A Language for Extensible
+Data-Oblivious Computation&lt;/em&gt;&lt;/a&gt;,
+&lt;a href=&#34;http://eprint.iacr.org/2015/1153&#34;&gt;Cryptology ePrint Archive: Report
+&lt;sup&gt;2015&lt;/sup&gt;&amp;frasl;&lt;sub&gt;1153&lt;/sub&gt;&lt;/a&gt;
+[&lt;a href=&#34;http://eprint.iacr.org/2015/1153&#34;&gt;PDF&lt;/a&gt;], November 2015.&lt;/p&gt;
+
 &lt;h3 id=&#34;tutorial:379caad01b6ea305187be199bcac1370&#34;&gt;Tutorial&lt;/h3&gt;
 
 &lt;h3 id=&#34;projects-using-obliv-c:379caad01b6ea305187be199bcac1370&#34;&gt;Projects Using Obliv-C&lt;/h3&gt;
