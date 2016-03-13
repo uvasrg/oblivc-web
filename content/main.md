@@ -52,6 +52,17 @@ version).  To appear in [_37<sup>th</sup> IEEE Symposium on Security and
 Privacy_](http://www.ieee-security.org/TC/SP2016/) ("Oakland"). San
 Jose, CA. 23-25 May 2016.
 
+#### Secure Deep Learning
+
+[https://github.com/bargavjayaraman/SecureDeepLearning](https://github.com/bargavjayaraman/SecureDeepLearning)  
+Bargav Jayaraman (Accenture Technology Labs, Bangalore)
+
+#### Scientific Data Analysis
+
+[https://github.com/samuelhavron/obliv-c](https://github.com/samuelhavron/obliv-c)  
+Private Linear Regression  
+Samuel Havron
+
 ## People
 
 [Samee Zahur](https://www.cs.virginia.edu/~sza4uq/), Project Leader
