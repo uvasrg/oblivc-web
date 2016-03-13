@@ -16,6 +16,8 @@
       <guid>http://oblivc.org/main/</guid>
       <description>
 
+&lt;p&gt;&lt;img src=&#34;http://oblivc.org/images/oblivc.png&#34; align=&#34;center&#34; width=&#34;90%&#34;&gt;&lt;/p&gt;
+
 &lt;p&gt;&lt;strong&gt;Obliv-C&lt;/strong&gt; is a simple GCC wrapper that makes it easy to embed secure
 computation protocols inside regular C programs.&lt;/p&gt;
 
