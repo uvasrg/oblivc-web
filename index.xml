@@ -16,28 +16,60 @@
       <guid>http://oblivc.org/main/</guid>
       <description>
 
-&lt;h3 id=&#34;obliv-c-a-language-for-extensible-data-oblivious-computation:379caad01b6ea305187be199bcac1370&#34;&gt;Obliv-C: A Language for Extensible Data-Oblivious Computation&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Obliv-C&lt;/strong&gt; is a simple GCC wrapper that makes it easy to embed secure
+computation protocols inside regular C programs.&lt;/p&gt;
 
-&lt;p&gt;Obliv-C is a simple GCC wrapper that makes it easy to embed secure
-computation protocols inside regular C programs. The idea is simple: if
-you are performing a multi-party distributed computation with sensitive
-data, just write it in our Obliv-C langauge and compile/link it with
-your project. The result will be a secure multi-party cryptographic
-protocol that performs this operation without revealing any of the
-inputs or intermediate values of the computation to any of the
-parties. Only the outputs are finally shared.&lt;/p&gt;
+&lt;p&gt;The idea is simple: if you are performing a multi-party distributed
+computation with sensitive data, just write it in our Obliv-C langauge
+and compile/link it with your project. The result will be a secure
+multi-party cryptographic protocol that performs this operation without
+revealing any of the inputs or intermediate values of the computation to
+any of the parties. Only the outputs are finally shared.&lt;/p&gt;
 
-&lt;h3 id=&#34;paper:379caad01b6ea305187be199bcac1370&#34;&gt;Paper&lt;/h3&gt;
+&lt;h2 id=&#34;paper:379caad01b6ea305187be199bcac1370&#34;&gt;Paper&lt;/h2&gt;
 
 &lt;p&gt;Samee Zahur and David Evans. &lt;a href=&#34;http://eprint.iacr.org/2015/1153.pdf&#34;&gt;&lt;em&gt;Obliv-C: A Language for Extensible
 Data-Oblivious Computation&lt;/em&gt;&lt;/a&gt;,
 &lt;a href=&#34;http://eprint.iacr.org/2015/1153&#34;&gt;Cryptology ePrint Archive: Report
-&lt;sup&gt;2015&lt;/sup&gt;&amp;frasl;&lt;sub&gt;1153&lt;/sub&gt;&lt;/a&gt;
+2015:1153&lt;/a&gt;
 [&lt;a href=&#34;http://eprint.iacr.org/2015/1153&#34;&gt;PDF&lt;/a&gt;], November 2015.&lt;/p&gt;
 
-&lt;h3 id=&#34;tutorial:379caad01b6ea305187be199bcac1370&#34;&gt;Tutorial&lt;/h3&gt;
+&lt;h2 id=&#34;code:379caad01b6ea305187be199bcac1370&#34;&gt;Code&lt;/h2&gt;
 
-&lt;h3 id=&#34;projects-using-obliv-c:379caad01b6ea305187be199bcac1370&#34;&gt;Projects Using Obliv-C&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/samee/obliv-c&#34;&gt;https://github.com/samee/obliv-c&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This repository includes the implementation of Obliv-C and several
+example applications and benchmarks.&lt;/p&gt;
+
+&lt;h2 id=&#34;tutorials:379caad01b6ea305187be199bcac1370&#34;&gt;Tutorials&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://samuelhavron.github.io/obliv-c/&#34;&gt;Introduction to Obliv-C&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://goo.gl/TXzxD0&#34;&gt;Obliv-C Language Introduction&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;projects-using-obliv-c:379caad01b6ea305187be199bcac1370&#34;&gt;Projects Using Obliv-C&lt;/h2&gt;
+
+&lt;h4 id=&#34;half-gates:379caad01b6ea305187be199bcac1370&#34;&gt;Half-Gates&lt;/h4&gt;
+
+&lt;p&gt;Samee Zahur, Mike Rosulek, and David Evans.  &lt;a href=&#34;http://mightbeevil.com/halfgates/&#34;&gt;&lt;em&gt;Two Halves Make a Whole: Reducing Data Transfer in Garbled Circuits using Half Gates&lt;/em&gt;&lt;/a&gt;.  In &lt;a href=&#34;https://www.cosic.esat.kuleuven.be/eurocrypt_2015/papers.shtml&#34;&gt;EuroCrypt 2015&lt;/a&gt;.  Sofia, Bulgaria.  26-30 April 2015. [&lt;a href=&#34;http://www.cs.virginia.edu/evans/pubs/ec2015/halfgates.pdf&#34;&gt;PDF&lt;/a&gt;, 28 pages] [&lt;a href=&#34;http://github.com/samee/obliv-c&#34;&gt;Code&lt;/a&gt;]&lt;/p&gt;
+
+&lt;h4 id=&#34;sqoram:379caad01b6ea305187be199bcac1370&#34;&gt;Sqoram&lt;/h4&gt;
+
+&lt;p&gt;Samee Zahur, Xiao Wang, Mariana Raykova, Adrià Gasco, Jack Doerner,
+David Evans, Jonathan Katz. &lt;a href=&#34;http://www.mightbeevil.com/sqoram.pdf&#34;&gt;&lt;em&gt;Revisiting Square-Root ORAM Efficient
+Random Access in Multi-Party
+Computation&lt;/em&gt;&lt;/a&gt; (pre-publication
+version).  To appear in &lt;a href=&#34;http://www.ieee-security.org/TC/SP2016/&#34;&gt;&lt;em&gt;37&lt;sup&gt;th&lt;/sup&gt; IEEE Symposium on Security and
+Privacy&lt;/em&gt;&lt;/a&gt; (&amp;ldquo;Oakland&amp;rdquo;). San
+Jose, CA. 23-25 May 2016.&lt;/p&gt;
+
+&lt;h2 id=&#34;people:379caad01b6ea305187be199bcac1370&#34;&gt;People&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.cs.virginia.edu/~sza4uq/&#34;&gt;Samee Zahur&lt;/a&gt;, Project Leader&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://jackdoerner.net/&#34;&gt;Jack Doerner&lt;/a&gt;, Wizard of Oblivion&lt;br /&gt;
+&lt;a href=&#34;https://www.cs.virginia.edu/evans&#34;&gt;David Evans&lt;/a&gt;, Faculty Advisor&lt;br /&gt;
+&lt;a href=&#34;https://github.com/samuelhavron&#34;&gt;Samuel Havron&lt;/a&gt;, Undergraduate Researcher&lt;/p&gt;
 </description>
     </item>
     
