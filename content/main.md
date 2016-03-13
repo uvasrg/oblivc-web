@@ -16,17 +16,14 @@ any of the parties. Only the outputs are finally shared.
 
 ## Code
 
-[https://github.com/samee/obliv-c](https://github.com/samee/obliv-c)
-
+[https://github.com/samee/obliv-c](https://github.com/samee/obliv-c)  
 This repository includes the implementation of Obliv-C and several
 example applications and benchmarks.
 
 ## Tutorials
 
-[Introduction to Obliv-C](http://samuelhavron.github.io/obliv-c/)  
-
-[Obliv-C Language Introduction](http://goo.gl/TXzxD0)  
-
+[Introduction to Obliv-C](http://samuelhavron.github.io/obliv-c/) (Samual Havron)  
+[Obliv-C Language Introduction](http://goo.gl/TXzxD0) (Samee Zahur)  
 
 ## Publications
 
@@ -62,7 +59,7 @@ Redmond, WA. 20 February 2014.
 
 Samee Zahur, Mike Rosulek, and David Evans.  <a href="http://mightbeevil.com/halfgates/"><em>Two Halves Make a Whole: Reducing Data Transfer in Garbled Circuits using Half Gates</em></a>.  In <a href="https://www.cosic.esat.kuleuven.be/eurocrypt_2015/papers.shtml">EuroCrypt 2015</a>.  Sofia, Bulgaria.  26-30 April 2015. [<a href="http://www.cs.virginia.edu/evans/pubs/ec2015/halfgates.pdf">PDF</a>, 28 pages] [<a href="http://github.com/samee/obliv-c">Code</a>]
 
-#### Sqoram
+#### SqORAM
 
 Samee Zahur, Xiao Wang, Mariana Raykova, Adrià Gascón, Jack Doerner,
 David Evans, Jonathan Katz. [_Revisiting Square-Root ORAM Efficient

@@ -30,16 +30,14 @@ any of the parties. Only the outputs are finally shared.&lt;/p&gt;
 
 &lt;h2 id=&#34;code:379caad01b6ea305187be199bcac1370&#34;&gt;Code&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://github.com/samee/obliv-c&#34;&gt;https://github.com/samee/obliv-c&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;This repository includes the implementation of Obliv-C and several
+&lt;p&gt;&lt;a href=&#34;https://github.com/samee/obliv-c&#34;&gt;https://github.com/samee/obliv-c&lt;/a&gt;&lt;br /&gt;
+This repository includes the implementation of Obliv-C and several
 example applications and benchmarks.&lt;/p&gt;
 
 &lt;h2 id=&#34;tutorials:379caad01b6ea305187be199bcac1370&#34;&gt;Tutorials&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://samuelhavron.github.io/obliv-c/&#34;&gt;Introduction to Obliv-C&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://goo.gl/TXzxD0&#34;&gt;Obliv-C Language Introduction&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://samuelhavron.github.io/obliv-c/&#34;&gt;Introduction to Obliv-C&lt;/a&gt; (Samual Havron)&lt;br /&gt;
+&lt;a href=&#34;http://goo.gl/TXzxD0&#34;&gt;Obliv-C Language Introduction&lt;/a&gt; (Samee Zahur)&lt;/p&gt;
 
 &lt;h2 id=&#34;publications:379caad01b6ea305187be199bcac1370&#34;&gt;Publications&lt;/h2&gt;
 
@@ -75,7 +73,7 @@ Redmond, WA. 20 February 2014.&lt;/p&gt;
 
 &lt;p&gt;Samee Zahur, Mike Rosulek, and David Evans.  &lt;a href=&#34;http://mightbeevil.com/halfgates/&#34;&gt;&lt;em&gt;Two Halves Make a Whole: Reducing Data Transfer in Garbled Circuits using Half Gates&lt;/em&gt;&lt;/a&gt;.  In &lt;a href=&#34;https://www.cosic.esat.kuleuven.be/eurocrypt_2015/papers.shtml&#34;&gt;EuroCrypt 2015&lt;/a&gt;.  Sofia, Bulgaria.  26-30 April 2015. [&lt;a href=&#34;http://www.cs.virginia.edu/evans/pubs/ec2015/halfgates.pdf&#34;&gt;PDF&lt;/a&gt;, 28 pages] [&lt;a href=&#34;http://github.com/samee/obliv-c&#34;&gt;Code&lt;/a&gt;]&lt;/p&gt;
 
-&lt;h4 id=&#34;sqoram:379caad01b6ea305187be199bcac1370&#34;&gt;Sqoram&lt;/h4&gt;
+&lt;h4 id=&#34;sqoram:379caad01b6ea305187be199bcac1370&#34;&gt;SqORAM&lt;/h4&gt;
 
 &lt;p&gt;Samee Zahur, Xiao Wang, Mariana Raykova, Adrià Gascón, Jack Doerner,
 David Evans, Jonathan Katz. &lt;a href=&#34;http://www.mightbeevil.com/sqoram.pdf&#34;&gt;&lt;em&gt;Revisiting Square-Root ORAM Efficient
