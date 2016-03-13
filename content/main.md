@@ -40,7 +40,10 @@ Samee Zahur and David Evans. [_Poster: Obliv-C: a Fast, Lightweight Language for
 
 ## Talks
 
-Samee Zahur. [_Obliv-C: A Simple C Extension for SMC_](http://www.humangenomeprivacy.org/2015/slides/UV.pdf), iDash Privacy & Security Workshop 2015.
+Samee Zahur. [_Obliv-C: A Simple C Extension for
+SMC_](http://www.humangenomeprivacy.org/2015/slides/UV.pdf), iDash
+Privacy & Security Workshop 2015.  (Won award for fasted "Hamming
+Distance" execution.)
 
 David Evans. [_Multi-Party Computation for the
 Masses_](http://www.cs.virginia.edu/~evans/talks/crossing2015/)
