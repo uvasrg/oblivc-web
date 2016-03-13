@@ -50,8 +50,6 @@ version).  To appear in [_37<sup>th</sup> IEEE Symposium on Security and
 Privacy_](http://www.ieee-security.org/TC/SP2016/) ("Oakland"). San
 Jose, CA. 23-25 May 2016.
 
-
-
 ## People
 
 [Samee Zahur](https://www.cs.virginia.edu/~sza4uq/), Project Leader
@@ -60,7 +58,8 @@ Jose, CA. 23-25 May 2016.
 [David Evans](https://www.cs.virginia.edu/evans), Faculty Advisor  
 [Samuel Havron](https://github.com/samuelhavron), Undergraduate Researcher  
 
-
+Past contributors: Natnatee ("Ko") Dokmai, [Richard
+Li](https://github.com/Lichard), Michael Mahoney.
 
 
 
