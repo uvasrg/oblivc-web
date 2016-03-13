@@ -44,7 +44,7 @@ Samee Zahur, Mike Rosulek, and David Evans.  <a href="http://mightbeevil.com/hal
 
 #### Sqoram
 
-Samee Zahur, Xiao Wang, Mariana Raykova, Adrià Gasco, Jack Doerner,
+Samee Zahur, Xiao Wang, Mariana Raykova, Adrià Gascón, Jack Doerner,
 David Evans, Jonathan Katz. [_Revisiting Square-Root ORAM Efficient
 Random Access in Multi-Party
 Computation_](http://www.mightbeevil.com/sqoram.pdf) (pre-publication
