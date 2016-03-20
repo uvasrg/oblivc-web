@@ -47,7 +47,12 @@ Data-Oblivious Computation&lt;/em&gt;&lt;/a&gt;,
 2015:1153&lt;/a&gt;
 [&lt;a href=&#34;http://eprint.iacr.org/2015/1153&#34;&gt;PDF&lt;/a&gt;], November 2015.&lt;/p&gt;
 
-&lt;p&gt;Samee Zahur and David Evans. &lt;a href=&#34;http://www.ieee-security.org/TC/SP2015/posters/paper_62.pdf&#34;&gt;&lt;em&gt;Poster: Obliv-C: a Fast, Lightweight Language for Garbled Circuits&lt;/em&gt;&lt;/a&gt;.  &lt;a href=&#34;www.ieee-security.org/TC/SP2015/&#34;&gt;&lt;em&gt;36&lt;sup&gt;th&lt;/sup&gt; IEEE Symposium on Security and Privacy&lt;/em&gt;&lt;/a&gt; (&amp;ldquo;Oakland&amp;rdquo;). 18-20 May 2015 (Poster).&lt;/p&gt;
+&lt;p&gt;Samee Zahur and David Evans. &lt;a href=&#34;http://www.ieee-security.org/TC/SP2015/posters/paper_62.pdf&#34;&gt;&lt;em&gt;Poster: Obliv-C: a Fast, Lightweight
+Language for Garbled
+Circuits&lt;/em&gt;&lt;/a&gt;.
+&lt;a href=&#34;www.ieee-security.org/TC/SP2015/&#34;&gt;&lt;em&gt;36&lt;sup&gt;th&lt;/sup&gt; IEEE Symposium on Security and
+Privacy&lt;/em&gt;&lt;/a&gt; (&amp;ldquo;Oakland&amp;rdquo;). 18-20 May 2015
+(Poster).&lt;/p&gt;
 
 &lt;h2 id=&#34;talks:379caad01b6ea305187be199bcac1370&#34;&gt;Talks&lt;/h2&gt;
 
@@ -76,7 +81,7 @@ Redmond, WA. 20 February 2014.&lt;/p&gt;
 &lt;h4 id=&#34;sqoram:379caad01b6ea305187be199bcac1370&#34;&gt;SqORAM&lt;/h4&gt;
 
 &lt;p&gt;Samee Zahur, Xiao Wang, Mariana Raykova, Adrià Gascón, Jack Doerner,
-David Evans, Jonathan Katz. &lt;a href=&#34;http://www.mightbeevil.com/sqoram.pdf&#34;&gt;&lt;em&gt;Revisiting Square-Root ORAM Efficient
+David Evans, Jonathan Katz. &lt;a href=&#34;http://oblivc.org/docs/sqoram.pdf&#34;&gt;&lt;em&gt;Revisiting Square-Root ORAM Efficient
 Random Access in Multi-Party
 Computation&lt;/em&gt;&lt;/a&gt; (pre-publication
 version).  To appear in &lt;a href=&#34;http://www.ieee-security.org/TC/SP2016/&#34;&gt;&lt;em&gt;37&lt;sup&gt;th&lt;/sup&gt; IEEE Symposium on Security and
