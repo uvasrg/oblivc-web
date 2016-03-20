@@ -27,13 +27,20 @@ example applications and benchmarks.
 
 ## Publications
 
+
+
 Samee Zahur and David Evans. [_Obliv-C: A Language for Extensible
 Data-Oblivious Computation_](http://eprint.iacr.org/2015/1153.pdf),
 [Cryptology ePrint Archive: Report
 2015:1153](http://eprint.iacr.org/2015/1153)
 [[PDF](http://eprint.iacr.org/2015/1153)], November 2015.
 
-Samee Zahur and David Evans. [_Poster: Obliv-C: a Fast, Lightweight Language for Garbled Circuits_](http://www.ieee-security.org/TC/SP2015/posters/paper_62.pdf).  [_36<sup>th</sup> IEEE Symposium on Security and Privacy_](www.ieee-security.org/TC/SP2015/) ("Oakland"). 18-20 May 2015 (Poster).
+Samee Zahur and David Evans. [_Poster: Obliv-C: a Fast, Lightweight
+Language for Garbled
+Circuits_](http://www.ieee-security.org/TC/SP2015/posters/paper_62.pdf).
+[_36<sup>th</sup> IEEE Symposium on Security and
+Privacy_](www.ieee-security.org/TC/SP2015/) ("Oakland"). 18-20 May 2015
+(Poster).
 
 ## Talks
 
@@ -64,7 +71,7 @@ Samee Zahur, Mike Rosulek, and David Evans.  <a href="http://mightbeevil.com/hal
 Samee Zahur, Xiao Wang, Mariana Raykova, Adrià Gascón, Jack Doerner,
 David Evans, Jonathan Katz. [_Revisiting Square-Root ORAM Efficient
 Random Access in Multi-Party
-Computation_](http://www.mightbeevil.com/sqoram.pdf) (pre-publication
+Computation_](/docs/sqoram.pdf) (pre-publication
 version).  To appear in [_37<sup>th</sup> IEEE Symposium on Security and
 Privacy_](http://www.ieee-security.org/TC/SP2016/) ("Oakland"). San
 Jose, CA. 23-25 May 2016.
