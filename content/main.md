@@ -22,7 +22,7 @@ example applications and benchmarks.
 
 ## Tutorials
 
-[Introduction to Obliv-C](http://samuelhavron.github.io/obliv-c/) (Samual Havron)  
+[Introduction to Obliv-C](http://samuelhavron.github.io/obliv-c/) (Samuel Havron)  
 [Obliv-C Language Introduction](http://goo.gl/TXzxD0) (Samee Zahur)  
 
 ## Publications
@@ -89,7 +89,7 @@ Samuel Havron
 
 ## People
 
-[Samee Zahur](https://www.cs.virginia.edu/~sza4uq/), Project Leader
+[Samee Zahur](https://www.cs.virginia.edu/~sza4uq/), Project Founder and Leader
 
 [Jack Doerner](https://jackdoerner.net/), Wizard of Oblivion  
 [David Evans](https://www.cs.virginia.edu/evans), Faculty Advisor  
