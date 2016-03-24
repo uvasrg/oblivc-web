@@ -20,10 +20,9 @@ any of the parties. Only the outputs are finally shared.
 This repository includes the implementation of Obliv-C and several
 example applications and benchmarks.
 
-## Tutorials
+## Tutorial
 
 [Introduction to Obliv-C](http://samuelhavron.github.io/obliv-c/) (Samuel Havron)  
-[Obliv-C Language Introduction](http://goo.gl/TXzxD0) (Samee Zahur)  
 
 ## Publications
 
