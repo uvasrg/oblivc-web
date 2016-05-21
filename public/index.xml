@@ -9,6 +9,16 @@
     <atom:link href="http://oblivc.org/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title></title>
+      <link>http://oblivc.org/tutorial/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://oblivc.org/tutorial/</guid>
+      <description>&lt;p&gt;&lt;meta http-equiv=&#34;refresh&#34; content=&#34;0; URL=&#39;http://samuelhavron.github.io/obliv-c/&#39;&#34;/&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Obliv-C: A Language for Extensible Data-Oblivious Computation</title>
       <link>http://oblivc.org/main/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -53,24 +63,6 @@ Circuits&lt;/em&gt;&lt;/a&gt;.
 Privacy&lt;/em&gt;&lt;/a&gt; (&amp;ldquo;Oakland&amp;rdquo;). 18-20 May 2015
 (Poster).&lt;/p&gt;
 
-&lt;h2 id=&#34;talks:379caad01b6ea305187be199bcac1370&#34;&gt;Talks&lt;/h2&gt;
-
-&lt;p&gt;Samee Zahur. &lt;a href=&#34;http://www.humangenomeprivacy.org/2015/slides/UV.pdf&#34;&gt;&lt;em&gt;Obliv-C: A Simple C Extension for
-SMC&lt;/em&gt;&lt;/a&gt;, iDash
-Privacy &amp;amp; Security Workshop 2015.  (Won award for fasted &amp;ldquo;Hamming
-Distance&amp;rdquo; execution.)&lt;/p&gt;
-
-&lt;p&gt;David Evans. &lt;a href=&#34;http://www.cs.virginia.edu/~evans/talks/crossing2015/&#34;&gt;&lt;em&gt;Multi-Party Computation for the
-Masses&lt;/em&gt;&lt;/a&gt;
-(includes video).  &lt;a href=&#34;https://www.crossing.tu-darmstadt.de/en/news-events/crossing-conference-2015/&#34;&gt;CROSSING Conference 2015: Where Quantum Physics,
-Cryptography, System Security and Software Engineering
-Meet&lt;/a&gt;. Darmstadt. 1 June 2015&lt;/p&gt;
-
-&lt;p&gt;Samee Zahur. &lt;a href=&#34;http://research.microsoft.com/apps/video/dl.aspx?id=20989&#34;&gt;&lt;em&gt;Obliv-C: A Lightweight Compiler for Data-Oblivious
-Computation&lt;/em&gt;&lt;/a&gt;
-(includes video). Applied Multi-Party Computation.  Microsoft Research,
-Redmond, WA. 20 February 2014.&lt;/p&gt;
-
 &lt;h2 id=&#34;projects-using-obliv-c:379caad01b6ea305187be199bcac1370&#34;&gt;Projects Using Obliv-C&lt;/h2&gt;
 
 &lt;h4 id=&#34;half-gates:379caad01b6ea305187be199bcac1370&#34;&gt;Half-Gates&lt;/h4&gt;
@@ -98,6 +90,24 @@ Bargav Jayaraman (Accenture Technology Labs, Bangalore)&lt;/p&gt;
 Private Linear Regression&lt;br /&gt;
 Samuel Havron&lt;/p&gt;
 
+&lt;h2 id=&#34;talks:379caad01b6ea305187be199bcac1370&#34;&gt;Talks&lt;/h2&gt;
+
+&lt;p&gt;Samee Zahur. &lt;a href=&#34;http://www.humangenomeprivacy.org/2015/slides/UV.pdf&#34;&gt;&lt;em&gt;Obliv-C: A Simple C Extension for
+SMC&lt;/em&gt;&lt;/a&gt;, iDash
+Privacy &amp;amp; Security Workshop 2015.  (Won award for fasted &amp;ldquo;Hamming
+Distance&amp;rdquo; execution.)&lt;/p&gt;
+
+&lt;p&gt;David Evans. &lt;a href=&#34;http://www.cs.virginia.edu/~evans/talks/crossing2015/&#34;&gt;&lt;em&gt;Multi-Party Computation for the
+Masses&lt;/em&gt;&lt;/a&gt;
+(includes video).  &lt;a href=&#34;https://www.crossing.tu-darmstadt.de/en/news-events/crossing-conference-2015/&#34;&gt;CROSSING Conference 2015: Where Quantum Physics,
+Cryptography, System Security and Software Engineering
+Meet&lt;/a&gt;. Darmstadt. 1 June 2015&lt;/p&gt;
+
+&lt;p&gt;Samee Zahur. &lt;a href=&#34;http://research.microsoft.com/apps/video/dl.aspx?id=20989&#34;&gt;&lt;em&gt;Obliv-C: A Lightweight Compiler for Data-Oblivious
+Computation&lt;/em&gt;&lt;/a&gt;
+(includes video). Applied Multi-Party Computation.  Microsoft Research,
+Redmond, WA. 20 February 2014.&lt;/p&gt;
+
 &lt;h2 id=&#34;people:379caad01b6ea305187be199bcac1370&#34;&gt;People&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://www.cs.virginia.edu/~sza4uq/&#34;&gt;Samee Zahur&lt;/a&gt;, Project Founder and Leader&lt;/p&gt;
@@ -106,7 +116,7 @@ Samuel Havron&lt;/p&gt;
 &lt;a href=&#34;https://www.cs.virginia.edu/evans&#34;&gt;David Evans&lt;/a&gt;, Faculty Advisor&lt;br /&gt;
 &lt;a href=&#34;https://github.com/samuelhavron&#34;&gt;Samuel Havron&lt;/a&gt;, Undergraduate Researcher&lt;/p&gt;
 
-&lt;p&gt;Past contributors: &lt;a href=&#34;https://github.com/ndokmai&#34;&gt;Natnatee (&amp;ldquo;Ko&amp;rdquo;) Dokmai&lt;/a&gt;, &lt;a href=&#34;https://github.com/Lichard&#34;&gt;Richard
+&lt;p&gt;Contributors: &lt;a href=&#34;https://github.com/ndokmai&#34;&gt;Natnatee (&amp;ldquo;Ko&amp;rdquo;) Dokmai&lt;/a&gt;, &lt;a href=&#34;https://github.com/Lichard&#34;&gt;Richard
 Li&lt;/a&gt;, &lt;a href=&#34;https://github.com/mdh3hc&#34;&gt;Michael Mahoney&lt;/a&gt;, &lt;a href=&#34;https://github.com/wangxiao1254&#34;&gt;Xiao Wang&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
