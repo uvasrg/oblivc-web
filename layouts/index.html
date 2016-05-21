@@ -10,8 +10,10 @@
 
 <section id="main">
   <div>
-    {{ range first 1 .Site.Pages }}
-        {{ .Content }}
+    {{ range .Site.Pages }}
+        {{ if eq .Title "Obliv-C: A Language for Extensible Data-Oblivious Computation"  }}
+          {{ .Content }}
+        {{ end }}
     {{ end }}
   </div>
 </section>
