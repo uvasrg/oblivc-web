@@ -1,6 +1,11 @@
 +++
-title = "Revisiting Square Root ORAM: Efficient Random Access in Multi-Party Computation"
+title = "Revisiting Square Root ORAM"
+notoc = "True"
+nodate = "True"
+nopaging = "True"
 +++
+
+## Efficient Random Access in Multi-Party Computation
 
 Hiding memory access patterns is required for secure computation, but
 remains prohibitively expensive for many interesting applications. Prior
@@ -8,16 +13,17 @@ work has either developed custom algorithms that minimize the need for
 data-dependant memory access, or proposed the use of Oblivious RAM
 (ORAM) to provide a general-purpose solution. However, most ORAMs are
 designed for client-server scenarios, and provide only asymptotic
-benefits in secure computation. We show how the classical square-root
-ORAM of Goldreich and Ostrovsky can be modified to provide a practical
-ORAM for use in secure computation, even though it is asymptotically
-worse than the best known schemes. Specifically, we show a design that
-has over 100_x_ lower initialization cost, and provides benefits over
-linear scan for just 8 blocks of data. Our scheme outperforms alternate
-approaches across a wide range of parameters, often by several orders of
-magnitude.
+benefits in secure computation. 
 
-<img src="/images/sqoramcompare.png" align="center" width="90%">
+We show how the classical square-root ORAM of Goldreich and Ostrovsky
+can be modified to provide a practical ORAM for use in secure
+computation, even though it is asymptotically worse than the best known
+schemes. Specifically, we show a design that has over 100_x_ lower
+initialization cost, and provides benefits over linear scan for just 8
+blocks of data. Our scheme outperforms alternate approaches across a
+wide range of parameters, often by several orders of magnitude.
+
+<img src="/images/sqoramcompare.png" align="center" width="70%">
 
 ## Code
 
