@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
   <title>
-    Revisiting Square Root ORAM: Efficient Random Access in Multi-Party Computation // Obliv-C
+    Revisiting Square Root ORAM // Obliv-C
   </title>
 
   <link href="http://gmpg.org/xfn/11" rel="profile">
@@ -16,7 +16,7 @@
 <meta name="author" content="">
 <meta name="generator" content="Hugo 0.15-DEV" />
 
-  <meta property="og:title" content="Revisiting Square Root ORAM: Efficient Random Access in Multi-Party Computation" />
+  <meta property="og:title" content="Revisiting Square Root ORAM" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="en_US" />
@@ -94,34 +94,14 @@
 		
 
 		
-			
-		    <div id="toc" class="pure-u-1 pure-u-md-1-4">
-				<small class="toc-label">Contents</small>
-		   	 	<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#code:99481d19139b404ed01e3659deadeada">Code</a></li>
-<li><a href="#paper:99481d19139b404ed01e3659deadeada">Paper</a></li>
-<li><a href="#people:99481d19139b404ed01e3659deadeada">People</a></li>
-</ul></li>
-</ul>
-</nav>
-		    </div>
-		    
-	    
   		<section class="post">
             <h1 class="post-title">
-              <a href="/sqoram/">Revisiting Square Root ORAM: Efficient Random Access in Multi-Party Computation</a>
+              <a href="/sqoram/">Revisiting Square Root ORAM</a>
             </h1>
             <h3 class="post-subtitle">
             	
             </h3>
             
-            	<span class="post-date">
-                	<span class="post-date-day"><sup>1</sup></span><span class="post-date-separator">/</span><span class="post-date-month">Jan</span> <span class="post-date-year">0001</span>
-            	</span>
-            	
             
             	
             
@@ -134,6 +114,8 @@
 			
 
             
+
+<h2 id="efficient-random-access-in-multi-party-computation:99481d19139b404ed01e3659deadeada">Efficient Random Access in Multi-Party Computation</h2>
 
 <p>Hiding memory access patterns is required for secure computation, but
 remains prohibitively expensive for many interesting applications. Prior
@@ -141,16 +123,17 @@ work has either developed custom algorithms that minimize the need for
 data-dependant memory access, or proposed the use of Oblivious RAM
 (ORAM) to provide a general-purpose solution. However, most ORAMs are
 designed for client-server scenarios, and provide only asymptotic
-benefits in secure computation. We show how the classical square-root
-ORAM of Goldreich and Ostrovsky can be modified to provide a practical
-ORAM for use in secure computation, even though it is asymptotically
-worse than the best known schemes. Specifically, we show a design that
-has over 100<em>x</em> lower initialization cost, and provides benefits over
-linear scan for just 8 blocks of data. Our scheme outperforms alternate
-approaches across a wide range of parameters, often by several orders of
-magnitude.</p>
+benefits in secure computation.</p>
 
-<p><img src="/images/sqoramcompare.png" align="center" width="90%"></p>
+<p>We show how the classical square-root ORAM of Goldreich and Ostrovsky
+can be modified to provide a practical ORAM for use in secure
+computation, even though it is asymptotically worse than the best known
+schemes. Specifically, we show a design that has over 100<em>x</em> lower
+initialization cost, and provides benefits over linear scan for just 8
+blocks of data. Our scheme outperforms alternate approaches across a
+wide range of parameters, often by several orders of magnitude.</p>
+
+<p><img src="/images/sqoramcompare.png" align="center" width="70%"></p>
 
 <h2 id="code:99481d19139b404ed01e3659deadeada">Code</h2>
 
@@ -185,18 +168,6 @@ Jose, CA. 23-25 May 2016.</p>
 			
 
 			
-				<div class="paging">
-					<span class="paging-label">More Reading</span>
-					
-					<div class="paging-newer">
-						<span class="dark-red">Newer</span><span class="decorative-marker">//</span>
-						<a class="paging-link" href="/main/">Obliv-C: A Language for Extensible Data-Oblivious Computation</a>
-		            </div>
-		            
-
-					
-	            </div>
-            
           </section>
           
           	

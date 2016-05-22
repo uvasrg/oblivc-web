@@ -122,12 +122,14 @@ Li&lt;/a&gt;, &lt;a href=&#34;https://github.com/mdh3hc&#34;&gt;Michael Mahoney&
     </item>
     
     <item>
-      <title>Revisiting Square Root ORAM: Efficient Random Access in Multi-Party Computation</title>
+      <title>Revisiting Square Root ORAM</title>
       <link>http://oblivc.org/sqoram/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://oblivc.org/sqoram/</guid>
       <description>
+
+&lt;h2 id=&#34;efficient-random-access-in-multi-party-computation:99481d19139b404ed01e3659deadeada&#34;&gt;Efficient Random Access in Multi-Party Computation&lt;/h2&gt;
 
 &lt;p&gt;Hiding memory access patterns is required for secure computation, but
 remains prohibitively expensive for many interesting applications. Prior
@@ -135,16 +137,17 @@ work has either developed custom algorithms that minimize the need for
 data-dependant memory access, or proposed the use of Oblivious RAM
 (ORAM) to provide a general-purpose solution. However, most ORAMs are
 designed for client-server scenarios, and provide only asymptotic
-benefits in secure computation. We show how the classical square-root
-ORAM of Goldreich and Ostrovsky can be modified to provide a practical
-ORAM for use in secure computation, even though it is asymptotically
-worse than the best known schemes. Specifically, we show a design that
-has over 100&lt;em&gt;x&lt;/em&gt; lower initialization cost, and provides benefits over
-linear scan for just 8 blocks of data. Our scheme outperforms alternate
-approaches across a wide range of parameters, often by several orders of
-magnitude.&lt;/p&gt;
+benefits in secure computation.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://oblivc.org/images/sqoramcompare.png&#34; align=&#34;center&#34; width=&#34;90%&#34;&gt;&lt;/p&gt;
+&lt;p&gt;We show how the classical square-root ORAM of Goldreich and Ostrovsky
+can be modified to provide a practical ORAM for use in secure
+computation, even though it is asymptotically worse than the best known
+schemes. Specifically, we show a design that has over 100&lt;em&gt;x&lt;/em&gt; lower
+initialization cost, and provides benefits over linear scan for just 8
+blocks of data. Our scheme outperforms alternate approaches across a
+wide range of parameters, often by several orders of magnitude.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://oblivc.org/images/sqoramcompare.png&#34; align=&#34;center&#34; width=&#34;70%&#34;&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;code:99481d19139b404ed01e3659deadeada&#34;&gt;Code&lt;/h2&gt;
 
