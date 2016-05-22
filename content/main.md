@@ -47,7 +47,7 @@ Privacy_](www.ieee-security.org/TC/SP2015/) ("Oakland"). 18-20 May 2015
 
 Samee Zahur, Mike Rosulek, and David Evans.  <a href="http://mightbeevil.com/halfgates/"><em>Two Halves Make a Whole: Reducing Data Transfer in Garbled Circuits using Half Gates</em></a>.  In <a href="https://www.cosic.esat.kuleuven.be/eurocrypt_2015/papers.shtml">EuroCrypt 2015</a>.  Sofia, Bulgaria.  26-30 April 2015. [<a href="http://www.cs.virginia.edu/evans/pubs/ec2015/halfgates.pdf">PDF</a>, 28 pages] [<a href="http://github.com/samee/obliv-c">Code</a>]
 
-#### SqORAM
+#### [SqORAM](/sqoram)
 
 Samee Zahur, Xiao Wang, Mariana Raykova, Adrià Gascón, Jack Doerner,
 David Evans, Jonathan Katz. [_Revisiting Square-Root ORAM Efficient
