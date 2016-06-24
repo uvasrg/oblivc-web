@@ -160,8 +160,7 @@ wide range of parameters, often by several orders of magnitude.&lt;/p&gt;
 
 &lt;p&gt;Samee Zahur, Xiao Wang, Mariana Raykova, Adrià Gascón, Jack Doerner,
 David Evans, Jonathan Katz. &lt;a href=&#34;http://oblivc.org/docs/sqoram.pdf&#34;&gt;&lt;em&gt;Revisiting Square-Root ORAM Efficient
-Random Access in Multi-Party Computation&lt;/em&gt;&lt;/a&gt;
-(pre-publication version).  To appear in &lt;a href=&#34;http://www.ieee-security.org/TC/SP2016/&#34;&gt;&lt;em&gt;37&lt;sup&gt;th&lt;/sup&gt; IEEE
+Random Access in Multi-Party Computation&lt;/em&gt;&lt;/a&gt;. In &lt;a href=&#34;http://www.ieee-security.org/TC/SP2016/&#34;&gt;&lt;em&gt;37&lt;sup&gt;th&lt;/sup&gt; IEEE
 Symposium on Security and
 Privacy&lt;/em&gt;&lt;/a&gt; (&amp;ldquo;Oakland&amp;rdquo;). San
 Jose, CA. 23-25 May 2016.&lt;/p&gt;
@@ -175,6 +174,59 @@ Jose, CA. 23-25 May 2016.&lt;/p&gt;
 &lt;a href=&#34;https://jackdoerner.net/&#34;&gt;Jack Doerner&lt;/a&gt; (University of Virginia)&lt;br /&gt;
 &lt;a href=&#34;https://www.cs.virginia.edu/evans&#34;&gt;David Evans&lt;/a&gt; (University of Virginia)&lt;br /&gt;
 &lt;a href=&#34;https://www.cs.umd.edu/~jkatz/&#34;&gt;Jonathan Katz&lt;/a&gt; (University of Maryland)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Secure Stable Matching at Scale</title>
+      <link>http://oblivc.org/matching/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://oblivc.org/matching/</guid>
+      <description>
+
+&lt;h2 id=&#34;secure-stable-matching-at-scale:5ee805dd04d144d46f06588a424f000c&#34;&gt;Secure Stable Matching at Scale&lt;/h2&gt;
+
+&lt;p&gt;When a group of individuals and organizations wish to compute a &lt;em&gt;stable
+matching&lt;/em&gt; &amp;mdash; for example, when medical students are matched to
+medical residency programs &amp;mdash; they often outsource the computation
+to a trusted arbiter to preserve the privacy of participants’ preference
+rankings. Secure multi-party computation presents an alternative that
+offers the possibility of private matching processes that do not rely on
+any common trusted third party. However, stable matching algorithms are
+computationally intensive and involve complex data-dependent memory
+access patterns, so they have previously been considered infeasible for
+execution in a secure multiparty context on non-trivial inputs.&lt;/p&gt;
+
+&lt;p&gt;We adapt the classic Gale-Shapley algorithm for use in such a
+context, and show experimentally that our modifications yield a
+lower asymptotic complexity and more than an order of magnitude
+in practical cost improvement over previous techniques. Our
+main insights are to design new oblivious data structures that exploit
+the properties of the matching algorithms. We then apply our
+secure computation techniques to the instability chaining algorithm
+of Roth and Peranson, currently in use by the National Resident
+Matching Program. The resulting algorithm is efficient enough to
+be useful at the scale required for matching medical residents nationwide,
+taking just over 17 hours to complete an execution simulating
+the 2016 NRMP match with more than 35,000 participants
+and 30,000 residency slots.&lt;/p&gt;
+
+&lt;h2 id=&#34;code:5ee805dd04d144d46f06588a424f000c&#34;&gt;Code&lt;/h2&gt;
+
+&lt;p&gt;Our code will be available soon under and open source license.  Please
+send email to jhd3pa@virginia.edu to be notified when it is available.&lt;/p&gt;
+
+&lt;h2 id=&#34;paper:5ee805dd04d144d46f06588a424f000c&#34;&gt;Paper&lt;/h2&gt;
+
+&lt;p&gt;Jack Doerner, David Evans, and abhi shelat. &lt;a href=&#34;http://oblivc.org/docs/matching.pdf&#34;&gt;&lt;em&gt;Secure Stable Matching at
+Scale&lt;/em&gt;&lt;/a&gt; (pre-publication version).  12 June 2016.&lt;/p&gt;
+
+&lt;h2 id=&#34;people:5ee805dd04d144d46f06588a424f000c&#34;&gt;People&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://jackdoerner.net/&#34;&gt;Jack Doerner&lt;/a&gt; (University of Virginia)&lt;br /&gt;
+&lt;a href=&#34;https://www.cs.virginia.edu/evans&#34;&gt;David Evans&lt;/a&gt; (University of Virginia)&lt;br /&gt;
+abhi shelat (Northeastern University)&lt;/p&gt;
 </description>
     </item>
     
