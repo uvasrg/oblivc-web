@@ -26,8 +26,6 @@ example applications and benchmarks.
 
 ## Publications
 
-
-
 Samee Zahur and David Evans. [_Obliv-C: A Language for Extensible
 Data-Oblivious Computation_](http://eprint.iacr.org/2015/1153.pdf),
 [Cryptology ePrint Archive: Report
