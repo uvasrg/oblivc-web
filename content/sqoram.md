@@ -36,8 +36,7 @@ This repository includes the implementation of Square-Root ORAM in
 
 Samee Zahur, Xiao Wang, Mariana Raykova, Adrià Gascón, Jack Doerner,
 David Evans, Jonathan Katz. [_Revisiting Square-Root ORAM Efficient
-Random Access in Multi-Party Computation_](/docs/sqoram.pdf)
-(pre-publication version).  To appear in [_37<sup>th</sup> IEEE
+Random Access in Multi-Party Computation_](/docs/sqoram.pdf). In [_37<sup>th</sup> IEEE
 Symposium on Security and
 Privacy_](http://www.ieee-security.org/TC/SP2016/) ("Oakland"). San
 Jose, CA. 23-25 May 2016.
