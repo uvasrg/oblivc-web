@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Obliv-C</title>
-    <link>http://oblivc.org/</link>
+    <link>//oblivc.org/</link>
     <description>Recent content on Obliv-C</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://oblivc.org/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//oblivc.org/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Obliv-C - Tutorial</title>
-      <link>http://oblivc.org/tutorial/</link>
+      <link>//oblivc.org/tutorial/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://oblivc.org/tutorial/</guid>
+      <guid>//oblivc.org/tutorial/</guid>
       <description>&lt;p&gt;&lt;meta http-equiv=&#34;refresh&#34; content=&#34;0; URL=&#39;http://samuelhavron.github.io/obliv-c/&#39;&#34;/&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Obliv-C: A Language for Extensible Data-Oblivious Computation</title>
-      <link>http://oblivc.org/main/</link>
+      <link>//oblivc.org/main/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://oblivc.org/main/</guid>
+      <guid>//oblivc.org/main/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;http://oblivc.org/images/oblivc.png&#34; align=&#34;center&#34; width=&#34;90%&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//oblivc.org/images/oblivc.png&#34; align=&#34;center&#34; width=&#34;90%&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Obliv-C&lt;/strong&gt; is a simple GCC wrapper that makes it easy to embed secure
 computation protocols inside regular C programs.&lt;/p&gt;
@@ -69,10 +69,10 @@ Privacy&lt;/em&gt;&lt;/a&gt; (&amp;ldquo;Oakland&amp;rdquo;). 18-20 May 2015
 
 &lt;p&gt;Samee Zahur, Mike Rosulek, and David Evans.  &lt;a href=&#34;http://mightbeevil.com/halfgates/&#34;&gt;&lt;em&gt;Two Halves Make a Whole: Reducing Data Transfer in Garbled Circuits using Half Gates&lt;/em&gt;&lt;/a&gt;.  In &lt;a href=&#34;https://www.cosic.esat.kuleuven.be/eurocrypt_2015/papers.shtml&#34;&gt;EuroCrypt 2015&lt;/a&gt;.  Sofia, Bulgaria.  26-30 April 2015. [&lt;a href=&#34;http://www.cs.virginia.edu/evans/pubs/ec2015/halfgates.pdf&#34;&gt;PDF&lt;/a&gt;, 28 pages] [&lt;a href=&#34;http://github.com/samee/obliv-c&#34;&gt;Code&lt;/a&gt;]&lt;/p&gt;
 
-&lt;h4 id=&#34;sqoram-sqoram:379caad01b6ea305187be199bcac1370&#34;&gt;&lt;a href=&#34;http://oblivc.org/sqoram&#34;&gt;SqORAM&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;sqoram-sqoram:379caad01b6ea305187be199bcac1370&#34;&gt;&lt;a href=&#34;//oblivc.org/sqoram&#34;&gt;SqORAM&lt;/a&gt;&lt;/h4&gt;
 
 &lt;p&gt;Samee Zahur, Xiao Wang, Mariana Raykova, Adrià Gascón, Jack Doerner,
-David Evans, Jonathan Katz. &lt;a href=&#34;http://oblivc.org/docs/sqoram.pdf&#34;&gt;&lt;em&gt;Revisiting Square-Root ORAM Efficient
+David Evans, Jonathan Katz. &lt;a href=&#34;//oblivc.org/docs/sqoram.pdf&#34;&gt;&lt;em&gt;Revisiting Square-Root ORAM Efficient
 Random Access in Multi-Party
 Computation&lt;/em&gt;&lt;/a&gt; (pre-publication
 version).  To appear in &lt;a href=&#34;http://www.ieee-security.org/TC/SP2016/&#34;&gt;&lt;em&gt;37&lt;sup&gt;th&lt;/sup&gt; IEEE Symposium on Security and
@@ -123,10 +123,10 @@ Li&lt;/a&gt;, &lt;a href=&#34;https://github.com/mdh3hc&#34;&gt;Michael Mahoney&
     
     <item>
       <title>Revisiting Square Root ORAM</title>
-      <link>http://oblivc.org/sqoram/</link>
+      <link>//oblivc.org/sqoram/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://oblivc.org/sqoram/</guid>
+      <guid>//oblivc.org/sqoram/</guid>
       <description>
 
 &lt;h2 id=&#34;efficient-random-access-in-multi-party-computation:99481d19139b404ed01e3659deadeada&#34;&gt;Efficient Random Access in Multi-Party Computation&lt;/h2&gt;
@@ -147,19 +147,19 @@ initialization cost, and provides benefits over linear scan for just 8
 blocks of data. Our scheme outperforms alternate approaches across a
 wide range of parameters, often by several orders of magnitude.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://oblivc.org/images/sqoramcompare.png&#34; align=&#34;center&#34; width=&#34;70%&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//oblivc.org/images/sqoramcompare.png&#34; align=&#34;center&#34; width=&#34;70%&#34;&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;code:99481d19139b404ed01e3659deadeada&#34;&gt;Code&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/samee/sqrtOram&#34;&gt;https://github.com/samee/sqrtOram&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;This repository includes the implementation of Square-Root ORAM in
-&lt;a href=&#34;http://oblivc.org/&#34;&gt;Obliv-C&lt;/a&gt;, as well as several example applications and benchmarks.&lt;/p&gt;
+&lt;a href=&#34;//oblivc.org/&#34;&gt;Obliv-C&lt;/a&gt;, as well as several example applications and benchmarks.&lt;/p&gt;
 
 &lt;h2 id=&#34;paper:99481d19139b404ed01e3659deadeada&#34;&gt;Paper&lt;/h2&gt;
 
 &lt;p&gt;Samee Zahur, Xiao Wang, Mariana Raykova, Adrià Gascón, Jack Doerner,
-David Evans, Jonathan Katz. &lt;a href=&#34;http://oblivc.org/docs/sqoram.pdf&#34;&gt;&lt;em&gt;Revisiting Square-Root ORAM Efficient
+David Evans, Jonathan Katz. &lt;a href=&#34;//oblivc.org/docs/sqoram.pdf&#34;&gt;&lt;em&gt;Revisiting Square-Root ORAM Efficient
 Random Access in Multi-Party Computation&lt;/em&gt;&lt;/a&gt;. In &lt;a href=&#34;http://www.ieee-security.org/TC/SP2016/&#34;&gt;&lt;em&gt;37&lt;sup&gt;th&lt;/sup&gt; IEEE
 Symposium on Security and
 Privacy&lt;/em&gt;&lt;/a&gt; (&amp;ldquo;Oakland&amp;rdquo;). San
@@ -179,10 +179,10 @@ Jose, CA. 23-25 May 2016.&lt;/p&gt;
     
     <item>
       <title>Secure Stable Matching at Scale</title>
-      <link>http://oblivc.org/matching/</link>
+      <link>//oblivc.org/matching/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://oblivc.org/matching/</guid>
+      <guid>//oblivc.org/matching/</guid>
       <description>
 
 &lt;h2 id=&#34;secure-stable-matching-at-scale:5ee805dd04d144d46f06588a424f000c&#34;&gt;Secure Stable Matching at Scale&lt;/h2&gt;
@@ -219,7 +219,7 @@ send email to jhd3pa@virginia.edu to be notified when it is available.&lt;/p&gt;
 
 &lt;h2 id=&#34;paper:5ee805dd04d144d46f06588a424f000c&#34;&gt;Paper&lt;/h2&gt;
 
-&lt;p&gt;Jack Doerner, David Evans, and abhi shelat. &lt;a href=&#34;http://oblivc.org/docs/matching.pdf&#34;&gt;&lt;em&gt;Secure Stable Matching at
+&lt;p&gt;Jack Doerner, David Evans, and abhi shelat. &lt;a href=&#34;//oblivc.org/docs/matching.pdf&#34;&gt;&lt;em&gt;Secure Stable Matching at
 Scale&lt;/em&gt;&lt;/a&gt; (pre-publication version).  12 June 2016.&lt;/p&gt;
 
 &lt;h2 id=&#34;people:5ee805dd04d144d46f06588a424f000c&#34;&gt;People&lt;/h2&gt;
