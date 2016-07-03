@@ -1,4 +1,4 @@
-baseurl = "http://oblivc.org"
+baseurl = "//oblivc.org"
 languageCode = "en-us"
 title = "Obliv-C"
 subtitle = "A Language for Extensible Data-Oblivious Computation"

@@ -2,24 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://oblivc.org/</loc>
+    <loc>//oblivc.org/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://oblivc.org/tutorial/</loc>
+    <loc>//oblivc.org/tutorial/</loc>
   </url>
   
   <url>
-    <loc>http://oblivc.org/main/</loc>
+    <loc>//oblivc.org/main/</loc>
   </url>
   
   <url>
-    <loc>http://oblivc.org/sqoram/</loc>
+    <loc>//oblivc.org/sqoram/</loc>
   </url>
   
   <url>
-    <loc>http://oblivc.org/matching/</loc>
+    <loc>//oblivc.org/matching/</loc>
   </url>
   
 </urlset>
