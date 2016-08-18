@@ -58,7 +58,7 @@ Jose, CA. 23-25 May 2016.
 #### Secure Deep Learning
 
 [https://github.com/bargavjayaraman/SecureDeepLearning](https://github.com/bargavjayaraman/SecureDeepLearning)  
-Bargav Jayaraman (Accenture Technology Labs, Bangalore)
+Bargav Jayaraman (Accenture Technology Labs, Bangalore &rarr; now at UVA)
 
 #### Scientific Data Analysis
 
@@ -86,7 +86,7 @@ Redmond, WA. 20 February 2014.
 
 ## People
 
-[Samee Zahur](https://www.cs.virginia.edu/~sza4uq/), Project Founder and Leader
+[Samee Zahur](https://www.cs.virginia.edu/~sza4uq/), Project Founder and Leader (now at Google)
 
 [Jack Doerner](https://jackdoerner.net/), Wizard of Oblivion  
 [David Evans](https://www.cs.virginia.edu/evans), Faculty Advisor  
