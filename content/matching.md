@@ -40,7 +40,10 @@ send email to jhd3pa@virginia.edu to be notified when it is available.
 ## Paper
 
 Jack Doerner, David Evans, and abhi shelat. [_Secure Stable Matching at
-Scale_](/docs/matching.pdf) (pre-publication version).  12 June 2016.
+Scale_](/docs/matching.pdf).  To appear in [_23<sup>rd</sup> ACM
+Conference on Computer and Communications
+Security_](https://www.sigsac.org/ccs/CCS2016/) (CCS). Vienna,
+Austria. 24-28 October 2016.
 
 ## People
 
