@@ -34,14 +34,13 @@ and 30,000 residency slots.
 
 ## Code
 
-Our code will be available soon under and open source license.  Please
-send email to jhd3pa@virginia.edu to be notified when it is available.
+[_https://github.com/jackdoerner/secure-stable-matching_](https://github.com/jackdoerner/secure-stable-matching)
 
 ## Paper
 
 Jack Doerner, David Evans, and abhi shelat. [_Secure Stable Matching at
-Scale_](/docs/matching.pdf).  To appear in [_23<sup>rd</sup> ACM
-Conference on Computer and Communications
+Scale_](/docs/matching.pdf).  In [_23<sup>rd</sup> ACM Conference on
+Computer and Communications
 Security_](https://www.sigsac.org/ccs/CCS2016/) (CCS). Vienna,
 Austria. 24-28 October 2016.
 

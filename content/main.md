@@ -49,15 +49,14 @@ Samee Zahur, Mike Rosulek, and David Evans.  <a href="http://mightbeevil.com/hal
 
 Samee Zahur, Xiao Wang, Mariana Raykova, Adrià Gascón, Jack Doerner,
 David Evans, Jonathan Katz. [_Revisiting Square-Root ORAM Efficient
-Random Access in Multi-Party
-Computation_](/docs/sqoram.pdf) (pre-publication
-version).  In [_37<sup>th</sup> IEEE Symposium on Security and
+Random Access in Multi-Party Computation_](/docs/sqoram.pdf) In
+[_37<sup>th</sup> IEEE Symposium on Security and
 Privacy_](http://www.ieee-security.org/TC/SP2016/) ("Oakland"). San
 Jose, CA. 23-25 May 2016.
 
 #### [Secure Stable Matching](/matching)
 
-Jack Doerner, David Evans, abhi shelat. [_Secure Stable Matching at Scale_](http://oblivc.org/docs/matching.pdf).  To appear in [_23<sup>rd</sup> ACM Conference on Computer and Communications Security_](https://www.sigsac.org/ccs/CCS2016/) (CCS). Vienna, Austria. 24-28 October 2016.
+Jack Doerner, David Evans, abhi shelat. [_Secure Stable Matching at Scale_](http://oblivc.org/docs/matching.pdf).  In [_23<sup>rd</sup> ACM Conference on Computer and Communications Security_](https://www.sigsac.org/ccs/CCS2016/) (CCS). Vienna, Austria. 24-28 October 2016.
 
 #### Secure Deep Learning
 
