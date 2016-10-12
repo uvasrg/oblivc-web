@@ -58,6 +58,13 @@ Jose, CA. 23-25 May 2016.
 
 Jack Doerner, David Evans, abhi shelat. [_Secure Stable Matching at Scale_](http://oblivc.org/docs/matching.pdf).  In [_23<sup>rd</sup> ACM Conference on Computer and Communications Security_](https://www.sigsac.org/ccs/CCS2016/) (CCS). Vienna, Austria. 24-28 October 2016.
 
+#### [Absentminded Crypto Kit](https://bitbucket.org/jackdoerner/absentminded-crypto-kit)
+
+Jack Doerner.  Library of oblivious implementations of cryptographic
+primitives implemented in Obliv-C.  Includes big integer math, hash
+functions, sorting, graph algorithms, oblivious data structures, and
+ORAM implementations.  [Code: [https://bitbucket.org/jackdoerner/absentminded-crypto-kit](https://bitbucket.org/jackdoerner/absentminded-crypto-kit)]
+
 #### Secure Deep Learning
 
 [https://github.com/bargavjayaraman/SecureDeepLearning](https://github.com/bargavjayaraman/SecureDeepLearning)  

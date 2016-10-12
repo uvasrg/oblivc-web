@@ -82,6 +82,13 @@ Jose, CA. 23-25 May 2016.&lt;/p&gt;
 
 &lt;p&gt;Jack Doerner, David Evans, abhi shelat. &lt;a href=&#34;http://oblivc.org/docs/matching.pdf&#34;&gt;&lt;em&gt;Secure Stable Matching at Scale&lt;/em&gt;&lt;/a&gt;.  In &lt;a href=&#34;https://www.sigsac.org/ccs/CCS2016/&#34;&gt;&lt;em&gt;23&lt;sup&gt;rd&lt;/sup&gt; ACM Conference on Computer and Communications Security&lt;/em&gt;&lt;/a&gt; (CCS). Vienna, Austria. 24-28 October 2016.&lt;/p&gt;
 
+&lt;h4 id=&#34;absentminded-crypto-kit-https-bitbucket-org-jackdoerner-absentminded-crypto-kit&#34;&gt;&lt;a href=&#34;https://bitbucket.org/jackdoerner/absentminded-crypto-kit&#34;&gt;Absentminded Crypto Kit&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;Jack Doerner.  Library of oblivious implementations of cryptographic
+primitives implemented in Obliv-C.  Includes big integer math, hash
+functions, sorting, graph algorithms, oblivious data structures, and
+ORAM implementations.  [Code: &lt;a href=&#34;https://bitbucket.org/jackdoerner/absentminded-crypto-kit&#34;&gt;https://bitbucket.org/jackdoerner/absentminded-crypto-kit&lt;/a&gt;]&lt;/p&gt;
+
 &lt;h4 id=&#34;secure-deep-learning&#34;&gt;Secure Deep Learning&lt;/h4&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/bargavjayaraman/SecureDeepLearning&#34;&gt;https://github.com/bargavjayaraman/SecureDeepLearning&lt;/a&gt;&lt;br /&gt;
