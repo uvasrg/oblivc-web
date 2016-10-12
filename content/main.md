@@ -63,7 +63,7 @@ Jack Doerner, David Evans, abhi shelat. [_Secure Stable Matching at Scale_](http
 Jack Doerner.  Library of oblivious implementations of cryptographic
 primitives implemented in Obliv-C.  Includes big integer math, hash
 functions, sorting, graph algorithms, oblivious data structures, and
-ORAM implementations.  [Code: [https://bitbucket.org/jackdoerner/absentminded-crypto-kit](https://bitbucket.org/jackdoerner/absentminded-crypto-kit)]
+ORAM implementations.  [Code:&nbsp;[https://bitbucket.org/jackdoerner/absentminded-crypto-kit](https://bitbucket.org/jackdoerner/absentminded-crypto-kit)]
 
 #### Secure Deep Learning
 
