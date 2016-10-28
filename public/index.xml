@@ -135,10 +135,10 @@ Li&lt;/a&gt;, &lt;a href=&#34;https://github.com/mdh3hc&#34;&gt;Michael Mahoney&
     
     <item>
       <title>Privacy-Preserving Machine Learning</title>
-      <link>//oblivc.org/pmpl/</link>
+      <link>//oblivc.org/ppml/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//oblivc.org/pmpl/</guid>
+      <guid>//oblivc.org/ppml/</guid>
       <description>
 
 &lt;p&gt;We consider the problem of privately learning a sparse model across
