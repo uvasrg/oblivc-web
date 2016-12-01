@@ -58,6 +58,14 @@ Jose, CA. 23-25 May 2016.
 
 Jack Doerner, David Evans, abhi shelat. [_Secure Stable Matching at Scale_](http://oblivc.org/docs/matching.pdf).  In [_23<sup>rd</sup> ACM Conference on Computer and Communications Security_](https://www.sigsac.org/ccs/CCS2016/) (CCS). Vienna, Austria. 24-28 October 2016.
 
+#### [Privacy-Preserving Machine Learning](/ppml)
+
+Lu Tian, Bargav Jayaraman, Quanquan Gu, and David Evans. [_Aggregating
+Private Sparse Learning Models Using Multi-Party
+Computation_](/docs/pmpml.pdf). In [Private Multi‑Party Machine
+Learning](https://pmpml.github.io/PMPML16/) (NIPS 2016 Workshop),
+Barcelona, 9 December 2016.
+
 #### [Absentminded Crypto Kit](https://bitbucket.org/jackdoerner/absentminded-crypto-kit)
 
 Jack Doerner.  Library of oblivious implementations of cryptographic

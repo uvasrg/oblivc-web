@@ -17,10 +17,10 @@ learning with secure multi-party computation.
 
 ## Papers
 
-Lu Tian, Bargav Jayaraman, Quanquan Gu, and David Evans. _Aggregating
-Private Sparse Learning Models Using Multi-Party Computation_. In
+Lu Tian, Bargav Jayaraman, Quanquan Gu, and David Evans. [_Aggregating
+Private Sparse Learning Models Using Multi-Party Computation_](/docs/pmpml.pdf). In
 [Private Multi‑Party Machine Learning](https://pmpml.github.io/PMPML16/)
-(NIPS 2016 Workshop), Barcelona, 9 December 2016.  (PDF available soon, or by request.)
+(NIPS 2016 Workshop), Barcelona, 9 December 2016.  ([PDF](/docs/pmpml.pdf), 6 pages)
 
 
 

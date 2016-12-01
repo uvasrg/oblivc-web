@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Obliv-C</title>
-    <link>//oblivc.org/</link>
+    <link>//oblivc.org/index.xml</link>
     <description>Recent content on Obliv-C</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -82,6 +82,14 @@ Jose, CA. 23-25 May 2016.&lt;/p&gt;
 
 &lt;p&gt;Jack Doerner, David Evans, abhi shelat. &lt;a href=&#34;http://oblivc.org/docs/matching.pdf&#34;&gt;&lt;em&gt;Secure Stable Matching at Scale&lt;/em&gt;&lt;/a&gt;.  In &lt;a href=&#34;https://www.sigsac.org/ccs/CCS2016/&#34;&gt;&lt;em&gt;23&lt;sup&gt;rd&lt;/sup&gt; ACM Conference on Computer and Communications Security&lt;/em&gt;&lt;/a&gt; (CCS). Vienna, Austria. 24-28 October 2016.&lt;/p&gt;
 
+&lt;h4 id=&#34;privacy-preserving-machine-learning-ppml&#34;&gt;&lt;a href=&#34;//oblivc.org/ppml&#34;&gt;Privacy-Preserving Machine Learning&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;Lu Tian, Bargav Jayaraman, Quanquan Gu, and David Evans. &lt;a href=&#34;//oblivc.org/docs/pmpml.pdf&#34;&gt;&lt;em&gt;Aggregating
+Private Sparse Learning Models Using Multi-Party
+Computation&lt;/em&gt;&lt;/a&gt;. In &lt;a href=&#34;https://pmpml.github.io/PMPML16/&#34;&gt;Private Multi‑Party Machine
+Learning&lt;/a&gt; (NIPS 2016 Workshop),
+Barcelona, 9 December 2016.&lt;/p&gt;
+
 &lt;h4 id=&#34;absentminded-crypto-kit-https-bitbucket-org-jackdoerner-absentminded-crypto-kit&#34;&gt;&lt;a href=&#34;https://bitbucket.org/jackdoerner/absentminded-crypto-kit&#34;&gt;Absentminded Crypto Kit&lt;/a&gt;&lt;/h4&gt;
 
 &lt;p&gt;Jack Doerner.  Library of oblivious implementations of cryptographic
@@ -153,10 +161,10 @@ learning with secure multi-party computation.&lt;/p&gt;
 
 &lt;h2 id=&#34;papers&#34;&gt;Papers&lt;/h2&gt;
 
-&lt;p&gt;Lu Tian, Bargav Jayaraman, Quanquan Gu, and David Evans. &lt;em&gt;Aggregating
-Private Sparse Learning Models Using Multi-Party Computation&lt;/em&gt;. In
+&lt;p&gt;Lu Tian, Bargav Jayaraman, Quanquan Gu, and David Evans. &lt;a href=&#34;//oblivc.org/docs/pmpml.pdf&#34;&gt;&lt;em&gt;Aggregating
+Private Sparse Learning Models Using Multi-Party Computation&lt;/em&gt;&lt;/a&gt;. In
 &lt;a href=&#34;https://pmpml.github.io/PMPML16/&#34;&gt;Private Multi‑Party Machine Learning&lt;/a&gt;
-(NIPS 2016 Workshop), Barcelona, 9 December 2016.  (PDF available soon, or by request.)&lt;/p&gt;
+(NIPS 2016 Workshop), Barcelona, 9 December 2016.  (&lt;a href=&#34;//oblivc.org/docs/pmpml.pdf&#34;&gt;PDF&lt;/a&gt;, 6 pages)&lt;/p&gt;
 </description>
     </item>
     
