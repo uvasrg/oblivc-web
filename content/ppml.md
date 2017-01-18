@@ -11,9 +11,9 @@ locally and privately aggregating them using secure multi-party
 computation.  Our project combines ideas from distributed machine
 learning with secure multi-party computation.
 
-## Code
-
-(Coming Soon)
+<center>
+<img src="/images/mpcaggregation.png" width=650>
+</center>
 
 ## Papers
 
@@ -22,6 +22,9 @@ Private Sparse Learning Models Using Multi-Party Computation_](/docs/pmpml.pdf).
 [Private Multi‑Party Machine Learning](https://pmpml.github.io/PMPML16/)
 (NIPS 2016 Workshop), Barcelona, 9 December 2016.  ([PDF](/docs/pmpml.pdf), 6 pages)
 
+## Code
+
+(Coming Soon)
 
 
 
