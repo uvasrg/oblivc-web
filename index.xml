@@ -155,9 +155,9 @@ locally and privately aggregating them using secure multi-party
 computation.  Our project combines ideas from distributed machine
 learning with secure multi-party computation.&lt;/p&gt;
 
-&lt;h2 id=&#34;code&#34;&gt;Code&lt;/h2&gt;
-
-&lt;p&gt;(Coming Soon)&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;
+&lt;img src=&#34;//oblivc.org/images/mpcaggregation.png&#34; width=650&gt;
+&lt;/center&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;papers&#34;&gt;Papers&lt;/h2&gt;
 
@@ -165,6 +165,10 @@ learning with secure multi-party computation.&lt;/p&gt;
 Private Sparse Learning Models Using Multi-Party Computation&lt;/em&gt;&lt;/a&gt;. In
 &lt;a href=&#34;https://pmpml.github.io/PMPML16/&#34;&gt;Private Multi‑Party Machine Learning&lt;/a&gt;
 (NIPS 2016 Workshop), Barcelona, 9 December 2016.  (&lt;a href=&#34;//oblivc.org/docs/pmpml.pdf&#34;&gt;PDF&lt;/a&gt;, 6 pages)&lt;/p&gt;
+
+&lt;h2 id=&#34;code&#34;&gt;Code&lt;/h2&gt;
+
+&lt;p&gt;(Coming Soon)&lt;/p&gt;
 </description>
     </item>
     
