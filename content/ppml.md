@@ -24,7 +24,7 @@ Private Sparse Learning Models Using Multi-Party Computation_](/docs/pmpml.pdf).
 
 ## Code
 
-(Coming Soon)
+(Coming Soon - please contact us if you would like early access.)
 
 
 
