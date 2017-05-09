@@ -2,4 +2,4 @@
 title = "Obliv-C - Tutorial"
 +++
 
-<meta http-equiv="refresh" content="0; URL='http://samuelhavron.github.io/obliv-c/'"/>
+<meta http-equiv="refresh" content="0; URL='http://havron.github.io/obliv-c/'"/>

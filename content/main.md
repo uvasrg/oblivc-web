@@ -22,7 +22,7 @@ example applications and benchmarks.
 
 ## Tutorial
 
-[Introduction to Obliv-C](http://samuelhavron.github.io/obliv-c/) (Samuel Havron)  
+[Introduction to Obliv-C](/tutorial) (Samuel Havron)  
 
 ## Publications
 
