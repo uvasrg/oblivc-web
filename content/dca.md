@@ -14,7 +14,7 @@ vendors.  Compromise of a CA private key represents a single
 point-of-failure that could have disastrous consequences, so CAs go to
 great lengths to attempt to protect and control the use of their
 private keys. Nevertheless, keys are sometimes compromised and may be
-misused accidentially or intentionally by insiders. 
+misused accidentally or intentionally by insiders. 
 
 We propose a new model where a CA's private key is split among
 multiple parties, and signatures are produced using a secure
@@ -33,7 +33,6 @@ little as 28.2-32.6 cents without bandwidth cost and approximately
 8.54 dollars with bandwidth cost.
 
 <center>
-<img src="/images/mpcaggregation.png" width=650>
 </center>
 
 ## Paper
