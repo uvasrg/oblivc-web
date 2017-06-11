@@ -66,6 +66,13 @@ Computation_](/docs/pmpml.pdf). In [Private Multi‑Party Machine
 Learning](https://pmpml.github.io/PMPML16/) (NIPS 2016 Workshop),
 Barcelona, 9 December 2016.
 
+#### [Decentralized Certificate Authorities](/dca)
+
+Bargav Jayaraman<sup>*</sup>, Haina Li<sup>*</sup>, David Evans. <a
+href="/docs/dca.pdf"><em>Decentralized Certificate
+Authorities</em></a>. 11 June 2017. (working paper) (* the first two
+authors both contributed as co-equal first authors)
+
 #### [Absentminded Crypto Kit](https://bitbucket.org/jackdoerner/absentminded-crypto-kit)
 
 Jack Doerner.  Library of oblivious implementations of cryptographic
