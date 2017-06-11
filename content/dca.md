@@ -37,10 +37,10 @@ little as 28.2-32.6 cents without bandwidth cost and approximately
 
 ## Paper
 
-Bargav Jayaraman<sup>*</sup>, Haina Li<sup>*</sup>, David Evans. <a
+Bargav Jayaraman, Haina Li, David Evans. <a
 href="/docs/dca.pdf"><em>Decentralized Certificate
-Authorities</em></a>. 11 June 2017. (working paper) (* the first two
-authors both contributed as co-equal first authors)
+Authorities</em></a>. 11 June 2017. (working paper) (The first two
+authors both contributed as co-equal first authors.)
 
 ## Code
 
