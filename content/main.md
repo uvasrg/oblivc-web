@@ -117,8 +117,8 @@ Redmond, WA. 20 February 2014.
 [Jack Doerner](https://jackdoerner.net/), Wizard of Oblivion  
 [David Evans](https://www.cs.virginia.edu/evans), Faculty Advisor  
 [Samuel Havron](https://github.com/samuelhavron), Undergraduate Researcher  
-[Bargav Jayaraman](https://researchweb.iiit.ac.in/~bargav.jayaraman/), PhD Student  
-
+[Bargav Jayaraman](https://bargavjayaraman.github.io/), PhD Student  
+[Haina Li](https://github.com/HainaLi), PhD Student  
 
 
 Contributors: [Natnatee ("Ko") Dokmai](https://github.com/ndokmai), [Richard

@@ -47,6 +47,11 @@ authors both contributed as co-equal first authors)
 
 (Coming Soon - please contact us if you would like early access.)
 
+## People
+
+[Bargav Jayaraman](https://bargavjayaraman.github.io/)  
+[Haina Li](https://github.com/HainaLi)  
+[David Evans](https://www.cs.virginia.edu/evans)  
 
 
 
