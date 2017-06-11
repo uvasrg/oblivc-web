@@ -9,6 +9,58 @@
     <atom:link href="//oblivc.org/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Decentralized Certificate Authorities</title>
+      <link>//oblivc.org/dca/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//oblivc.org/dca/</guid>
+      <description>
+
+&lt;p&gt;The security of TLS depends on trust in certificate authorities, and
+that trust stems from their ability to protect and control the use of
+a private signing key.  The signing key is the key asset of a
+certificate authority (CA), and its value is based on trust in the
+corresponding public key which is primarily distributed by browser
+vendors.  Compromise of a CA private key represents a single
+point-of-failure that could have disastrous consequences, so CAs go to
+great lengths to attempt to protect and control the use of their
+private keys. Nevertheless, keys are sometimes compromised and may be
+misused accidentially or intentionally by insiders.&lt;/p&gt;
+
+&lt;p&gt;We propose a new model where a CA&amp;rsquo;s private key is split among
+multiple parties, and signatures are produced using a secure
+multi-party computation protocol that never exposes the actual signing
+key. This could be used by a single CA to reduce the risk that its
+signing key would be compromised or misused. It could also enable new
+models for certificate generation, where multiple CAs would need to
+agree and cooperate before a new certificate can be generated, or even
+where certificate generation would require cooperation between a CA
+and the certificate recipient (subject). We demonstrate the
+practicality of this concept with an evaluation of a prototype
+implementation that uses secure two-party computation to generate
+certificates signed using ECDSA on curve secp192k1. We show that using
+Amazon AWS EC2 c4.2xlarge nodes to jointly sign a certificate costs as
+little as 28.2-32.6 cents without bandwidth cost and approximately
+8.54 dollars with bandwidth cost.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;img src=&#34;//oblivc.org/images/mpcaggregation.png&#34; width=650&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;paper&#34;&gt;Paper&lt;/h2&gt;
+
+&lt;p&gt;Bargav Jayaraman&lt;sup&gt;&lt;em&gt;&lt;/sup&gt;, Haina Li&lt;sup&gt;&lt;/em&gt;&lt;/sup&gt;, David Evans. &lt;a
+href=&#34;/docs/dca.pdf&#34;&gt;&lt;em&gt;Decentralized Certificate
+Authorities&lt;/em&gt;&lt;/a&gt;. 11 June 2017. (working paper) (* the first two
+authors both contributed as co-equal first authors)&lt;/p&gt;
+
+&lt;h2 id=&#34;code&#34;&gt;Code&lt;/h2&gt;
+
+&lt;p&gt;(Coming Soon - please contact us if you would like early access.)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Obliv-C - Tutorial</title>
       <link>//oblivc.org/tutorial/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -89,6 +141,13 @@ Private Sparse Learning Models Using Multi-Party
 Computation&lt;/em&gt;&lt;/a&gt;. In &lt;a href=&#34;https://pmpml.github.io/PMPML16/&#34;&gt;Private Multi‑Party Machine
 Learning&lt;/a&gt; (NIPS 2016 Workshop),
 Barcelona, 9 December 2016.&lt;/p&gt;
+
+&lt;h4 id=&#34;decentralized-certificate-authorities-dca&#34;&gt;&lt;a href=&#34;//oblivc.org/dca&#34;&gt;Decentralized Certificate Authorities&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;Bargav Jayaraman&lt;sup&gt;&lt;em&gt;&lt;/sup&gt;, Haina Li&lt;sup&gt;&lt;/em&gt;&lt;/sup&gt;, David Evans. &lt;a
+href=&#34;/docs/dca.pdf&#34;&gt;&lt;em&gt;Decentralized Certificate
+Authorities&lt;/em&gt;&lt;/a&gt;. 11 June 2017. (working paper) (* the first two
+authors both contributed as co-equal first authors)&lt;/p&gt;
 
 &lt;h4 id=&#34;absentminded-crypto-kit-https-bitbucket-org-jackdoerner-absentminded-crypto-kit&#34;&gt;&lt;a href=&#34;https://bitbucket.org/jackdoerner/absentminded-crypto-kit&#34;&gt;Absentminded Crypto Kit&lt;/a&gt;&lt;/h4&gt;
 
