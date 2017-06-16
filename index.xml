@@ -27,6 +27,10 @@ great lengths to attempt to protect and control the use of their
 private keys. Nevertheless, keys are sometimes compromised and may be
 misused accidentally or intentionally by insiders.&lt;/p&gt;
 
+&lt;p&gt;&lt;center&gt;
+&lt;a href=&#34;//oblivc.org/images/dca.png&#34;&gt;&lt;img src=&#34;//oblivc.org/images/dca-small.png&#34; width=750 height=500&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+
 &lt;p&gt;We propose a new model where a CA&amp;rsquo;s private key is split among
 multiple parties, and signatures are produced using a secure
 multi-party computation protocol that never exposes the actual signing
