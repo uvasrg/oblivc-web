@@ -68,7 +68,7 @@ Barcelona, 9 December 2016.
 
 #### [Decentralized Certificate Authorities](/dca)
 
-Bargav Jayaraman<sup>*</sup>, Haina Li<sup>*</sup>, David Evans. <a
+Bargav Jayaraman<sup>*</sup>, Hannah Li<sup>*</sup>, David Evans. <a
 href="/docs/dca.pdf"><em>Decentralized Certificate
 Authorities</em></a>. 11 June 2017. (working paper) (* the first two
 authors both contributed as co-equal first authors)
@@ -118,7 +118,7 @@ Redmond, WA. 20 February 2014.
 [David Evans](https://www.cs.virginia.edu/evans), Faculty Advisor  
 [Samuel Havron](https://github.com/samuelhavron), Undergraduate Researcher  
 [Bargav Jayaraman](https://bargavjayaraman.github.io/), PhD Student  
-[Haina Li](https://github.com/HainaLi), PhD Student  
+[Hannah Li](https://github.com/HainaLi), PhD Student  
 
 
 Contributors: [Natnatee ("Ko") Dokmai](https://github.com/ndokmai), [Richard
