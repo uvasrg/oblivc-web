@@ -9,6 +9,31 @@
     <atom:link href="//oblivc.org/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title></title>
+      <link>//oblivc.org/pubs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//oblivc.org/pubs/</guid>
+      <description>
+
+&lt;h2 id=&#34;publications&#34;&gt;Publications&lt;/h2&gt;
+
+&lt;p&gt;Samee Zahur and David Evans. &lt;a href=&#34;http://eprint.iacr.org/2015/1153.pdf&#34;&gt;&lt;em&gt;Obliv-C: A Language for Extensible
+Data-Oblivious Computation&lt;/em&gt;&lt;/a&gt;,
+&lt;a href=&#34;http://eprint.iacr.org/2015/1153&#34;&gt;Cryptology ePrint Archive: Report
+2015:1153&lt;/a&gt;
+[&lt;a href=&#34;http://eprint.iacr.org/2015/1153&#34;&gt;PDF&lt;/a&gt;], November 2015.&lt;/p&gt;
+
+&lt;p&gt;Samee Zahur and David Evans. &lt;a href=&#34;http://www.ieee-security.org/TC/SP2015/posters/paper_62.pdf&#34;&gt;&lt;em&gt;Poster: Obliv-C: a Fast, Lightweight
+Language for Garbled
+Circuits&lt;/em&gt;&lt;/a&gt;.
+&lt;a href=&#34;www.ieee-security.org/TC/SP2015/&#34;&gt;&lt;em&gt;36&lt;sup&gt;th&lt;/sup&gt; IEEE Symposium on Security and
+Privacy&lt;/em&gt;&lt;/a&gt; (&amp;ldquo;Oakland&amp;rdquo;). 18-20 May 2015
+(Poster).&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Decentralized Certificate Authorities</title>
       <link>//oblivc.org/dca/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -99,6 +124,16 @@ multi-party cryptographic protocol that performs this operation without
 revealing any of the inputs or intermediate values of the computation to
 any of the parties. Only the outputs are finally shared.&lt;/p&gt;
 
+&lt;p&gt;This paper motivates and describes Obliv-C:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Samee Zahur and David Evans. &lt;a href=&#34;http://eprint.iacr.org/2015/1153.pdf&#34;&gt;&lt;em&gt;Obliv-C: A Language for Extensible
+Data-Oblivious Computation&lt;/em&gt;&lt;/a&gt;,
+&lt;a href=&#34;http://eprint.iacr.org/2015/1153&#34;&gt;Cryptology ePrint Archive: Report
+2015:1153&lt;/a&gt;
+[&lt;a href=&#34;http://eprint.iacr.org/2015/1153&#34;&gt;PDF&lt;/a&gt;], November 2015.&lt;/p&gt;
+&lt;/blockquote&gt;
+
 &lt;h2 id=&#34;code&#34;&gt;Code&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/samee/obliv-c&#34;&gt;https://github.com/samee/obliv-c&lt;/a&gt;&lt;br /&gt;
@@ -109,22 +144,9 @@ example applications and benchmarks.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;//oblivc.org/tutorial&#34;&gt;Introduction to Obliv-C&lt;/a&gt; (Samuel Havron)&lt;/p&gt;
 
-&lt;h2 id=&#34;publications&#34;&gt;Publications&lt;/h2&gt;
-
-&lt;p&gt;Samee Zahur and David Evans. &lt;a href=&#34;http://eprint.iacr.org/2015/1153.pdf&#34;&gt;&lt;em&gt;Obliv-C: A Language for Extensible
-Data-Oblivious Computation&lt;/em&gt;&lt;/a&gt;,
-&lt;a href=&#34;http://eprint.iacr.org/2015/1153&#34;&gt;Cryptology ePrint Archive: Report
-2015:1153&lt;/a&gt;
-[&lt;a href=&#34;http://eprint.iacr.org/2015/1153&#34;&gt;PDF&lt;/a&gt;], November 2015.&lt;/p&gt;
-
-&lt;p&gt;Samee Zahur and David Evans. &lt;a href=&#34;http://www.ieee-security.org/TC/SP2015/posters/paper_62.pdf&#34;&gt;&lt;em&gt;Poster: Obliv-C: a Fast, Lightweight
-Language for Garbled
-Circuits&lt;/em&gt;&lt;/a&gt;.
-&lt;a href=&#34;www.ieee-security.org/TC/SP2015/&#34;&gt;&lt;em&gt;36&lt;sup&gt;th&lt;/sup&gt; IEEE Symposium on Security and
-Privacy&lt;/em&gt;&lt;/a&gt; (&amp;ldquo;Oakland&amp;rdquo;). 18-20 May 2015
-(Poster).&lt;/p&gt;
-
 &lt;h2 id=&#34;projects-using-obliv-c&#34;&gt;Projects Using Obliv-C&lt;/h2&gt;
+
+&lt;h3 id=&#34;libraries-and-protocols&#34;&gt;Libraries and Protocols&lt;/h3&gt;
 
 &lt;h4 id=&#34;half-gates&#34;&gt;Half-Gates&lt;/h4&gt;
 
@@ -139,25 +161,6 @@ Random Access in Multi-Party Computation&lt;/em&gt;&lt;/a&gt; In
 Privacy&lt;/em&gt;&lt;/a&gt; (&amp;ldquo;Oakland&amp;rdquo;). San
 Jose, CA. 23-25 May 2016.&lt;/p&gt;
 
-&lt;h4 id=&#34;secure-stable-matching-matching&#34;&gt;&lt;a href=&#34;//oblivc.org/matching&#34;&gt;Secure Stable Matching&lt;/a&gt;&lt;/h4&gt;
-
-&lt;p&gt;Jack Doerner, David Evans, abhi shelat. &lt;a href=&#34;http://oblivc.org/docs/matching.pdf&#34;&gt;&lt;em&gt;Secure Stable Matching at Scale&lt;/em&gt;&lt;/a&gt;.  In &lt;a href=&#34;https://www.sigsac.org/ccs/CCS2016/&#34;&gt;&lt;em&gt;23&lt;sup&gt;rd&lt;/sup&gt; ACM Conference on Computer and Communications Security&lt;/em&gt;&lt;/a&gt; (CCS). Vienna, Austria. 24-28 October 2016.&lt;/p&gt;
-
-&lt;h4 id=&#34;privacy-preserving-machine-learning-ppml&#34;&gt;&lt;a href=&#34;//oblivc.org/ppml&#34;&gt;Privacy-Preserving Machine Learning&lt;/a&gt;&lt;/h4&gt;
-
-&lt;p&gt;Lu Tian, Bargav Jayaraman, Quanquan Gu, and David Evans. &lt;a href=&#34;//oblivc.org/docs/pmpml.pdf&#34;&gt;&lt;em&gt;Aggregating
-Private Sparse Learning Models Using Multi-Party
-Computation&lt;/em&gt;&lt;/a&gt;. In &lt;a href=&#34;https://pmpml.github.io/PMPML16/&#34;&gt;Private Multi‑Party Machine
-Learning&lt;/a&gt; (NIPS 2016 Workshop),
-Barcelona, 9 December 2016.&lt;/p&gt;
-
-&lt;h4 id=&#34;decentralized-certificate-authorities-dca&#34;&gt;&lt;a href=&#34;//oblivc.org/dca&#34;&gt;Decentralized Certificate Authorities&lt;/a&gt;&lt;/h4&gt;
-
-&lt;p&gt;Bargav Jayaraman&lt;sup&gt;&lt;em&gt;&lt;/sup&gt;, Hannah Li&lt;sup&gt;&lt;/em&gt;&lt;/sup&gt;, David Evans. &lt;a
-href=&#34;/docs/dca.pdf&#34;&gt;&lt;em&gt;Decentralized Certificate
-Authorities&lt;/em&gt;&lt;/a&gt;. 11 June 2017. (working paper) (* the first two
-authors both contributed as co-equal first authors)&lt;/p&gt;
-
 &lt;h4 id=&#34;absentminded-crypto-kit-https-bitbucket-org-jackdoerner-absentminded-crypto-kit&#34;&gt;&lt;a href=&#34;https://bitbucket.org/jackdoerner/absentminded-crypto-kit&#34;&gt;Absentminded Crypto Kit&lt;/a&gt;&lt;/h4&gt;
 
 &lt;p&gt;Jack Doerner.  Library of oblivious implementations of cryptographic
@@ -165,18 +168,58 @@ primitives implemented in Obliv-C.  Includes big integer math, hash
 functions, sorting, graph algorithms, oblivious data structures, and
 ORAM implementations.  [Code:&amp;nbsp;&lt;a href=&#34;https://bitbucket.org/jackdoerner/absentminded-crypto-kit&#34;&gt;https://bitbucket.org/jackdoerner/absentminded-crypto-kit&lt;/a&gt;]&lt;/p&gt;
 
+&lt;h3 id=&#34;applications&#34;&gt;Applications&lt;/h3&gt;
+
+&lt;h4 id=&#34;privacy-preserving-distributed-linear-regression-on-high-dimensional-data-https-eprint-iacr-org-2016-892&#34;&gt;&lt;a href=&#34;https://eprint.iacr.org/2016/892&#34;&gt;Privacy-Preserving Distributed Linear Regression on High-Dimensional Data&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;Adria&amp;#768; Gasco&amp;#769;n and Phillipp Schoppmann and Borja Balle and
+Mariana Raykova and Jack Doerner and Samee Zahur and David Evans. In &lt;a href=&#34;https://petsymposium.org/2017/&#34;&gt;Privacy Enhancing Technologies Symposium&lt;/a&gt; (PETS).  Minneapolis, Minnesota, 18 &amp;ndash; 21 July 2017. [&lt;a href=&#34;//oblivc.org/docs/distributedregression.pdf&#34;&gt;PDF&lt;/a&gt;]&lt;/p&gt;
+
+&lt;h4 id=&#34;decentralized-certificate-authorities-dca&#34;&gt;&lt;a href=&#34;//oblivc.org/dca&#34;&gt;Decentralized Certificate Authorities&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;Bargav Jayaraman&lt;sup&gt;&lt;em&gt;&lt;/sup&gt;, Hannah Li&lt;sup&gt;&lt;/em&gt;&lt;/sup&gt;, David Evans. &lt;a
+href=&#34;/docs/dca.pdf&#34;&gt;&lt;em&gt;Decentralized Certificate
+Authorities&lt;/em&gt;&lt;/a&gt;. 11 June 2017. (working paper) (* the first two
+authors both contributed as co-equal first authors) [&lt;a href=&#34;//oblivc.org/docs/dca.pdf&#34;&gt;PDF&lt;/a&gt;]&lt;/p&gt;
+
+&lt;h4 id=&#34;privacy-preserving-machine-learning-ppml&#34;&gt;&lt;a href=&#34;//oblivc.org/ppml&#34;&gt;Privacy-Preserving Machine Learning&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;Lu Tian, Bargav Jayaraman, Quanquan Gu, and David Evans. &lt;a href=&#34;//oblivc.org/docs/pmpml.pdf&#34;&gt;&lt;em&gt;Aggregating
+Private Sparse Learning Models Using Multi-Party
+Computation&lt;/em&gt;&lt;/a&gt;. In &lt;a href=&#34;https://pmpml.github.io/PMPML16/&#34;&gt;Private Multi‑Party Machine
+Learning&lt;/a&gt; (NIPS 2016 Workshop),
+Barcelona, 9 December 2016. [&lt;a href=&#34;//oblivc.org/docs/pmpml.pdf&#34;&gt;PDF&lt;/a&gt;]&lt;/p&gt;
+
+&lt;h4 id=&#34;secure-stable-matching-matching&#34;&gt;&lt;a href=&#34;//oblivc.org/matching&#34;&gt;Secure Stable Matching&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;Jack Doerner, David Evans, abhi shelat. &lt;a href=&#34;http://oblivc.org/docs/matching.pdf&#34;&gt;&lt;em&gt;Secure Stable Matching at Scale&lt;/em&gt;&lt;/a&gt;.  In &lt;a href=&#34;https://www.sigsac.org/ccs/CCS2016/&#34;&gt;&lt;em&gt;23&lt;sup&gt;rd&lt;/sup&gt; ACM Conference on Computer and Communications Security&lt;/em&gt;&lt;/a&gt; (CCS). Vienna, Austria. 24-28 October 2016. [&lt;a href=&#34;//oblivc.org/docs/matching.pdf&#34;&gt;PDF&lt;/a&gt;]&lt;/p&gt;
+
 &lt;h4 id=&#34;secure-deep-learning&#34;&gt;Secure Deep Learning&lt;/h4&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/bargavjayaraman/SecureDeepLearning&#34;&gt;https://github.com/bargavjayaraman/SecureDeepLearning&lt;/a&gt;&lt;br /&gt;
 Bargav Jayaraman (Accenture Technology Labs, Bangalore &amp;rarr; now at UVA)&lt;/p&gt;
 
-&lt;h4 id=&#34;scientific-data-analysis&#34;&gt;Scientific Data Analysis&lt;/h4&gt;
+&lt;h3 id=&#34;industrial-applications-built-with-obliv-c&#34;&gt;Industrial Applications Built with Obliv-C&lt;/h3&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://github.com/samuelhavron/obliv-c&#34;&gt;https://github.com/samuelhavron/obliv-c&lt;/a&gt;&lt;br /&gt;
-Private Linear Regression&lt;br /&gt;
-Samuel Havron&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://calctopia.com&#34;&gt;SECCOMP - The Secure Spreadsheet&lt;/a&gt;, Calctopia, 2017.&lt;/p&gt;
 
-&lt;h2 id=&#34;talks&#34;&gt;Talks&lt;/h2&gt;
+&lt;h2 id=&#34;selected-talks&#34;&gt;Selected Talks&lt;/h2&gt;
+
+&lt;p&gt;David Evans. &lt;a href=&#34;https://www.jeffersonswheel.org/2017/secure-multi-party-computation-promises-protocols-and-practicalities&#34;&gt;&lt;em&gt;Secure Multi-Party Computation: Promises, Protocols, and Practicalities&lt;/em&gt;&lt;/a&gt;. &lt;a href=&#34;http://crypto-events.di.ens.fr/ecryptnet/&#34;&gt;ECRYPT NET Workshop
+on Crypto for the Cloud &amp;amp; Implementation&lt;/a&gt;, Paris, France, 27 June
+2017. [&lt;a
+href=&#34;https://speakerdeck.com/evansuva/secure-multi-party-computation-promises-protocols-and-practicalities&#34;&gt;Speaker&amp;nbsp;Deck&lt;/a&gt;]&lt;/p&gt;
+
+&lt;p&gt;David Evans and Denis Nekipelov. &lt;a href=&#34;https://www.jeffersonswheel.org/2016/ftc-visit&#34;&gt;&lt;em&gt;Private Data Analysis using Multi-Party Computation&lt;/em&gt;&lt;/a&gt;.
+Federal Trade Commission (joint presentation), 18 August 2016.&lt;/p&gt;
+
+&lt;p&gt;David Evans. &lt;a href=&#34;https://www.jeffersonswheel.org/2016/shanghaitech-symposium&#34;&gt;&lt;em&gt;Memory for Data Oblivious Computation&lt;/em&gt;&lt;/a&gt;.  &lt;a href=&#34;http://ssist2016.shanghaitech.edu.cn/index.html&#34;&gt;ShanghaiTech Symposium&lt;/a&gt;, 25 June
+  2016. [&lt;a href=&#34;https://speakerdeck.com/evansuva/memory-for-data-oblivious-computation&#34;&gt;Speaker Deck&lt;/a&gt;]&lt;/p&gt;
+
+&lt;p&gt;David Evans. &lt;a href=&#34;https://www.jeffersonswheel.org/2016/aarhus-workshop-on-theory-and-practice-of-secure-multiparty-computation&#34;&gt;&lt;em&gt;From Mercury Delay Lines to Magnetic Core Memories: Progress in Oblivious Memories&lt;/em&gt;&lt;/a&gt;.
+&lt;a href=&#34;http://ctic.au.dk/events/workshops-conferences/mpc-2016/&#34;&gt;Workshop
+  on Theory and Practice of Secure Multiparty Computation&lt;/a&gt;, Aarhus
+  University, Denmark. 1 June 2016. [&lt;a href=&#34;https://speakerdeck.com/evansuva/from-mercury-delay-lines-to-magnetic-core-memories-progress-in-oblivious-memories&#34;&gt;Speaker Deck&lt;/a&gt;]&lt;/p&gt;
 
 &lt;p&gt;Samee Zahur. &lt;a href=&#34;http://www.humangenomeprivacy.org/2015/slides/UV.pdf&#34;&gt;&lt;em&gt;Obliv-C: A Simple C Extension for
 SMC&lt;/em&gt;&lt;/a&gt;, iDash
