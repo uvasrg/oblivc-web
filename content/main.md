@@ -132,7 +132,7 @@ Redmond, WA. 20 February 2014.
 [Darion Cassel](http://darioncassel.me/), Undergraduate Researcher  
 [Jack Doerner](https://jackdoerner.net/), Wizard of Oblivion  
 [David Evans](https://www.cs.virginia.edu/evans), Faculty Advisor  
-[Samuel Havron](https://github.com/samuelhavron), Undergraduate Researcher  
+[Samuel Havron](https://havron.xyz), Undergraduate Researcher  
 [Bargav Jayaraman](https://bargavjayaraman.github.io/), PhD Student  
 [Hannah Li](https://github.com/HainaLi), PhD Student  
 
