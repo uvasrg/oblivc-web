@@ -22,15 +22,15 @@ Data-Oblivious Computation_](http://eprint.iacr.org/2015/1153.pdf),
 2015:1153](http://eprint.iacr.org/2015/1153)
 [[PDF](http://eprint.iacr.org/2015/1153)], November 2015.
 
-## Code
+## Code, API, and Tutorial
 
 [https://github.com/samee/obliv-c](https://github.com/samee/obliv-c)  
 This repository includes the implementation of Obliv-C and several
 example applications and benchmarks.
 
-## Tutorial
+[Obliv-C API Documentation](/documentation)
 
-[Introduction to Obliv-C](/tutorial) (Samuel Havron)  
+[Obliv-C Tutorial](/tutorial)
 
 ## Projects Using Obliv-C
 
