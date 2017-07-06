@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+  <title>
+    Obliv-C - API Documentation // Obliv-C
+  </title>
+
+  <link href="//gmpg.org/xfn/11" rel="profile">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<meta name="generator" content="Hugo 0.17" />
+
+
+  <meta property="og:title" content="Obliv-C - API Documentation" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:url" content="//oblivc.org/documentation/" />
+
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/base-min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/pure-min.css">
+  
+  
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/grids-responsive-min.css">
+  
+  
+
+  <link rel="stylesheet" href="//oblivc.org/css/srg.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,400italic,200,100,700,300,500,600,800' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' rel='stylesheet' type='text/css'>
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/rotunda.png">
+  <link rel="shortcut icon" href="/rotunda.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Obliv-C" />
+
+    
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/tomorrow-night-bright.min.css">
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+  
+
+  
+
+  
+</head>
+
+<body>
+	
+
+	<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+  <div class="header">
+    <h2 class="brand-group">
+
+<a href="http://www.jeffersonswheel.org">Security Research Group</a><br>
+<a href="http://www.cs.virginia.edu">University of Virginia</a>
+</h2>
+
+
+
+    <a href="//oblivc.org"><h1 class="brand-title">Obliv-C</h1></a>
+    <h2 class="brand-tagline">A Language for Extensible Data-Oblivious Computation</h2>
+
+<img src="/images/oblivc-small.png" align="center" width="90%">
+
+
+
+
+    
+
+  </div>
+</div>
+
+	
+	
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+		<a name="top"></a>
+		
+
+		
+  		<section class="post">
+            <h1 class="post-title">
+              <a href="/documentation/">Obliv-C - API Documentation</a>
+            </h1>
+            <h3 class="post-subtitle">
+            	
+            </h3>
+            
+            
+            	
+            
+
+			
+			
+
+			
+
+			
+
+            
+
+<h2 id="about-this-documentation">About this Documentation</h2>
+
+<p>The below documentation of Obliv-C protocols, functions, qualifiers, and other
+aspects of the language is by no means comprehensive for the Obliv-C language.
+It is included for the sole purpose of making the Obliv-C API simpler for users
+to understand in order to write programs in Obliv-C successfully, and uses
+an informal tone to achieve this purpose. See
+this <a href="http://goo.gl/TXzxD0">language primer</a> for information not covered in this documentation or in
+the <a href="../tutorial">tutorial</a>.</p>
+
+<h2 id="general-usage">General Usage</h2>
+
+<h3 id="use-of-tname">Use of tname</h3>
+
+<p>Valid substitutions for <code>tname</code> are bool, char, int, short, long, or long long,
+depending on what data type you need. <code>&lt;Tname&gt;</code> means to substitute in a valid
+type with the first character of the type capitalized. As of July 2017, the <code>obliv</code> qualifier is
+not valid for float or double. Use fixed point arithmetic as a workaround for
+these data types. However, <a href="https://github.com/samee/obliv-c/pull/30">floating point support is
+forthcoming</a>.</p>
+
+<h3 id="the-obliv-qualifier">The obliv qualifier</h3>
+
+<p>The <code>obliv</code> qualifier should be declared on any variable that is supposed to
+depend on unknown inputs in any way; <code>obliv</code> qualified values implement secure
+encryption on the variable, and can only be declared in an Obliv-C file (.oc).
+Supported data types for the <code>obliv</code> qualifier are bool, int, char, short, long,
+and long long. Non-obliv values can be implicitly converted into obliv, but
+obliv values cannot be implicitly converted to non-obliv. Doing this requires
+<code>revealObliv&lt;Tname&gt;()</code> to be called.</p>
+
+<h3 id="where-to-begin">Where to begin</h3>
+
+<p>Take a look through the <a href="../tutorial">tutorial</a> to get started. In order to start running your
+Obliv-C program between two parties, ensure that the following Obliv-C library
+functions are called in order:</p>
+
+<ol>
+<li>int protocolAcceptTcp2P(ProtocolDesc* pd, const char* port)</li>
+<li>int protocolConnectTcp2P(ProtocolDesc* pd, const char* server, const char* port)</li>
+<li>void setCurrentParty(ProtocolDesc* pd, int party)</li>
+<li>void execYaoProtocol(ProtocolDesc* pd, protocol_run start, void* arg)</li>
+<li>Any Obliv-C functions needed in your .oc file(s)</li>
+<li>void cleanupProtocol(ProtocolDesc* pd)</li>
+</ol>
+
+<h2 id="c-functions">C Functions</h2>
+
+<h3 id="void-cleanupprotocol-protocoldesc-pd">void cleanupProtocol(ProtocolDesc* pd)</h3>
+
+<p>C file; requires <code>#include &lt;obliv.h&gt;</code>. Call this function in your C file after
+execYaoProtocol() has been called. This function will clean up the ProtocolDesc.</p>
+
+<h3 id="void-execyaoprotocol-protocoldesc-pd-protocol-run-start-void-arg">void execYaoProtocol(ProtocolDesc* pd, protocol_run start, void* arg)</h3>
+
+<p>C file; requires <code>#include &lt;obliv.h&gt;</code>. Call this function in your C file&rsquo;s main()
+function to execute the Yao protocol. Supply the starting function name (without
+parentheses) in the Obliv-C file as the parameter for <code>protocol_run start</code>. Supply
+any arguments for the Obliv-C starting function in <code>void* arg</code>; pass in a struct
+to supply multiple parameters. Before calling this function, establish a
+connection between parties with protocolAcceptTcp2P() and
+protocolConnectTcp2P(), and call setCurrentParty().</p>
+
+<h3 id="int-protocolaccepttcp2p-protocoldesc-pd-const-char-port">int protocolAcceptTcp2P(ProtocolDesc* pd, const char* port)</h3>
+
+<p>C file; requires <code>#include &lt;obliv.h&gt;</code>. The first party calls this function to
+listen for a second party on the supplied port parameter. Use conditional logic
+to ensure only the first party calls this function.</p>
+
+<h3 id="int-protocolconnecttcp2p-protocoldesc-pd-const-char-server-const-char-port">int protocolConnectTcp2P(ProtocolDesc* pd, const char* server, const char* port)</h3>
+
+<p>C file; requires <code>#include &lt;obliv.h&gt;</code>. The second party should call this function
+after the first party calls protocolAcceptTcp2P(); use conditional logic to
+ensure this. Supply either &lsquo;localhost&rsquo;, the IP address, or the DNS name of the
+first party to the <code>const char* server</code> parameter.</p>
+
+<h3 id="void-setcurrentparty-protocoldesc-pd-int-party">void setCurrentParty(ProtocolDesc* pd, int party)</h3>
+
+<p>C file; requires <code>#include &lt;obliv.h&gt;</code>. Sets the proper parties into the
+ProtocolDesc. Call this before calling execYaoProtocol().</p>
+
+<h2 id="obliv-c-functions">Obliv-C Functions</h2>
+
+<h3 id="obliv-tname-feedobliv-tname-tname-v-int-party">obliv tname feedObliv<Tname>(tname v, int party)</h3>
+
+<p>Obliv-C file; requires <code>#include &lt;obliv.oh&gt;</code>. This function returns an <code>obliv</code>
+qualified <code>tname v</code> from the specified party to both parties. Floating point
+numbers are not currently supported by the <code>obliv</code> qualifier.</p>
+
+<p>Sample code for using this function to feed an int array from the specified
+party into an obliv int array to both parties:</p>
+
+<pre><code>void toObliv(int n, obliv int *oa, int *a, int party) {
+  int i, res;
+  for(i = 0; i &lt; n; i++) {
+    oa[i] = feedOblivInt(a[i], party);
+  }
+}
+</code></pre>
+
+<h3 id="name-ocbroadcast-tname-tname-v-int-source">name ocBroadcast<Tname>(tname v, int source)</h3>
+
+<p>Obliv-C file; requires <code>#include &lt;obliv.oh&gt;</code>. Returns v from the specified source
+(party). This function allows non-obliv data to be transferred across parties,
+similar to <code>feedObliv&lt;Tname&gt;()</code>.</p>
+
+<h3 id="bool-revealobliv-tname-tname-dest-obliv-tname-src-int-party">bool revealObliv<Tname>(tname* dest, obliv tname src, int party)</h3>
+
+<p>Obliv-C file; requires <code>#include &lt;obliv.oh&gt;</code>. Return value true means <code>dest</code> was
+written to. <code>party</code> indicates which party will receive the revealed obliv value;
+enter 0 for all parties to receive the revealed value. It is typical for this
+function to be called towards the end of a Yao protocol.</p>
+
+	
+			
+
+			
+
+			
+          </section>
+          
+          	
+          
+        
+      <div class="footer">
+	<hr class="thin" />
+
+-   <div class="funding">
+This work was supported by <a href="http://www.securecomputation.org">a grant from the National Science Foundation SaTC Program</a>.
+   </div>
+
+	<p></p>
+</div>
+
+    </div>
+  </div>
+	
+
+	
+
+  
+</body>
+</html>
