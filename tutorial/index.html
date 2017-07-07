@@ -34,8 +34,8 @@
   
   
 
-  <link rel="stylesheet" href="//oblivc.org/css/srg.css">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
   <link href='//fonts.googleapis.com/css?family=Open+Sans:400,400italic,200,100,700,300,500,600,800' rel='stylesheet' type='text/css'>
   <link href='//fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' rel='stylesheet' type='text/css'>
 
@@ -53,6 +53,8 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
 
+
+  <link rel="stylesheet" href="//oblivc.org/css/srg.css">
 
   
 
@@ -76,7 +78,9 @@
 
 <a href="//oblivc.org"><img src="/images/oblivc-small.png" align="center" width="90%"></a>
 
-    <h2 class="brand-tagline">A Language for Extensible Data-Oblivious Computation</h2>
+    <h2 class="brand-tagline">
+A Language for Extensible Data&#8209;Oblivious Computation
+   </h2>
 
 
 
@@ -118,58 +122,71 @@
             
 
 <p>Obliv-C is a simple GCC wrapper that makes it easy to embed secure
-computation protocols inside regular C programs. The idea is simple:
-if you are performing a multi-party distributed computation with
-sensitive data, just write it in our Obliv-C langauge and compile/link
-it with your project. The result will be a secure cryptographic
-protocol that performs this operation without revealing any of the
-inputs or intermediate values of the computation to any of the
-parties.  Only the outputs are finally shared.</p>
+computation protocols inside regular C programs. This tutorial will
+explain how to set up and build your first Obliv-C program using a
+privacy-preserving linear regression application as an example.</p>
 
-<p>One particularly useful application of Obliv-C is enabling aggregate
-data analysis from private datasets, which will serve as the focus of
-this tutorial.  Keep the <a href="../documentation">API documentation</a> as a
-handy reference throughout.</p>
+<h2 id="installation">Installation</h2>
 
-<h1 id="installation">Installation</h1>
+<h4 id="1-install-dependencies">1. Install Dependencies</h4>
 
-<ol>
-<li><p>Installation of dependencies:</p>
+<p>Before setting up Obliv-C, several other modules need to be installed. Here are the commands to do the installations, depending on your platform.</p>
 
-<ul>
-<li>For Ubuntu: <code>sudo apt-get install ocaml libgcrypt20-dev ocaml-findlib</code>.</li>
-<li>For Fedora: <code>sudo dnf install glibc-devel.i686 ocaml ocaml-ocamldoc
-ocaml-findlib ocaml-findlib-devel libgcrypt libgcrypt-devel
-perl-ExtUtils-MakeMaker perl-Data-Dumper</code>.</li>
-<li>For Mac OS (with Macports): <code>sudo port install gcc5 ocaml ocaml-findlib
-libgcrypt +devel</code>.</li>
-</ul></li>
+<p>Ubuntu:</p>
 
-<li><p>Git-clone the <a href="https://github.com/samee/obliv-c">source repository</a>, and compile:</p>
+<pre><code class="language-c">$ sudo apt-get install ocaml libgcrypt20-dev ocaml-findlib
+</code></pre>
 
-<ul>
-<li>For Linux: <code>./configure &amp;&amp; make</code>.</li>
-<li>For Mac OS (with Macports): <code>CC=/opt/local/bin/gcc-mp-5
-CPP=/opt/local/bin/cpp-mp-5 LIBRARY_PATH=/opt/local/lib ./configure &amp;&amp;
-make</code>.</li>
-</ul></li>
+<p>Fedora:</p>
 
-<li><p>Start using it! The compiler is a GCC wrapper script found in <code>bin/oblivcc</code>.
-Example codes are in <code>test/oblivc</code>.</p></li>
-</ol>
+<pre><code class="language-c">$ sudo dnf install glibc-devel.i686 ocaml ocaml-ocamldoc ocaml-findlib ocaml-findlib-devel libgcrypt libgcrypt-devel perl-ExtUtils-MakeMaker perl-Data-Dumper
+</code></pre>
 
-<h1 id="how-an-obliv-c-program-works-in-four-steps">How an Obliv-C program works, in four steps</h1>
+<p>Mac OS (with Macports):</p>
 
-<p>For the purposes of this tutorial, we will be using a sample linear regression
+<pre><code class="language-c">$ sudo port install gcc5 ocaml ocaml-findlib libgcrypt +devel
+</code></pre>
+
+<h4 id="2-cloning-obliv-c">2. Cloning Obliv-C</h4>
+
+<p>Clone (git) the <a href="https://github.com/samee/obliv-c">Obliv-C source repository</a>:</p>
+
+<pre><code class="language-html">$ git clone https://github.com/samee/obliv-c
+</code></pre>
+
+<h4 id="3-build-obliv-c">3. Build Obliv-C</h4>
+
+<p>Linux:</p>
+
+<pre><code class="language-c">$ ./configure &amp;&amp; make
+</code></pre>
+
+<p>Mac OS:</p>
+
+<p>First, you need to install <a href="https://guide.macports.org/chunked/installing.macports.html">MacPorts</a>.  Then,</p>
+
+<pre><code class="language-html">$ CC=/opt/local/bin/gcc-mp-5 
+$ CPP=/opt/local/bin/cpp-mp-5 
+$ LIBRARY_PATH=/opt/local/lib 
+$ ./configure &amp;&amp; make
+</code></pre>
+
+<p>You&rsquo;re all set! The compiler is a GCC wrapper script found in
+   <code>bin/oblivcc</code>.  Example programs are in <code>test/oblivc</code>.</p>
+
+<h2 id="understanding-obliv-c-programs">Understanding Obliv-C Programs</h2>
+
+<p>Here, we explain how an Obliv-C program works in four steps. For the
+purposes of this tutorial, we will be using a sample linear regression
 implementation in Obliv-C, <a href="https://github.com/havron/obliv-c/tree/linReg/tutorial/olinReg">found
 here</a>. This
-implementation is not necessarily up-to-date with the latest stable release of
-Obliv-C (notably in lack of floating point support), but the core principles
-of using the language remain the same.</p>
+example is for instructional purposes, and does not take advantage of
+all features of Obliv-C (notably, it does not use the built-in support
+for floating point numbers now provided by Obliv-C).</p>
 
-<h2 id="1-connecting-parties-storing-arguments-and-executing-yao-s-protocol">1. Connecting parties, storing arguments, and executing Yao&rsquo;s protocol</h2>
+<h3 id="1-connecting-parties-storing-arguments-and-executing-yao-s-protocol">1. Connecting parties, storing arguments, and executing Yao&rsquo;s protocol</h3>
 
-<p><strong>Storing Arguments to a Struct</strong></p>
+<h4 id="storing-arguments-to-a-struct">Storing Arguments to a Struct</h4>
 
 <p>Navigate to <code>main()</code> in
 <a href="https://github.com/havron/obliv-c/blob/linReg/tutorial/olinReg/linReg.c">linReg.c</a>;
@@ -183,7 +200,7 @@ a connection must be established between the two parties.
 <em>Using the struct is a convenient way to access and manipulate data between your
 C and Obliv-C files.</em></p>
 
-<p><strong>Connecting Parties</strong></p>
+<h4 id="connecting-parties">Connecting Parties</h4>
 
 <pre><code>// code ...
 const char *remote_host = strtok(argv[1], &quot;:&quot;); // parse hostname from cmdline
@@ -214,7 +231,7 @@ functions were called by the appropriate parties). Then, the second party calls
 connecting to the first party. After a connection is made, <code>setCurrentParty()</code>
 is called, which allows the <code>ProtocolDesc pd</code> to keep track of parties.</p>
 
-<p><strong>Executing Yao&rsquo;s Protocol</strong></p>
+<h4 id="executing-yao-s-protocol">Executing Yao&rsquo;s Protocol</h4>
 
 <pre><code class="language-c">// Execute Yao protocol and cleanup
 execYaoProtocol(&amp;pd, linReg, &amp;io); // starts 'linReg()'
@@ -223,7 +240,7 @@ cleanupProtocol(&amp;pd);
 
 <p>Now, <code>execYaoProtocol()</code> is called; this function begins linReg.oc&rsquo;s code at the supplied function name: linReg().</p>
 
-<h2 id="2-loading-local-data-and-sharing-obliv-qualified-data">2. Loading local data and sharing obliv qualified data</h2>
+<h3 id="2-loading-local-data-and-sharing-obliv-qualified-data">2. Loading local data and sharing obliv qualified data</h3>
 
 <p>Loading local data and obtaining protocolIO struct values in Obliv-C:
 Navigate to <a href="https://github.com/havron/obliv-c/blob/linReg/tutorial/olinReg/linReg.oc">linReg.oc</a>
@@ -276,7 +293,7 @@ x and y were declared for both parties, only party 1 will have stored data to it
 local x int array, and vice versa (if you need to share the local data values
 non-obliviously, look at <code>ocBroadcast&lt;Tname&gt;()</code> in the <a href="../documentation">documentation</a>).</p>
 
-<p><strong>Sharing obliv qualified data</strong></p>
+<h4 id="sharing-obliv-data">Sharing <code>obliv</code> data</h4>
 
 <p>Now that the data for each party is stored locally in scaled int arrays, the
 data must be made <code>obliv</code> qualified and then shared with the other party
@@ -315,9 +332,9 @@ local int array is selected is hardcoded into the function call, so as to preven
 from trying to convert its own y array data (which are all 0 because nothing was ever stored
 to them) into <code>obliv</code> values, and vice versa.</p>
 
-<h2 id="3-computing-linear-regression-and-using-fixed-point-math">3. Computing linear regression and using fixed point math</h2>
+<h3 id="3-computing-linear-regression-and-using-fixed-point-math">3. Computing linear regression and using fixed point math</h3>
 
-<p><strong>Fixed point math usage</strong></p>
+<h4 id="fixed-point-math-usage">Fixed point math usage</h4>
 
 <p>See <a href="https://github.com/samee/obliv-c/pull/30">forthcoming floating point support</a>!</p>
 
@@ -332,7 +349,7 @@ in <a href="https://github.com/havron/obliv-c/blob/linReg/tutorial/olinReg/linRe
 in order to handle the large numbers that result from multiplying the already
 very high scaled ints, and then adjusting the scale appropriately).</p>
 
-<p><strong>Computing the function of two parties (linear regression)</strong></p>
+<h4 id="computing-the-function-of-two-parties-linear-regression">Computing the function of two parties (linear regression)</h4>
 
 <p>Our data has been shared obliviously into two arrays, and we are now ready to
 perform our joint function on our private data (linear regression):</p>
@@ -361,9 +378,9 @@ summations to calculate our results; note that all multiplication and division i
 adjusted for fixed point math. With the results now captured as <code>obliv int</code>s,
 we are ready to reveal them to the users and cleanup our protocol.</p>
 
-<h2 id="4-revealing-results-cleaning-up">4. Revealing results, cleaning up</h2>
+<h3 id="4-revealing-results-cleaning-up">4. Revealing results, cleaning up</h3>
 
-<p><strong>Revealing Results</strong></p>
+<h4 id="revealing-results">Revealing Results</h4>
 
 <p>With our values for om, ob, and orsqr obtained, we can reveal them:</p>
 
@@ -380,7 +397,7 @@ have their <code>obliv</code> qualifier removed when they are stored to the dest
  Lastly, &lsquo;0&rsquo; specifies that all parties will receive the result, instead of &lsquo;1&rsquo;
 for party 1 or &lsquo;2&rsquo; for party 2 receiving the results.</p>
 
-<p><strong>Cleaning up, recording runtime information</strong></p>
+<h4 id="cleaning-up-recording-runtime-information">Cleaning up, recording runtime information</h4>
 
 <p>Having stored the results as non-obliv ints in the io struct, we are now ready
 to leave Yao&rsquo;s protocol and print our results to the Terminal.
@@ -418,7 +435,14 @@ can be reverse engineered as a result of calling <code>sqrt()</code> outside of 
 
 <h2 id="conclusion">Conclusion</h2>
 
-<p>We hope that using the walkthrough tutorial of the linear regression implementation in Obliv-C will be a useful guide in starting to write your own Obliv-C programs!</p>
+<p>We hope that using the walkthrough tutorial of the linear regression
+implementation in Obliv-C will be a useful guide in starting to write
+your own Obliv-C programs!</p>
+
+<p>Please let us know if you have any suggestions for improving Obliv-C
+or this tutorial.  We also welcome issues and pull requests to the
+<a href="https://github.com/samee/obliv-c">Obliv-C repository</a>, and hearing
+about your experiences building applications with Obliv-C.</p>
 
 	
 			
