@@ -1,21 +1,23 @@
 +++
-title = "Obliv-C - Tutorial"
+title = "Obliv-C Tutorial"
 notoc = "True"
 nodate = "True"
 nopaging = "True"
 +++
 
-Obliv-C is a simple GCC wrapper that makes it easy to embed secure computation
-protocols inside regular C programs. The idea is simple: if you are performing a
-multi-party distributed computation with sensitive data, just write it in our
-Obliv-C langauge and compile/link it with your project. The result will be a
-secure cryptographic protocol that performs this operation without revealing any
-of the inputs or intermediate values of the computation to any of the parties.
-Only the outputs are finally shared.
+Obliv-C is a simple GCC wrapper that makes it easy to embed secure
+computation protocols inside regular C programs. The idea is simple:
+if you are performing a multi-party distributed computation with
+sensitive data, just write it in our Obliv-C langauge and compile/link
+it with your project. The result will be a secure cryptographic
+protocol that performs this operation without revealing any of the
+inputs or intermediate values of the computation to any of the
+parties.  Only the outputs are finally shared.
 
-One particularly useful application of Obliv-C is enabling aggregate data
-analysis from private datasets, which will serve as the focus of this tutorial. 
-Keep the [API documentation](../documentation) as a handy reference throughout.
+One particularly useful application of Obliv-C is enabling aggregate
+data analysis from private datasets, which will serve as the focus of
+this tutorial.  Keep the [API documentation](../documentation) as a
+handy reference throughout.
 
 # Installation
 

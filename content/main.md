@@ -12,7 +12,7 @@ computation with sensitive data, just write it in our Obliv-C langauge
 and compile/link it with your project. The result will be a secure
 multi-party cryptographic protocol that performs this operation without
 revealing any of the inputs or intermediate values of the computation to
-any of the parties. Only the outputs are finally shared.
+any of the parties. Only the final outputs are revealed.
 
 This paper motivates and describes Obliv-C:
 
@@ -22,15 +22,22 @@ Data-Oblivious Computation_](http://eprint.iacr.org/2015/1153.pdf),
 2015:1153](http://eprint.iacr.org/2015/1153)
 [[PDF](http://eprint.iacr.org/2015/1153)], November 2015.
 
-## Code, API, and Tutorial
 
-[https://github.com/samee/obliv-c](https://github.com/samee/obliv-c)  
-This repository includes the implementation of Obliv-C and several
-example applications and benchmarks.
+## Getting Started
 
-[Obliv-C API Documentation](/documentation)
+**Code: [https://github.com/samee/obliv-c](https://github.com/samee/obliv-c)**
 
-[Obliv-C Tutorial](/tutorial)
+> This repository includes the implementation of Obliv-C and several example applications and benchmarks.
+
+
+[**Tutorial**](/tutorial) 
+
+> Walks through how to install Obliv-C and build your first data-oblivious application using a simple linear regression example application.
+
+[**Documentation**](/documentation)
+
+> Documentation on Obliv-C's language extensions and library functions.
+
 
 ## Projects Using Obliv-C
 

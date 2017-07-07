@@ -3,7 +3,7 @@
 
 <head>
   <title>
-    Obliv-C - Tutorial // Obliv-C
+    Obliv-C Tutorial // Obliv-C
   </title>
 
   <link href="//gmpg.org/xfn/11" rel="profile">
@@ -18,7 +18,7 @@
 <meta name="generator" content="Hugo 0.17" />
 
 
-  <meta property="og:title" content="Obliv-C - Tutorial" />
+  <meta property="og:title" content="Obliv-C Tutorial" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="en_US" />
@@ -68,17 +68,17 @@
     <div class="sidebar pure-u-1 pure-u-md-1-4">
   <div class="header">
     <h2 class="brand-group">
-
 <a href="http://www.jeffersonswheel.org">Security Research Group</a><br>
 <a href="http://www.cs.virginia.edu">University of Virginia</a>
 </h2>
 
 
 
-    <a href="//oblivc.org"><h1 class="brand-title">Obliv-C</h1></a>
+<a href="//oblivc.org"><img src="/images/oblivc-small.png" align="center" width="90%"></a>
+
     <h2 class="brand-tagline">A Language for Extensible Data-Oblivious Computation</h2>
 
-<img src="/images/oblivc-small.png" align="center" width="90%">
+
 
 
 
@@ -98,7 +98,7 @@
 		
   		<section class="post">
             <h1 class="post-title">
-              <a href="/tutorial/">Obliv-C - Tutorial</a>
+              <a href="/tutorial/">Obliv-C Tutorial</a>
             </h1>
             <h3 class="post-subtitle">
             	
@@ -117,17 +117,19 @@
 
             
 
-<p>Obliv-C is a simple GCC wrapper that makes it easy to embed secure computation
-protocols inside regular C programs. The idea is simple: if you are performing a
-multi-party distributed computation with sensitive data, just write it in our
-Obliv-C langauge and compile/link it with your project. The result will be a
-secure cryptographic protocol that performs this operation without revealing any
-of the inputs or intermediate values of the computation to any of the parties.
-Only the outputs are finally shared.</p>
+<p>Obliv-C is a simple GCC wrapper that makes it easy to embed secure
+computation protocols inside regular C programs. The idea is simple:
+if you are performing a multi-party distributed computation with
+sensitive data, just write it in our Obliv-C langauge and compile/link
+it with your project. The result will be a secure cryptographic
+protocol that performs this operation without revealing any of the
+inputs or intermediate values of the computation to any of the
+parties.  Only the outputs are finally shared.</p>
 
-<p>One particularly useful application of Obliv-C is enabling aggregate data
-analysis from private datasets, which will serve as the focus of this tutorial.
-Keep the <a href="../documentation">API documentation</a> as a handy reference throughout.</p>
+<p>One particularly useful application of Obliv-C is enabling aggregate
+data analysis from private datasets, which will serve as the focus of
+this tutorial.  Keep the <a href="../documentation">API documentation</a> as a
+handy reference throughout.</p>
 
 <h1 id="installation">Installation</h1>
 

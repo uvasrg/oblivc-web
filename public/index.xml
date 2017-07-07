@@ -219,24 +219,26 @@ Authorities&lt;/em&gt;&lt;/a&gt;. &lt;a href=&#34;https://arxiv.org/abs/1706.033
     </item>
     
     <item>
-      <title>Obliv-C - Tutorial</title>
+      <title>Obliv-C Tutorial</title>
       <link>//oblivc.org/tutorial/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//oblivc.org/tutorial/</guid>
       <description>
 
-&lt;p&gt;Obliv-C is a simple GCC wrapper that makes it easy to embed secure computation
-protocols inside regular C programs. The idea is simple: if you are performing a
-multi-party distributed computation with sensitive data, just write it in our
-Obliv-C langauge and compile/link it with your project. The result will be a
-secure cryptographic protocol that performs this operation without revealing any
-of the inputs or intermediate values of the computation to any of the parties.
-Only the outputs are finally shared.&lt;/p&gt;
+&lt;p&gt;Obliv-C is a simple GCC wrapper that makes it easy to embed secure
+computation protocols inside regular C programs. The idea is simple:
+if you are performing a multi-party distributed computation with
+sensitive data, just write it in our Obliv-C langauge and compile/link
+it with your project. The result will be a secure cryptographic
+protocol that performs this operation without revealing any of the
+inputs or intermediate values of the computation to any of the
+parties.  Only the outputs are finally shared.&lt;/p&gt;
 
-&lt;p&gt;One particularly useful application of Obliv-C is enabling aggregate data
-analysis from private datasets, which will serve as the focus of this tutorial.
-Keep the &lt;a href=&#34;../documentation&#34;&gt;API documentation&lt;/a&gt; as a handy reference throughout.&lt;/p&gt;
+&lt;p&gt;One particularly useful application of Obliv-C is enabling aggregate
+data analysis from private datasets, which will serve as the focus of
+this tutorial.  Keep the &lt;a href=&#34;../documentation&#34;&gt;API documentation&lt;/a&gt; as a
+handy reference throughout.&lt;/p&gt;
 
 &lt;h1 id=&#34;installation&#34;&gt;Installation&lt;/h1&gt;
 
@@ -547,7 +549,7 @@ computation with sensitive data, just write it in our Obliv-C langauge
 and compile/link it with your project. The result will be a secure
 multi-party cryptographic protocol that performs this operation without
 revealing any of the inputs or intermediate values of the computation to
-any of the parties. Only the outputs are finally shared.&lt;/p&gt;
+any of the parties. Only the final outputs are revealed.&lt;/p&gt;
 
 &lt;p&gt;This paper motivates and describes Obliv-C:&lt;/p&gt;
 
@@ -559,15 +561,25 @@ Data-Oblivious Computation&lt;/em&gt;&lt;/a&gt;,
 [&lt;a href=&#34;http://eprint.iacr.org/2015/1153&#34;&gt;PDF&lt;/a&gt;], November 2015.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&#34;code-api-and-tutorial&#34;&gt;Code, API, and Tutorial&lt;/h2&gt;
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://github.com/samee/obliv-c&#34;&gt;https://github.com/samee/obliv-c&lt;/a&gt;&lt;br /&gt;
-This repository includes the implementation of Obliv-C and several
-example applications and benchmarks.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Code: &lt;a href=&#34;https://github.com/samee/obliv-c&#34;&gt;https://github.com/samee/obliv-c&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;//oblivc.org/documentation&#34;&gt;Obliv-C API Documentation&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This repository includes the implementation of Obliv-C and several example applications and benchmarks.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;&lt;a href=&#34;//oblivc.org/tutorial&#34;&gt;Obliv-C Tutorial&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;//oblivc.org/tutorial&#34;&gt;&lt;strong&gt;Tutorial&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Walks through how to install Obliv-C and build your first data-oblivious application using a simple linear regression example application.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;//oblivc.org/documentation&#34;&gt;&lt;strong&gt;Documentation&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Documentation on Obliv-C&amp;rsquo;s language extensions and library functions.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;h2 id=&#34;projects-using-obliv-c&#34;&gt;Projects Using Obliv-C&lt;/h2&gt;
 
