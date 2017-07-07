@@ -41,6 +41,7 @@ p a {
 	color:#08088A;
         text-decoration: none;
 }
+
 h1 {
 	font-family: 'Libre Baskerville', serif;
 	font-weight: 700; 
@@ -85,9 +86,11 @@ h1.brand-title {
 	font-size: 3rem;
 	margin-bottom: 0.25rem;
 }
+
 h2.brand-tagline {
 	font-size: 1.4rem;
 	margin-top: 0.25rem;
+	text-align: right;
 }
 h2.brand-group {
 	font-family: 'Libre Baskerville', serif;
@@ -95,6 +98,7 @@ h2.brand-group {
 	font-size: 0.8rem;
 	margin-top: 0.25rem;
 	color: #6b6b6b;
+	text-align: right;
 }
 .sidebar h1.brand-title {
 	color: #fff;
@@ -105,6 +109,7 @@ h2.brand-group {
 }
 .sidebar {
 	background: #663399;
+	width: 25%;
 }
 .sidebar, .sidebar p {
 	color: #8b8b8b;
@@ -495,4 +500,11 @@ hr.thin {
         top: 0;
         bottom: 0;
     }
+}
+
+
+h2 {
+   text-align: center;
+   background-color: #663399;
+   color: #ffffff;
 }
