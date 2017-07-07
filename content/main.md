@@ -2,7 +2,7 @@
 title = "Obliv-C: A Language for Extensible Data-Oblivious Computation"
 +++
 
-<img src="/images/oblivc-2.png" align="center" width="90%">
+<center><img src="/images/oblivc-cropped.png" align="center" width="90%"></center>
 
 **Obliv-C** is a simple GCC wrapper that makes it easy to embed secure
 computation protocols inside regular C programs. 

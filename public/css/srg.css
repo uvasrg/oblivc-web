@@ -508,3 +508,12 @@ h2 {
    background-color: #663399;
    color: #ffffff;
 }
+
+.hljs {
+   margin-left: 20px;
+   margin-right: 20px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   background: #EEE;
+   color: #000;
+}
