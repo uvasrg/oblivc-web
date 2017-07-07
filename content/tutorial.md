@@ -54,10 +54,7 @@ Mac OS:
 First, you need to install [MacPorts](https://guide.macports.org/chunked/installing.macports.html).  Then,
 
 ```html
-$ CC=/opt/local/bin/gcc-mp-5 
-$ CPP=/opt/local/bin/cpp-mp-5 
-$ LIBRARY_PATH=/opt/local/lib 
-$ ./configure && make
+$ CC=/opt/local/bin/gcc-mp-5 CPP=/opt/local/bin/cpp-mp-5 LIBRARY_PATH=/opt/local/lib ./configure && make
 ```
 
 You're all set! The compiler is a GCC wrapper script found in
