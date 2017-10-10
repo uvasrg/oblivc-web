@@ -74,7 +74,7 @@ Mariana Raykova and Jack Doerner and Samee Zahur and David Evans. In [Privacy En
 
 Bargav Jayaraman<sup>*</sup>, Hannah Li<sup>*</sup>, David Evans. <a
 href="/docs/dca.pdf"><em>Decentralized Certificate
-Authorities</em></a>. 11 June 2017. (working paper) (* the first two
+Authorities</em></a>. 11 June 2017. (updated 10 October 2017) (* the first two
 authors both contributed as co-equal first authors) [<a href="/docs/dca.pdf">PDF</a>]
 
 #### [Privacy-Preserving Machine Learning](/ppml)
@@ -94,7 +94,12 @@ Jack Doerner, David Evans, abhi shelat. [_Secure Stable Matching at Scale_](http
 [https://github.com/bargavjayaraman/SecureDeepLearning](https://github.com/bargavjayaraman/SecureDeepLearning)  
 Bargav Jayaraman (Accenture Technology Labs, Bangalore &rarr; now at UVA)
 
-### Industrial Applications Built with Obliv-C
+### Applications Built with Obliv-C by Others
+
+[Pretzel: Email encryption and provider-supplied functions are
+compatible](http://www.cs.nyu.edu/~mwalfish/papers/pretzel-sigcomm17.pdf),
+Trinabh Gupta, Henrique Fingler, Lorenzo Alvisi, and Michael
+Walfish. ACM SIGCOMM 2017.
 
 [SECCOMP - The Secure Spreadsheet](https://calctopia.com), Calctopia, 2017.
 
