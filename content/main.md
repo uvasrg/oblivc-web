@@ -43,9 +43,13 @@ Data-Oblivious Computation_](http://eprint.iacr.org/2015/1153.pdf),
 
 ### Libraries and Protocols
 
-#### Half-Gates
+#### [floram](https://gitlab.com/neucrypt/floram)
 
-Samee Zahur, Mike Rosulek, and David Evans.  <a href="http://mightbeevil.com/halfgates/"><em>Two Halves Make a Whole: Reducing Data Transfer in Garbled Circuits using Half Gates</em></a>.  In <a href="https://www.cosic.esat.kuleuven.be/eurocrypt_2015/papers.shtml">EuroCrypt 2015</a>.  Sofia, Bulgaria.  26-30 April 2015. [<a href="http://www.cs.virginia.edu/evans/pubs/ec2015/halfgates.pdf">PDF</a>, 28 pages] [<a href="http://github.com/samee/obliv-c">Code</a>]
+Jack Doerner and abhi shelat. [_Scaling ORAM for Secure
+Computation_](https://acmccs.github.io/papers/p523-doernerA.pdf). In
+[_24<sup>th</sup> ACM Conference on Computer and Communications
+Security_](https://ccs2017.sigsac.org/). Dallas, TX. 31 Oct-3 November
+2017. (Best Paper Award)
 
 #### [SqORAM](/sqoram)
 
@@ -62,6 +66,11 @@ Jack Doerner.  Library of oblivious implementations of cryptographic
 primitives implemented in Obliv-C.  Includes big integer math, hash
 functions, sorting, graph algorithms, oblivious data structures, and
 ORAM implementations.  [Code:&nbsp;[https://bitbucket.org/jackdoerner/absentminded-crypto-kit](https://bitbucket.org/jackdoerner/absentminded-crypto-kit)]
+
+
+#### Half-Gates
+
+Samee Zahur, Mike Rosulek, and David Evans.  <a href="http://mightbeevil.com/halfgates/"><em>Two Halves Make a Whole: Reducing Data Transfer in Garbled Circuits using Half Gates</em></a>.  In <a href="https://www.cosic.esat.kuleuven.be/eurocrypt_2015/papers.shtml">EuroCrypt 2015</a>.  Sofia, Bulgaria.  26-30 April 2015. [<a href="http://www.cs.virginia.edu/evans/pubs/ec2015/halfgates.pdf">PDF</a>, 28 pages] [<a href="http://github.com/samee/obliv-c">Code</a>]
 
 ### Applications
 
