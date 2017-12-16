@@ -85,10 +85,10 @@ Mariana Raykova and Jack Doerner and Samee Zahur and David Evans. In [Privacy En
 
 #### [Decentralized Certificate Authorities](/dca)
 
-Bargav Jayaraman<sup>*</sup>, Hannah Li<sup>*</sup>, David Evans. <a
+Bargav Jayaraman, Hannah Li, David Evans. <a
 href="/docs/dca.pdf"><em>Decentralized Certificate
-Authorities</em></a>. 11 June 2017. (updated 10 October 2017) (* the first two
-authors both contributed as co-equal first authors) [<a href="/docs/dca.pdf">PDF</a>]
+Authorities</em></a>. 11 June 2017. (updated 10 October 2017) (The first two
+authors both contributed as co-equal first authors.) [<a href="/docs/dca.pdf">PDF</a>]
 
 #### [Privacy-Preserving Machine Learning](/ppml)
 
