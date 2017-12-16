@@ -65,6 +65,10 @@ ORAM implementations.  [Code:&nbsp;[https://bitbucket.org/jackdoerner/absentmind
 
 ### Applications
 
+#### [Oblivious Knuth-Morris-Pratt Sub-String Search](https://github.com/jnayak1/kmp-mpc)
+
+Jesse Nayak (capstone project). Code: [_https://github.com/jnayak1/kmp-mpc_](https://github.com/jnayak1/kmp-mpc).
+
 #### [Privacy-Preserving Distributed Linear Regression on High-Dimensional Data](https://eprint.iacr.org/2016/892)
 
 Adria&#768; Gasco&#769;n and Phillipp Schoppmann and Borja Balle and
