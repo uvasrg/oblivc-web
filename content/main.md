@@ -152,17 +152,22 @@ Redmond, WA. 20 February 2014.
 
 ## People
 
-[Samee Zahur](https://www.cs.virginia.edu/~sza4uq/), Project Founder and Leader (now at Google)
-
-[Darion Cassel](http://darioncassel.me/), Undergraduate Researcher  
-[Jack Doerner](https://jackdoerner.net/), Wizard of Oblivion  
 [David Evans](https://www.cs.virginia.edu/evans), Faculty Advisor  
-[Samuel Havron](https://havron.xyz), Undergraduate Researcher  
 [Bargav Jayaraman](https://bargavjayaraman.github.io/), PhD Student  
-[Hannah Li](https://github.com/HainaLi), PhD Student  
+[Jesse Nayak](https://github.com/jnayak1), Undergraduate Researcher
 
+### Alumni
 
-Contributors: [Natnatee ("Ko") Dokmai](https://github.com/ndokmai), [Richard
+[Samee Zahur](https://www.cs.virginia.edu/~sza4uq/), Project Founder and Leader (now at Google)  
+
+[Darion Cassel](http://darioncassel.me/), Undergraduate Researcher (now at CMU)  
+[Natnatee ("Ko") Dokmai](https://github.com/ndokmai), Undergraduate Researcher (now at Indiana University)  
+[Jack Doerner](https://jackdoerner.net/), Wizard of Oblivion (now at Northeastern)  
+[Samuel Havron](https://havron.xyz), Undergraduate Researcher (now at Cornell)  
+[Hannah Li](https://github.com/HainaLi), Undergraduate at Masters Student (now at Facebook)  
+    
+
+Other Contributors: [Richard
 Li](https://github.com/Lichard), [Michael Mahoney](https://github.com/mdh3hc), [Xiao Wang](https://github.com/wangxiao1254).
 
 
