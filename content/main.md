@@ -152,13 +152,13 @@ Redmond, WA. 20 February 2014.
 
 ## People
 
+[Samee Zahur](https://www.cs.virginia.edu/~sza4uq/), Project Founder and Leader (now at Google)  
+
 [David Evans](https://www.cs.virginia.edu/evans), Faculty Advisor  
 [Bargav Jayaraman](https://bargavjayaraman.github.io/), PhD Student  
 [Jesse Nayak](https://github.com/jnayak1), Undergraduate Researcher
 
 ### Alumni
-
-[Samee Zahur](https://www.cs.virginia.edu/~sza4uq/), Project Founder and Leader (now at Google)  
 
 [Darion Cassel](http://darioncassel.me/), Undergraduate Researcher (now at CMU)  
 [Natnatee ("Ko") Dokmai](https://github.com/ndokmai), Undergraduate Researcher (now at Indiana University)  
