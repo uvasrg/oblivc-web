@@ -824,22 +824,18 @@ Jose, CA. 23-25 May 2016.&lt;/p&gt;
     </item>
     
     <item>
-      <title>Rust Wrapper</title>
+      <title>Rust Wrapper for Obliv-C</title>
       <link>//oblivc.org/rust/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//oblivc.org/rust/</guid>
-      <description>
-
-&lt;h2 id=&#34;rust-wrapper-for-obliv-c&#34;&gt;Rust Wrapper for Obliv-C&lt;/h2&gt;
+      <description>&lt;pre&gt;&lt;code class=&#34;language-Rust&#34;&gt;   unsafe { pd.exec_yao_protocol(millionaire, &amp;amp;mut args); }
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://www.informatik.hu-berlin.de/de/Members/schopmaf/&#34;&gt;Phillipp
 Schoppmann&lt;/a&gt;
 developed a Rust library for enabling Rust programs to integrate with
 protocols implemented in Obliv-C.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-Rust&#34;&gt;   unsafe { pd.exec_yao_protocol(millionaire, &amp;amp;mut args); }
-&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/schoppmp/oblivc-rust&#34;&gt;https://github.com/schoppmp/oblivc-rust&lt;/a&gt;&lt;/p&gt;
 </description>
