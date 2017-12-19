@@ -38,6 +38,10 @@ Data-Oblivious Computation_](http://eprint.iacr.org/2015/1153.pdf),
 
 > Documentation on Obliv-C's language extensions and library functions.
 
+[**Rust Wrapper**](/rust)
+
+> Calling Obliv-C protocols from Rust programs ([Phillipp
+Schoppmann](https://www.informatik.hu-berlin.de/de/Members/schopmaf/)
 
 ## Projects Using Obliv-C
 
