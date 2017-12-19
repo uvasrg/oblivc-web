@@ -41,7 +41,7 @@ Data-Oblivious Computation_](http://eprint.iacr.org/2015/1153.pdf),
 [**Rust Wrapper**](/rust)
 
 > Calling Obliv-C protocols from Rust programs ([Phillipp
-Schoppmann](https://www.informatik.hu-berlin.de/de/Members/schopmaf/)
+Schoppmann](https://www.informatik.hu-berlin.de/de/Members/schopmaf/))
 
 ## Projects Using Obliv-C
 
