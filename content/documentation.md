@@ -21,12 +21,12 @@ the [tutorial](../tutorial).
 
 ### Use of tname
 
-Valid substitutions for `tname` are bool, char, int, short, long, or long long,
+Valid substitutions for `tname` are bool, char, int, short, long, long long, or float,
 depending on what data type you need. `<Tname>` means to substitute in a valid
 type with the first character of the type capitalized. As of July 2017, the `obliv` qualifier is
-not valid for float or double. Use fixed point arithmetic as a workaround for
-these data types. However, [floating point support is
-forthcoming](https://github.com/samee/obliv-c/pull/30).
+not valid for double. Use fixed point arithmetic as a workaround for
+this data type. However, [single-precision floating point support has been recently
+added](https://github.com/samee/obliv-c/pull/30).
 
 
 ### The obliv qualifier
@@ -92,8 +92,8 @@ ProtocolDesc. Call this before calling execYaoProtocol().
 ### obliv tname feedObliv<Tname>(tname v, int party)
 
 Obliv-C file; requires `#include <obliv.oh>`. This function returns an `obliv`
-qualified `tname v` from the specified party to both parties. Floating point
-numbers are not currently supported by the `obliv` qualifier. 
+qualified `tname v` from the specified party to both parties. Double-precision 
+floating point numbers are not currently supported by the `obliv` qualifier. 
 
 Sample code for using this function to feed an int array from the specified
 party into an obliv int array to both parties:
