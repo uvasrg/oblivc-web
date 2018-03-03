@@ -21,21 +21,17 @@ the [tutorial](../tutorial).
 
 ### Use of tname
 
-Valid substitutions for `tname` are bool, char, int, short, long, long long, or float,
+Valid substitutions for `tname` are `bool`, `char`, `int`, `short`, `long`, `long long`, or `float`,
 depending on what data type you need. `<Tname>` means to substitute in a valid
-type with the first character of the type capitalized. As of July 2017, the `obliv` qualifier is
-not valid for double. Use fixed point arithmetic as a workaround for
-this data type. However, [single-precision floating point support has been recently
-added](https://github.com/samee/obliv-c/pull/30).
-
+type with the first character of the type capitalized. As of March 2018, the `obliv` qualifier is
+not supported for double-precision floating point, however, [single-precision floating point support is available](https://github.com/samee/obliv-c/pull/30).
 
 ### The obliv qualifier
 
 The `obliv` qualifier should be declared on any variable that is supposed to
 depend on unknown inputs in any way; `obliv` qualified values implement secure
 encryption on the variable, and can only be declared in an Obliv-C file (.oc).
-Supported data types for the `obliv` qualifier are bool, int, char, short, long,
-and long long. Non-obliv values can be implicitly converted into obliv, but
+Supported data types for the `obliv` qualifier are `bool`, `int`, `char`, `short`, `long`, `long long`, and `float`. Non-obliv values can be implicitly converted into obliv, but
 obliv values cannot be implicitly converted to non-obliv. Doing this requires
 `revealObliv<Tname>()` to be called.
 
