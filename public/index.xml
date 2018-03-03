@@ -29,21 +29,19 @@ the &lt;a href=&#34;../tutorial&#34;&gt;tutorial&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&#34;general-usage&#34;&gt;General Usage&lt;/h2&gt;
 
-&lt;h3 id=&#34;use-of-tname&#34;&gt;Use of tname&lt;/h3&gt;
+&lt;h3 id=&#34;the-obliv-qualifier&#34;&gt;The &lt;code&gt;obliv&lt;/code&gt; qualifier&lt;/h3&gt;
 
-&lt;p&gt;Valid substitutions for &lt;code&gt;tname&lt;/code&gt; are &lt;code&gt;bool&lt;/code&gt;, &lt;code&gt;char&lt;/code&gt;, &lt;code&gt;int&lt;/code&gt;, &lt;code&gt;short&lt;/code&gt;, &lt;code&gt;long&lt;/code&gt;, &lt;code&gt;long long&lt;/code&gt;, or &lt;code&gt;float&lt;/code&gt;,
-depending on what data type you need. &lt;code&gt;&amp;lt;Tname&amp;gt;&lt;/code&gt; means to substitute in a valid
-type with the first character of the type capitalized. As of March 2018, the &lt;code&gt;obliv&lt;/code&gt; qualifier is
-not supported for double-precision floating point, however, &lt;a href=&#34;https://github.com/samee/obliv-c/pull/30&#34;&gt;single-precision floating point support is available&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;obliv&lt;/code&gt; qualifier should be declared on any variable that is
+supposed to depend on unknown inputs in any way; &lt;code&gt;obliv&lt;/code&gt;-qualified
+values implement secure encryption on the variable, and can only be
+declared in an Obliv-C file (&lt;code&gt;.oc&lt;/code&gt;).&lt;/p&gt;
 
-&lt;h3 id=&#34;the-obliv-qualifier&#34;&gt;The obliv qualifier&lt;/h3&gt;
-
-&lt;p&gt;The &lt;code&gt;obliv&lt;/code&gt; qualifier should be declared on any variable that is supposed to
-depend on unknown inputs in any way; &lt;code&gt;obliv&lt;/code&gt; qualified values implement secure
-encryption on the variable, and can only be declared in an Obliv-C file (.oc).
-Supported data types for the &lt;code&gt;obliv&lt;/code&gt; qualifier are &lt;code&gt;bool&lt;/code&gt;, &lt;code&gt;int&lt;/code&gt;, &lt;code&gt;char&lt;/code&gt;, &lt;code&gt;short&lt;/code&gt;, &lt;code&gt;long&lt;/code&gt;, &lt;code&gt;long long&lt;/code&gt;, and &lt;code&gt;float&lt;/code&gt;. Non-obliv values can be implicitly converted into obliv, but
-obliv values cannot be implicitly converted to non-obliv. Doing this requires
-&lt;code&gt;revealObliv&amp;lt;Tname&amp;gt;()&lt;/code&gt; to be called.&lt;/p&gt;
+&lt;p&gt;Supported data types for the &lt;code&gt;obliv&lt;/code&gt; qualifier are &lt;code&gt;bool&lt;/code&gt;, &lt;code&gt;int&lt;/code&gt;,
+&lt;code&gt;char&lt;/code&gt;, &lt;code&gt;short&lt;/code&gt;, &lt;code&gt;long&lt;/code&gt;, &lt;code&gt;long long&lt;/code&gt;, and &lt;code&gt;float&lt;/code&gt;. Non-obliv values
+can be implicitly converted into &lt;code&gt;obliv&lt;/code&gt;, but &lt;code&gt;obliv&lt;/code&gt; values cannot be
+implicitly converted to non-obliv. Doing this requires
+&lt;code&gt;revealObliv&amp;lt;Tname&amp;gt;()&lt;/code&gt; (described below) to be called to indicate that
+previously-oblivious data is now being revealed.&lt;/p&gt;
 
 &lt;h3 id=&#34;where-to-begin&#34;&gt;Where to begin&lt;/h3&gt;
 
@@ -52,56 +50,71 @@ Obliv-C program between two parties, ensure that the following Obliv-C library
 functions are called in order:&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;int protocolAcceptTcp2P(ProtocolDesc* pd, const char* port)&lt;/li&gt;
-&lt;li&gt;int protocolConnectTcp2P(ProtocolDesc* pd, const char* server, const char* port)&lt;/li&gt;
-&lt;li&gt;void setCurrentParty(ProtocolDesc* pd, int party)&lt;/li&gt;
-&lt;li&gt;void execYaoProtocol(ProtocolDesc* pd, protocol_run start, void* arg)&lt;/li&gt;
-&lt;li&gt;Any Obliv-C functions needed in your .oc file(s)&lt;/li&gt;
-&lt;li&gt;void cleanupProtocol(ProtocolDesc* pd)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;int protocolAcceptTcp2P(ProtocolDesc* pd, const char* port)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;int protocolConnectTcp2P(ProtocolDesc* pd, const char* server, const char* port)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;void setCurrentParty(ProtocolDesc* pd, int party)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;void execYaoProtocol(ProtocolDesc* pd, protocol_run start, void* arg)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Any Obliv-C functions needed in your &lt;code&gt;.oc&lt;/code&gt; files&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;void cleanupProtocol(ProtocolDesc* pd)&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&#34;c-functions&#34;&gt;C Functions&lt;/h2&gt;
 
-&lt;h3 id=&#34;void-cleanupprotocol-protocoldesc-pd&#34;&gt;void cleanupProtocol(ProtocolDesc* pd)&lt;/h3&gt;
-
-&lt;p&gt;C file; requires &lt;code&gt;#include &amp;lt;obliv.h&amp;gt;&lt;/code&gt;. Call this function in your C file after
-execYaoProtocol() has been called. This function will clean up the ProtocolDesc.&lt;/p&gt;
-
-&lt;h3 id=&#34;void-execyaoprotocol-protocoldesc-pd-protocol-run-start-void-arg&#34;&gt;void execYaoProtocol(ProtocolDesc* pd, protocol_run start, void* arg)&lt;/h3&gt;
-
-&lt;p&gt;C file; requires &lt;code&gt;#include &amp;lt;obliv.h&amp;gt;&lt;/code&gt;. Call this function in your C file&amp;rsquo;s main()
-function to execute the Yao protocol. Supply the starting function name (without
-parentheses) in the Obliv-C file as the parameter for &lt;code&gt;protocol_run start&lt;/code&gt;. Supply
-any arguments for the Obliv-C starting function in &lt;code&gt;void* arg&lt;/code&gt;; pass in a struct
-to supply multiple parameters. Before calling this function, establish a
-connection between parties with protocolAcceptTcp2P() and
-protocolConnectTcp2P(), and call setCurrentParty().&lt;/p&gt;
+&lt;p&gt;These functions should be called in a C file, and require using &lt;code&gt;#include &amp;lt;obliv.h&amp;gt;&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h3 id=&#34;int-protocolaccepttcp2p-protocoldesc-pd-const-char-port&#34;&gt;int protocolAcceptTcp2P(ProtocolDesc* pd, const char* port)&lt;/h3&gt;
 
-&lt;p&gt;C file; requires &lt;code&gt;#include &amp;lt;obliv.h&amp;gt;&lt;/code&gt;. The first party calls this function to
-listen for a second party on the supplied port parameter. Use conditional logic
-to ensure only the first party calls this function.&lt;/p&gt;
+&lt;p&gt;The first party calls this function to listen for a second party on
+the supplied port parameter. Use conditional logic to ensure only the
+first party calls this function.&lt;/p&gt;
 
 &lt;h3 id=&#34;int-protocolconnecttcp2p-protocoldesc-pd-const-char-server-const-char-port&#34;&gt;int protocolConnectTcp2P(ProtocolDesc* pd, const char* server, const char* port)&lt;/h3&gt;
 
-&lt;p&gt;C file; requires &lt;code&gt;#include &amp;lt;obliv.h&amp;gt;&lt;/code&gt;. The second party should call this function
-after the first party calls protocolAcceptTcp2P(); use conditional logic to
-ensure this. Supply either &amp;lsquo;localhost&amp;rsquo;, the IP address, or the DNS name of the
-first party to the &lt;code&gt;const char* server&lt;/code&gt; parameter.&lt;/p&gt;
+&lt;p&gt;The second party should call this function after the first party calls
+&lt;code&gt;protocolAcceptTcp2P()&lt;/code&gt;; use conditional logic to ensure this. Supply
+either &amp;lsquo;localhost&amp;rsquo;, the IP address, or the DNS name of the first party
+to the &lt;code&gt;const char* server&lt;/code&gt; parameter.&lt;/p&gt;
 
 &lt;h3 id=&#34;void-setcurrentparty-protocoldesc-pd-int-party&#34;&gt;void setCurrentParty(ProtocolDesc* pd, int party)&lt;/h3&gt;
 
-&lt;p&gt;C file; requires &lt;code&gt;#include &amp;lt;obliv.h&amp;gt;&lt;/code&gt;. Sets the proper parties into the
-ProtocolDesc. Call this before calling execYaoProtocol().&lt;/p&gt;
+&lt;p&gt;Sets the proper parties into the &lt;code&gt;ProtocolDesc&lt;/code&gt;. Call this before
+calling &lt;code&gt;execYaoProtocol()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;void-execyaoprotocol-protocoldesc-pd-protocol-run-start-void-arg&#34;&gt;void execYaoProtocol(ProtocolDesc* pd, protocol_run start, void* arg)&lt;/h3&gt;
+
+&lt;p&gt;Call this function in your C file&amp;rsquo;s &lt;code&gt;main()&lt;/code&gt; function to execute Yao&amp;rsquo;s
+garbled circuits protocol. Supply the starting function name (without
+parentheses) in the Obliv-C file as the parameter for &lt;code&gt;protocol_run
+start&lt;/code&gt;. Supply any arguments for the Obliv-C starting function in
+&lt;code&gt;void* arg&lt;/code&gt;; pass in a struct to supply multiple parameters. Before
+calling this function, establish a connection between parties with
+&lt;code&gt;protocolAcceptTcp2P()&lt;/code&gt; and &lt;code&gt;protocolConnectTcp2P()&lt;/code&gt;, and call
+&lt;code&gt;setCurrentParty()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;void-cleanupprotocol-protocoldesc-pd&#34;&gt;void cleanupProtocol(ProtocolDesc* pd)&lt;/h3&gt;
+
+&lt;p&gt;Call this function in your C file after &lt;code&gt;execYaoProtocol()&lt;/code&gt; has been
+called. This function will clean up the &lt;code&gt;ProtocolDesc&lt;/code&gt; object.&lt;/p&gt;
 
 &lt;h2 id=&#34;obliv-c-functions&#34;&gt;Obliv-C Functions&lt;/h2&gt;
 
-&lt;h3 id=&#34;obliv-tname-feedobliv-tname-tname-v-int-party&#34;&gt;obliv tname feedObliv&lt;Tname&gt;(tname v, int party)&lt;/h3&gt;
+&lt;p&gt;These functions should be used in Obliv-C (&lt;code&gt;.oc&lt;/code&gt;) files. They require `#include &lt;obliv.oh&gt;&amp;rsquo;.&lt;/p&gt;
 
-&lt;p&gt;Obliv-C file; requires &lt;code&gt;#include &amp;lt;obliv.oh&amp;gt;&lt;/code&gt;. This function returns an &lt;code&gt;obliv&lt;/code&gt;
-qualified &lt;code&gt;tname v&lt;/code&gt; from the specified party to both parties. Double-precision
-floating point numbers are not currently supported by the &lt;code&gt;obliv&lt;/code&gt; qualifier.&lt;/p&gt;
+&lt;p&gt;Valid substitutions for &lt;em&gt;&lt;code&gt;tname&lt;/code&gt;&lt;/em&gt; are &lt;code&gt;bool&lt;/code&gt;, &lt;code&gt;char&lt;/code&gt;, &lt;code&gt;int&lt;/code&gt;, &lt;code&gt;short&lt;/code&gt;,
+&lt;code&gt;long&lt;/code&gt;, &lt;code&gt;long long&lt;/code&gt;, or &lt;code&gt;float&lt;/code&gt;.  The value of _&lt;code&gt;&amp;lt;Tname&amp;gt;&lt;/code&gt; is the
+corresponding type name with its first letter capitalized. (As of
+March 2018, the &lt;code&gt;obliv&lt;/code&gt; qualifier is not supported for
+double-precision floating point, however, &lt;a href=&#34;https://github.com/samee/obliv-c/pull/30&#34;&gt;single-precision floating
+point support is
+available&lt;/a&gt;.)&lt;/p&gt;
+
+&lt;h3 id=&#34;obliv-tname-feedobliv-tname-tname-v-int-party&#34;&gt;obliv &lt;em&gt;tname&lt;/em&gt; feedObliv&amp;lt;&lt;em&gt;Tname&lt;/em&gt;&amp;gt;(&lt;em&gt;tname&lt;/em&gt; v, int party)&lt;/h3&gt;
+
+&lt;p&gt;This function returns an &lt;code&gt;obliv&lt;/code&gt;-qualified type from the specified
+party to both parties.  For example, for &lt;code&gt;float&lt;/code&gt;, there is:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;   obliv float feedOblivFloat(float v, int party)
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Sample code for using this function to feed an int array from the specified
 party into an obliv int array to both parties:&lt;/p&gt;
@@ -114,18 +127,20 @@ party into an obliv int array to both parties:&lt;/p&gt;
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;name-ocbroadcast-tname-tname-v-int-source&#34;&gt;name ocBroadcast&lt;Tname&gt;(tname v, int source)&lt;/h3&gt;
+&lt;h3 id=&#34;name-ocbroadcast-tname-tname-v-int-source&#34;&gt;name ocBroadcast&amp;lt;&lt;em&gt;Tname&lt;/em&gt;&amp;gt;(&lt;em&gt;tname&lt;/em&gt; v, int source)&lt;/h3&gt;
 
-&lt;p&gt;Obliv-C file; requires &lt;code&gt;#include &amp;lt;obliv.oh&amp;gt;&lt;/code&gt;. Returns v from the specified source
-(party). This function allows non-obliv data to be transferred across parties,
-similar to &lt;code&gt;feedObliv&amp;lt;Tname&amp;gt;()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Returns &lt;em&gt;v&lt;/em&gt; from the specified source (party). This function allows
+non-obliv data to be transferred across parties, similar to
+&lt;code&gt;feedObliv&amp;lt;Tname&amp;gt;()&lt;/code&gt;.&lt;/p&gt;
 
-&lt;h3 id=&#34;bool-revealobliv-tname-tname-dest-obliv-tname-src-int-party&#34;&gt;bool revealObliv&lt;Tname&gt;(tname* dest, obliv tname src, int party)&lt;/h3&gt;
+&lt;h3 id=&#34;bool-revealobliv-tname-tname-dest-obliv-tname-src-int-party&#34;&gt;bool revealObliv&amp;lt;&lt;em&gt;Tname&lt;/em&gt;&amp;gt;(&lt;em&gt;tname&lt;/em&gt;* dest, obliv &lt;em&gt;tname&lt;/em&gt; src, int party)&lt;/h3&gt;
 
-&lt;p&gt;Obliv-C file; requires &lt;code&gt;#include &amp;lt;obliv.oh&amp;gt;&lt;/code&gt;. Return value true means &lt;code&gt;dest&lt;/code&gt; was
-written to. &lt;code&gt;party&lt;/code&gt; indicates which party will receive the revealed obliv value;
-enter 0 for all parties to receive the revealed value. It is typical for this
-function to be called towards the end of a Yao protocol.&lt;/p&gt;
+&lt;p&gt;Return value true indicated that &lt;code&gt;dest&lt;/code&gt; was written to
+successfully. &lt;code&gt;party&lt;/code&gt; indicates which party will receive the revealed
+obliv value; use &lt;code&gt;0&lt;/code&gt; for all parties to receive the revealed value. It
+is typical for this function to be called towards the end of a
+protocol execution, revealing the output of the function that was
+computed security to both parties.&lt;/p&gt;
 </description>
     </item>
     

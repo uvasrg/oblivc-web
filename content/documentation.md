@@ -19,21 +19,19 @@ the [tutorial](../tutorial).
 
 ## General Usage
 
-### Use of tname
+### The `obliv` qualifier
 
-Valid substitutions for `tname` are `bool`, `char`, `int`, `short`, `long`, `long long`, or `float`,
-depending on what data type you need. `<Tname>` means to substitute in a valid
-type with the first character of the type capitalized. As of March 2018, the `obliv` qualifier is
-not supported for double-precision floating point, however, [single-precision floating point support is available](https://github.com/samee/obliv-c/pull/30).
+The `obliv` qualifier should be declared on any variable that is
+supposed to depend on unknown inputs in any way; `obliv`-qualified
+values implement secure encryption on the variable, and can only be
+declared in an Obliv-C file (`.oc`).  
 
-### The obliv qualifier
-
-The `obliv` qualifier should be declared on any variable that is supposed to
-depend on unknown inputs in any way; `obliv` qualified values implement secure
-encryption on the variable, and can only be declared in an Obliv-C file (.oc).
-Supported data types for the `obliv` qualifier are `bool`, `int`, `char`, `short`, `long`, `long long`, and `float`. Non-obliv values can be implicitly converted into obliv, but
-obliv values cannot be implicitly converted to non-obliv. Doing this requires
-`revealObliv<Tname>()` to be called.
+Supported data types for the `obliv` qualifier are `bool`, `int`,
+`char`, `short`, `long`, `long long`, and `float`. Non-obliv values
+can be implicitly converted into `obliv`, but `obliv` values cannot be
+implicitly converted to non-obliv. Doing this requires
+`revealObliv<Tname>()` (described below) to be called to indicate that
+previously-oblivious data is now being revealed.
 
 ### Where to begin
 
@@ -41,55 +39,71 @@ Take a look through the [tutorial](../tutorial) to get started. In order to star
 Obliv-C program between two parties, ensure that the following Obliv-C library
 functions are called in order:
  
-1. int protocolAcceptTcp2P(ProtocolDesc\* pd, const char\* port)
-2. int protocolConnectTcp2P(ProtocolDesc\* pd, const char\* server, const char\* port)
-3. void setCurrentParty(ProtocolDesc\* pd, int party)
-4. void execYaoProtocol(ProtocolDesc\* pd, protocol_run start, void\* arg)
-5. Any Obliv-C functions needed in your .oc file(s)
-6. void cleanupProtocol(ProtocolDesc\* pd)
+1. `int protocolAcceptTcp2P(ProtocolDesc* pd, const char* port)`
+2. `int protocolConnectTcp2P(ProtocolDesc* pd, const char* server, const char* port)`
+3. `void setCurrentParty(ProtocolDesc* pd, int party)`
+4. `void execYaoProtocol(ProtocolDesc* pd, protocol_run start, void* arg)`
+5. Any Obliv-C functions needed in your `.oc` files
+6. `void cleanupProtocol(ProtocolDesc* pd)`
 
 ## C Functions
 
-### void cleanupProtocol(ProtocolDesc\* pd)
-
-C file; requires `#include <obliv.h>`. Call this function in your C file after
-execYaoProtocol() has been called. This function will clean up the ProtocolDesc.
-
-### void execYaoProtocol(ProtocolDesc\* pd, protocol_run start, void\* arg)
-
-C file; requires `#include <obliv.h>`. Call this function in your C file's main()
-function to execute the Yao protocol. Supply the starting function name (without
-parentheses) in the Obliv-C file as the parameter for `protocol_run start`. Supply
-any arguments for the Obliv-C starting function in `void* arg`; pass in a struct
-to supply multiple parameters. Before calling this function, establish a
-connection between parties with protocolAcceptTcp2P() and
-protocolConnectTcp2P(), and call setCurrentParty().
+These functions should be called in a C file, and require using `#include <obliv.h>`.
 
 ### int protocolAcceptTcp2P(ProtocolDesc\* pd, const char\* port)
 
-C file; requires `#include <obliv.h>`. The first party calls this function to
-listen for a second party on the supplied port parameter. Use conditional logic
-to ensure only the first party calls this function.
+The first party calls this function to listen for a second party on
+the supplied port parameter. Use conditional logic to ensure only the
+first party calls this function.
 
 ### int protocolConnectTcp2P(ProtocolDesc\* pd, const char\* server, const char\* port)
 
-C file; requires `#include <obliv.h>`. The second party should call this function
-after the first party calls protocolAcceptTcp2P(); use conditional logic to
-ensure this. Supply either 'localhost', the IP address, or the DNS name of the
-first party to the `const char* server` parameter.
+The second party should call this function after the first party calls
+`protocolAcceptTcp2P()`; use conditional logic to ensure this. Supply
+either 'localhost', the IP address, or the DNS name of the first party
+to the `const char* server` parameter.
 
 ### void setCurrentParty(ProtocolDesc\* pd, int party)
 
-C file; requires `#include <obliv.h>`. Sets the proper parties into the
-ProtocolDesc. Call this before calling execYaoProtocol().
+Sets the proper parties into the `ProtocolDesc`. Call this before
+calling `execYaoProtocol()`.
+
+### void execYaoProtocol(ProtocolDesc\* pd, protocol_run start, void\* arg)
+
+Call this function in your C file's `main()` function to execute Yao's
+garbled circuits protocol. Supply the starting function name (without
+parentheses) in the Obliv-C file as the parameter for `protocol_run
+start`. Supply any arguments for the Obliv-C starting function in
+`void* arg`; pass in a struct to supply multiple parameters. Before
+calling this function, establish a connection between parties with
+`protocolAcceptTcp2P()` and `protocolConnectTcp2P()`, and call
+`setCurrentParty()`.
+
+### void cleanupProtocol(ProtocolDesc* pd)
+
+Call this function in your C file after `execYaoProtocol()` has been
+called. This function will clean up the `ProtocolDesc` object.
 
 ## Obliv-C Functions
 
-### obliv tname feedObliv<Tname>(tname v, int party)
+These functions should be used in Obliv-C (`.oc`) files. They require `#include <obliv.oh>'.
 
-Obliv-C file; requires `#include <obliv.oh>`. This function returns an `obliv`
-qualified `tname v` from the specified party to both parties. Double-precision 
-floating point numbers are not currently supported by the `obliv` qualifier. 
+Valid substitutions for _`tname`_ are `bool`, `char`, `int`, `short`,
+`long`, `long long`, or `float`.  The value of _`<Tname>` is the
+corresponding type name with its first letter capitalized. (As of
+March 2018, the `obliv` qualifier is not supported for
+double-precision floating point, however, [single-precision floating
+point support is
+available](https://github.com/samee/obliv-c/pull/30).)
+
+
+### obliv _tname_ feedObliv<_Tname_>(_tname_ v, int party)
+
+This function returns an `obliv`-qualified type from the specified
+party to both parties.  For example, for `float`, there is:
+```
+   obliv float feedOblivFloat(float v, int party)
+```
 
 Sample code for using this function to feed an int array from the specified
 party into an obliv int array to both parties:
@@ -103,15 +117,17 @@ void toObliv(int n, obliv int *oa, int *a, int party) {
 }
 ```
 
-### name ocBroadcast<Tname>(tname v, int source)
+### name ocBroadcast<_Tname_>(_tname_ v, int source)
 
-Obliv-C file; requires `#include <obliv.oh>`. Returns v from the specified source
-(party). This function allows non-obliv data to be transferred across parties,
-similar to `feedObliv<Tname>()`.
+Returns _v_ from the specified source (party). This function allows
+non-obliv data to be transferred across parties, similar to
+`feedObliv<Tname>()`.
 
-### bool revealObliv<Tname>(tname\* dest, obliv tname src, int party)
+### bool revealObliv<_Tname_>(_tname_\* dest, obliv _tname_ src, int party)
 
-Obliv-C file; requires `#include <obliv.oh>`. Return value true means `dest` was
-written to. `party` indicates which party will receive the revealed obliv value;
-enter 0 for all parties to receive the revealed value. It is typical for this
-function to be called towards the end of a Yao protocol.
+Return value true indicated that `dest` was written to
+successfully. `party` indicates which party will receive the revealed
+obliv value; use `0` for all parties to receive the revealed value. It
+is typical for this function to be called towards the end of a
+protocol execution, revealing the output of the function that was
+computed security to both parties. 
