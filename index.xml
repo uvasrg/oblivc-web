@@ -31,20 +31,17 @@ the &lt;a href=&#34;../tutorial&#34;&gt;tutorial&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&#34;use-of-tname&#34;&gt;Use of tname&lt;/h3&gt;
 
-&lt;p&gt;Valid substitutions for &lt;code&gt;tname&lt;/code&gt; are bool, char, int, short, long, or long long,
+&lt;p&gt;Valid substitutions for &lt;code&gt;tname&lt;/code&gt; are &lt;code&gt;bool&lt;/code&gt;, &lt;code&gt;char&lt;/code&gt;, &lt;code&gt;int&lt;/code&gt;, &lt;code&gt;short&lt;/code&gt;, &lt;code&gt;long&lt;/code&gt;, &lt;code&gt;long long&lt;/code&gt;, or &lt;code&gt;float&lt;/code&gt;,
 depending on what data type you need. &lt;code&gt;&amp;lt;Tname&amp;gt;&lt;/code&gt; means to substitute in a valid
-type with the first character of the type capitalized. As of July 2017, the &lt;code&gt;obliv&lt;/code&gt; qualifier is
-not valid for float or double. Use fixed point arithmetic as a workaround for
-these data types. However, &lt;a href=&#34;https://github.com/samee/obliv-c/pull/30&#34;&gt;floating point support is
-forthcoming&lt;/a&gt;.&lt;/p&gt;
+type with the first character of the type capitalized. As of March 2018, the &lt;code&gt;obliv&lt;/code&gt; qualifier is
+not supported for double-precision floating point, however, &lt;a href=&#34;https://github.com/samee/obliv-c/pull/30&#34;&gt;single-precision floating point support is available&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&#34;the-obliv-qualifier&#34;&gt;The obliv qualifier&lt;/h3&gt;
 
 &lt;p&gt;The &lt;code&gt;obliv&lt;/code&gt; qualifier should be declared on any variable that is supposed to
 depend on unknown inputs in any way; &lt;code&gt;obliv&lt;/code&gt; qualified values implement secure
 encryption on the variable, and can only be declared in an Obliv-C file (.oc).
-Supported data types for the &lt;code&gt;obliv&lt;/code&gt; qualifier are bool, int, char, short, long,
-and long long. Non-obliv values can be implicitly converted into obliv, but
+Supported data types for the &lt;code&gt;obliv&lt;/code&gt; qualifier are &lt;code&gt;bool&lt;/code&gt;, &lt;code&gt;int&lt;/code&gt;, &lt;code&gt;char&lt;/code&gt;, &lt;code&gt;short&lt;/code&gt;, &lt;code&gt;long&lt;/code&gt;, &lt;code&gt;long long&lt;/code&gt;, and &lt;code&gt;float&lt;/code&gt;. Non-obliv values can be implicitly converted into obliv, but
 obliv values cannot be implicitly converted to non-obliv. Doing this requires
 &lt;code&gt;revealObliv&amp;lt;Tname&amp;gt;()&lt;/code&gt; to be called.&lt;/p&gt;
 
@@ -103,8 +100,8 @@ ProtocolDesc. Call this before calling execYaoProtocol().&lt;/p&gt;
 &lt;h3 id=&#34;obliv-tname-feedobliv-tname-tname-v-int-party&#34;&gt;obliv tname feedObliv&lt;Tname&gt;(tname v, int party)&lt;/h3&gt;
 
 &lt;p&gt;Obliv-C file; requires &lt;code&gt;#include &amp;lt;obliv.oh&amp;gt;&lt;/code&gt;. This function returns an &lt;code&gt;obliv&lt;/code&gt;
-qualified &lt;code&gt;tname v&lt;/code&gt; from the specified party to both parties. Floating point
-numbers are not currently supported by the &lt;code&gt;obliv&lt;/code&gt; qualifier.&lt;/p&gt;
+qualified &lt;code&gt;tname v&lt;/code&gt; from the specified party to both parties. Double-precision
+floating point numbers are not currently supported by the &lt;code&gt;obliv&lt;/code&gt; qualifier.&lt;/p&gt;
 
 &lt;p&gt;Sample code for using this function to feed an int array from the specified
 party into an obliv int array to both parties:&lt;/p&gt;
