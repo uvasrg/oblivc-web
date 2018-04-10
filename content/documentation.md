@@ -1,5 +1,5 @@
 +++
-title = "Obliv-C - API Documentation"
+title = "Obliv-C - Documentation"
 draft = false
 date = "2017-07-06T16:05:58-04:00"
 notoc = "True"
