@@ -9,13 +9,9 @@ nopaging = "True"
 
 ## About this Documentation
 
-The below documentation of Obliv-C protocols, functions, qualifiers, and other
-aspects of the language is by no means comprehensive for the Obliv-C language. 
-It is included for the sole purpose of making the Obliv-C API simpler for users 
-to understand in order to write programs in Obliv-C successfully, and uses 
-an informal tone to achieve this purpose. See
-this [language primer](http://goo.gl/TXzxD0) for information not covered in this documentation or in
-the [tutorial](../tutorial).
+This documention is provided to make the Obliv-C API simpler for users to understand in order to write programs in Obliv-C successfully, and uses  an informal tone to achieve this purpose. For getting started with Obliv-C, we recommend first using the [tutorial](../tutorial).
+
+> (This documentation is generated from https://github.com/uvasrg/oblivc-web/edit/master/content/documentation.md; please submit an Issue or PR if you have suggestions on improving it.)
 
 ## General Usage
 
