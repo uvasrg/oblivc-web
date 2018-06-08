@@ -517,3 +517,10 @@ h2 {
    background: #EEE;
    color: #000;
 }
+
+.credits {
+  color: #888888;
+  font-size: 0.8rem;
+  margin-left: 10rem;
+  text-align: right;
+}
