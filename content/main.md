@@ -158,10 +158,11 @@ Redmond, WA. 20 February 2014.
 ## People
 
 [Samee Zahur](https://www.cs.virginia.edu/~sza4uq/), Project Founder and Leader (now at Google)  
+[Bargav Jayaraman](https://bargavjayaraman.github.io/), PhD Student  
+Nathaniel Grevatt, Undergraduate Researcher
 
 [David Evans](https://www.cs.virginia.edu/evans), Faculty Advisor  
-[Bargav Jayaraman](https://bargavjayaraman.github.io/), PhD Student  
-[Jesse Nayak](https://github.com/jnayak1), Undergraduate Researcher
+
 
 ### Alumni
 
@@ -170,6 +171,7 @@ Redmond, WA. 20 February 2014.
 [Jack Doerner](https://jackdoerner.net/), Wizard of Oblivion (now at Northeastern)  
 [Samuel Havron](https://havron.xyz), Undergraduate Researcher (now at Cornell)  
 [Hannah Li](https://github.com/HainaLi), Undergraduate at Masters Student (now at Facebook)  
+[Jesse Nayak](https://github.com/jnayak1), Undergraduate Researcher
     
 
 Other Contributors: [Richard
