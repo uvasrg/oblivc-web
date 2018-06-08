@@ -385,8 +385,8 @@ Authorities&lt;/em&gt;&lt;/a&gt;. &lt;a href=&#34;https://arxiv.org/abs/1706.033
       <description>
 
 &lt;p&gt;Obliv-C is a simple GCC wrapper that makes it easy to embed secure
-computation protocols inside regular C programs. This tutorial will
-explain how to set up and build your first Obliv-C program using a
+computation protocols inside regular C programs. This tutorial
+explains how to set up and build your first Obliv-C program using
 privacy-preserving linear regression application as an example.&lt;/p&gt;
 
 &lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
@@ -397,7 +397,7 @@ privacy-preserving linear regression application as an example.&lt;/p&gt;
 
 &lt;p&gt;Ubuntu:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;$ sudo apt-get install ocaml libgcrypt20-dev ocaml-findlib
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;$ sudo apt install ocaml libgcrypt20-dev ocaml-findlib
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Fedora:&lt;/p&gt;
@@ -412,7 +412,7 @@ privacy-preserving linear regression application as an example.&lt;/p&gt;
 
 &lt;h4 id=&#34;2-cloning-obliv-c&#34;&gt;2. Cloning Obliv-C&lt;/h4&gt;
 
-&lt;p&gt;Clone (git) the &lt;a href=&#34;https://github.com/samee/obliv-c&#34;&gt;Obliv-C source repository&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;Clone the &lt;a href=&#34;https://github.com/samee/obliv-c&#34;&gt;Obliv-C source repository&lt;/a&gt;:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;$ git clone https://github.com/samee/obliv-c
 &lt;/code&gt;&lt;/pre&gt;
@@ -431,70 +431,75 @@ privacy-preserving linear regression application as an example.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;$ CC=/opt/local/bin/gcc-mp-5 CPP=/opt/local/bin/cpp-mp-5 LIBRARY_PATH=/opt/local/lib ./configure &amp;amp;&amp;amp; make
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;You&amp;rsquo;re all set! The compiler is a GCC wrapper script found in
-   &lt;code&gt;bin/oblivcc&lt;/code&gt;.  Example programs are in &lt;code&gt;test/oblivc&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;You&amp;rsquo;re all set!&lt;/p&gt;
+
+&lt;p&gt;The compiler is a GCC wrapper script found in &lt;code&gt;bin/oblivcc&lt;/code&gt;.  Example programs are in &lt;code&gt;test/oblivc&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h2 id=&#34;understanding-obliv-c-programs&#34;&gt;Understanding Obliv-C Programs&lt;/h2&gt;
 
-&lt;p&gt;Here, we explain how an Obliv-C program works in four steps. For the
-purposes of this tutorial, we will be using a sample linear regression
-implementation in Obliv-C, &lt;a href=&#34;https://github.com/havron/obliv-c/tree/linReg/tutorial/olinReg&#34;&gt;found
-here&lt;/a&gt;. This
-example is for instructional purposes, and does not take advantage of
-all features of Obliv-C (notably, it does not use the built-in support
-for floating point numbers now provided by Obliv-C).&lt;/p&gt;
+&lt;p&gt;Here, we explain how an Obliv-C program works in four steps. For this tutorial, we implement a sample linear regression in Obliv-C: &lt;a href=&#34;https://github.com/samee/obliv-c/tree/obliv-c/test/oblivc/linreg&#34;&gt;https://github.com/samee/obliv-c/tree/obliv-c/test/oblivc/linreg&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This example is for instructional purposes only, and does not take
+advantage of all features of Obliv-C and favors simplicity over
+performance.&lt;/p&gt;
 
 &lt;h3 id=&#34;1-connecting-parties-storing-arguments-and-executing-yao-s-protocol&#34;&gt;1. Connecting parties, storing arguments, and executing Yao&amp;rsquo;s protocol&lt;/h3&gt;
 
-&lt;h4 id=&#34;storing-arguments-to-a-struct&#34;&gt;Storing Arguments to a Struct&lt;/h4&gt;
+&lt;p&gt;The protocol is started in &lt;code&gt;main()&lt;/code&gt; in
+&lt;a href=&#34;https://github.com/samee/obliv-c/blob/obliv-c/test/oblivc/linreg/linreg.c&#34;&gt;linreg.c&lt;/a&gt;. The
+&lt;code&gt;#include &amp;lt;obliv.h&amp;gt;&lt;/code&gt; header is needed to incorporate the Obliv-C library.&lt;/p&gt;
 
-&lt;p&gt;Navigate to &lt;code&gt;main()&lt;/code&gt; in
-&lt;a href=&#34;https://github.com/havron/obliv-c/blob/linReg/tutorial/olinReg/linReg.c&#34;&gt;linReg.c&lt;/a&gt;;
-notice the &lt;code&gt;#include &amp;lt;obliv.h&amp;gt;&lt;/code&gt; header needed to call
-Obliv-C&amp;rsquo;s built in functions. &lt;code&gt;ProtocolDesc pd&lt;/code&gt; is initialized, which is used as
-an argument for several essential functions. After storing commandline arguments
-(hostname, TCP port, party, and data filename) to &lt;code&gt;protocolIO io&lt;/code&gt; (a struct
-defined in
-&lt;a href=&#34;https://github.com/havron/obliv-c/blob/linReg/tutorial/olinReg/linReg.h&#34;&gt;linReg.h&lt;/a&gt;),
-a connection must be established between the two parties.
-&lt;em&gt;Using the struct is a convenient way to access and manipulate data between your
-C and Obliv-C files.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The first step to creating a protocol is to initialize a
+&lt;code&gt;ProtocolDesc&lt;/code&gt; object, stored in the &lt;code&gt;pd&lt;/code&gt; variable in this code. This
+is needed as an argument for several essential functions.&lt;/p&gt;
+
+&lt;p&gt;After storing the command-line arguments (hostname, TCP port, party,
+and data filename) to &lt;code&gt;protocolIO io&lt;/code&gt; (a struct defined in
+&lt;a href=&#34;https://github.com/samee/obliv-c/blob/obliv-c/test/oblivc/linreg/linreg.h&#34;&gt;linreg.h&lt;/a&gt;),
+a connection must be established between the two parties.  The
+&lt;code&gt;ProtocolDesc&lt;/code&gt; structure is a convenient way to represent
+data used in both your C and Obliv-C files.&lt;/p&gt;
 
 &lt;h4 id=&#34;connecting-parties&#34;&gt;Connecting Parties&lt;/h4&gt;
 
-&lt;pre&gt;&lt;code&gt;// code ...
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;// code ...
 const char *remote_host = strtok(argv[1], &amp;quot;:&amp;quot;); // parse hostname from cmdline
 const char *port = strtok(NULL, &amp;quot;:&amp;quot;); // parse port name from cmdline
 ProtocolDesc pd;
+protocolIO io;
 // code ...
-if(argv[2][0] == &#39;1&#39;) { // if the cmdline argument for party is 1
-  if(protocolAcceptTcp2P(&amp;amp;pd,port)!=0) { 
-    log_err(&amp;quot;TCP accept from %s failed\n&amp;quot;, remote_host);
-    exit(1);
-  }
-} else { // if the commandline argument for party is not 1
-  if(protocolConnectTcp2P(&amp;amp;pd,remote_host,port)!=0) {
-    log_err(&amp;quot;TCP connect to %s failed\n&amp;quot;, remote_host);
-    exit(1);
-  }
+log_info(&amp;quot;Connecting to %s on port %s ...\n&amp;quot;, remote_host, port);
+if(argv[2][0] == &#39;1&#39;) {
+   if(protocolAcceptTcp2P(&amp;amp;pd,port)!=0) {
+      log_err(&amp;quot;TCP accept from %s failed\n&amp;quot;, remote_host);
+      exit(1);
+   }
+} else {
+   if(protocolConnectTcp2P(&amp;amp;pd,remote_host,port)!=0) {
+      log_err(&amp;quot;TCP connect to %s failed\n&amp;quot;, remote_host);
+      exit(1);
+   }
 }
 // code ...
-currentParty = (argv[2][0]==&#39;1&#39;?1:2);
-setCurrentParty(&amp;amp;pd, currentParty);
+cp = (argv[2][0]==&#39;1&#39;? 1 : 2);
+setCurrentParty(&amp;amp;pd, cp); // only checks for a &#39;1&#39;
+io.src = argv[3]; // filename
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;The first party calls &lt;code&gt;protocolAcceptTcp2P()&lt;/code&gt; to listen for a connection (use of &lt;code&gt;log_err()&lt;/code&gt; is specific to &lt;a href=&#34;https://github.com/havron/obliv-c/blob/linReg/tutorial/olinReg/dbg.h&#34;&gt;dbg.h&lt;/a&gt;
-and is not necessary to include in your own files for the purpose of making an Obliv-C
-program. The important takeaway from the above code snippet is that the accept and connect
-functions were called by the appropriate parties). Then, the second party calls
-&lt;code&gt;protocolConnectTcp2P()&lt;/code&gt;, supplying the hostname from the commandline argument and
-connecting to the first party. After a connection is made, &lt;code&gt;setCurrentParty()&lt;/code&gt;
-is called, which allows the &lt;code&gt;ProtocolDesc pd&lt;/code&gt; to keep track of parties.&lt;/p&gt;
+&lt;p&gt;The first party calls &lt;code&gt;protocolAcceptTcp2P()&lt;/code&gt; to listen for a connection. The
+&lt;code&gt;log_err()&lt;/code&gt; function is defined for this example in &lt;a href=&#34;https://github.com/samee/obliv-c/blob/obliv-c/test/oblivc/linreg/dbg.h&#34;&gt;dbg.h&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The important takeaway from the above code snippet is that the accept
+and connect functions were called by the appropriate parties). Then,
+the second party calls &lt;code&gt;protocolConnectTcp2P()&lt;/code&gt;, supplying the
+hostname from the commandline argument and connecting to the first
+party. After a connection is made, &lt;code&gt;setCurrentParty()&lt;/code&gt; is called,
+which allows the &lt;code&gt;ProtocolDesc pd&lt;/code&gt; to keep track of parties.&lt;/p&gt;
 
 &lt;h4 id=&#34;executing-yao-s-protocol&#34;&gt;Executing Yao&amp;rsquo;s Protocol&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;// Execute Yao protocol and cleanup
-execYaoProtocol(&amp;amp;pd, linReg, &amp;amp;io); // starts &#39;linReg()&#39;
+execYaoProtocol(&amp;amp;pd, linReg, &amp;amp;io);
 cleanupProtocol(&amp;amp;pd);
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -502,12 +507,14 @@ cleanupProtocol(&amp;amp;pd);
 
 &lt;h3 id=&#34;2-loading-local-data-and-sharing-obliv-qualified-data&#34;&gt;2. Loading local data and sharing obliv qualified data&lt;/h3&gt;
 
-&lt;p&gt;Loading local data and obtaining protocolIO struct values in Obliv-C:
-Navigate to &lt;a href=&#34;https://github.com/havron/obliv-c/blob/linReg/tutorial/olinReg/linReg.oc&#34;&gt;linReg.oc&lt;/a&gt;
-and look at the &lt;code&gt;void linReg()&lt;/code&gt; function; this function was called by
-&lt;code&gt;execYaoProtocol()&lt;/code&gt; at the end of step 1.&lt;/p&gt;
+&lt;p&gt;Now, we switch to the Olbiv-C code in &lt;a href=&#34;https://github.com/samee/obliv-c/blob/obliv-c/test/oblivc/linreg/linreg.oc&#34;&gt;&lt;code&gt;linreg.oc&lt;/code&gt;&lt;/a&gt;. Code in the &lt;code&gt;.oc&lt;/code&gt; files can use the &lt;code&gt;obliv&lt;/code&gt; extensions, and it source-to-source translacted to C code as part of the Obliv-C compilation process.&lt;/p&gt;
+
+&lt;p&gt;Loading local data and obtaining &lt;code&gt;protocolIO&lt;/code&gt; struct values in Obliv-C
+is done inside the &lt;code&gt;void linReg()&lt;/code&gt; function, called by
+&lt;code&gt;execYaoProtocol()&lt;/code&gt; at the end of step 1:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;protocolIO *io = (protocolIO*) args;
+
 int *x = malloc(sizeof(int) * ALLOC);
 int *y = malloc(sizeof(int) * ALLOC);
 // code ...
@@ -515,194 +522,160 @@ load_data(io, &amp;amp;x, &amp;amp;y, ocCurrentParty());
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Notice that the struct used for accessing variables across C and Obliv-C files (&lt;code&gt;protocolIO io&lt;/code&gt;)
- is obtained from the call to &lt;code&gt;linReg()&lt;/code&gt; by &lt;code&gt;execYaoProtocol()&lt;/code&gt;.
-To load the data points (the private input) from local files for each party, two
-int arrays were created with &lt;code&gt;ALLOC&lt;/code&gt; being an initial size defined in
-&lt;a href=&#34;https://github.com/havron/obliv-c/blob/linReg/tutorial/olinReg/linReg.h&#34;&gt;linReg.h&lt;/a&gt;.
-The &lt;code&gt;load_data()&lt;/code&gt; function from
-&lt;a href=&#34;https://github.com/havron/obliv-c/blob/linReg/tutorial/olinReg/linReg.c&#34;&gt;linReg.c&lt;/a&gt;
- is called, with the int arrays created in the Obliv-C file being passed in as parameters.
-&lt;em&gt;It is important to note that calls can be made to C file functions even while being
-in Yao&amp;rsquo;s protocol and running code in an Obliv-C file&lt;/em&gt;.
- The majority of the &lt;code&gt;load_data()&lt;/code&gt; function is comprised of regular C procedures,
-with the exception of this code snippet:&lt;/p&gt;
+ is obtained from the call to &lt;code&gt;linReg()&lt;/code&gt; by &lt;code&gt;execYaoProtocol()&lt;/code&gt;.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;int aint = a * SCALE;
-assert(APPROX((double) DESCALE(aint), a));
+&lt;p&gt;To load the data points (the private input) from local files for each
+party, two int arrays were created with &lt;code&gt;ALLOC&lt;/code&gt; being an initial size
+defined in
+&lt;a href=&#34;https://github.com/samee/obliv-c/blob/obliv-c/test/oblivc/linreg/linreg.h&#34;&gt;&lt;code&gt;linreg.h&lt;/code&gt;&lt;/a&gt;.
+The &lt;code&gt;load_data()&lt;/code&gt; function from
+&lt;a href=&#34;https://github.com/samee/obliv-c/blob/obliv-c/test/oblivc/linreg/linreg.c&#34;&gt;&lt;code&gt;linreg.c&lt;/code&gt;&lt;/a&gt;
+is called, with the int arrays created in the Obliv-C file being
+passed in as parameters.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Note that calls can be
+made to C file functions even while being in Yao&amp;rsquo;s protocol and
+running code in an Obliv-C file&lt;/em&gt;.  The majority of the &lt;code&gt;load_data()&lt;/code&gt;
+function is comprised of regular C procedures, with the exception of
+this code snippet:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;float a_float = (float) a;
 if (party == 1) {
-  *(*x + io-&amp;gt;n - 1) =  aint; // messy, but needed for dereferencing 
+   *(*x + io-&amp;gt;n - 1) =  a_float; // messy, but needed for dereferencing 
 } else if (party == 2) {
-  *(*y + io-&amp;gt;n - 1) =  aint;
+   *(*y + io-&amp;gt;n - 1) =  a_float;
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;As of July 2017, the &lt;code&gt;obliv&lt;/code&gt; qualifier that we will need for the data to
-be shared with the other party does not accept the floating point number (&lt;code&gt;a&lt;/code&gt;)
- that is being read in from the data file. Support for floating point numbers
- &lt;a href=&#34;https://github.com/samee/obliv-c/pull/30&#34;&gt;is forthcoming&lt;/a&gt;, and will render this
-part of the tutorial irrelevant (simply use the &lt;code&gt;obliv float&lt;/code&gt; data type once it arrives).
-For now, the value stored in the int array is a scaled value of the float,
-such that the radix point is eliminated. Because of the scaling that is used on
-the numbers, data values of over 32,000 cannot be used as they cause integer
-overflow (a solution would be to use long ints or long long ints).
-The &lt;code&gt;assert()&lt;/code&gt; statement checks for whether the data value exceeds 32,000 by
-comparing its approximate value with its actual value. After the value is scaled
-and checked for exceeding its boundary, it is stored in the appropriate array based
-on whether it comes from party 1&amp;rsquo;s local file or party 2&amp;rsquo;s. Although the int arrays
-x and y were declared for both parties, only party 1 will have stored data to its own
-local x int array, and vice versa (if you need to share the local data values
-non-obliviously, look at &lt;code&gt;ocBroadcast&amp;lt;Tname&amp;gt;()&lt;/code&gt; in the &lt;a href=&#34;../documentation&#34;&gt;documentation&lt;/a&gt;).&lt;/p&gt;
-
 &lt;h4 id=&#34;sharing-obliv-data&#34;&gt;Sharing &lt;code&gt;obliv&lt;/code&gt; data&lt;/h4&gt;
 
-&lt;p&gt;Now that the data for each party is stored locally in scaled int arrays, the
-data must be made &lt;code&gt;obliv&lt;/code&gt; qualified and then shared with the other party
-as private data:&lt;/p&gt;
+&lt;p&gt;Now that the data for each party is stored locally in float arrays,
+the data must be made oblivious (converted to &lt;code&gt;obliv&lt;/code&gt;-typed data) and
+then shared with the other party as private data:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;// code ...
 check_input_count(io);
-  
-obliv int *ox = malloc(sizeof(obliv int) * io-&amp;gt;n);
-obliv int *oy = malloc(sizeof(obliv int) * io-&amp;gt;n);
-  
+
+obliv float *ox = malloc(sizeof(obliv float) * io-&amp;gt;n);
+obliv float *oy = malloc(sizeof(obliv float) * io-&amp;gt;n);
+    
 toObliv(io, ox, x, 1);
 toObliv(io, oy, y, 2);
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Two new int arrays that are &lt;code&gt;obliv&lt;/code&gt; qualified are created, with size n
-known since it was stored to &lt;code&gt;io-&amp;gt;n&lt;/code&gt; after loading the local data
-(notice the call to &lt;code&gt;check_input_count()&lt;/code&gt; which ensures both parties sent
-the same amount of data using the &lt;code&gt;ocBroadcastInt()&lt;/code&gt; function). Then, &lt;code&gt;toObliv()&lt;/code&gt;
- is called:&lt;/p&gt;
+&lt;p&gt;Two new float arrays that are &lt;code&gt;obliv&lt;/code&gt; qualified are created, with size
+&lt;code&gt;io-&amp;gt;n&lt;/code&gt; after loading the local data (note that the call to
+&lt;code&gt;check_input_count()&lt;/code&gt; ensures both parties sent the same amount of
+data using the &lt;code&gt;ocBroadcastFloat()&lt;/code&gt; function). Then, &lt;code&gt;toObliv()&lt;/code&gt; is
+called:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;// code ...
-void toObliv(protocolIO *io, obliv int *oa, int *a, int party) {
-  int i, res;
-  for(i = 0; i &amp;lt; io-&amp;gt;n; i++) {
-    oa[i] = feedOblivInt(a[i], party);
-  }
+void toObliv(protocolIO *io, obliv float *oa, float *a, int party) 
+{
+    for(int i = 0; i &amp;lt; io-&amp;gt;n; i++) {
+        oa[i] = feedOblivFloat(a[i], party);
+    }
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;code&gt;feedOblivInt()&lt;/code&gt; (see &lt;a href=&#34;../documentation&#34;&gt;documentation&lt;/a&gt;) allows both parties to
-share their data over their network connection as &lt;code&gt;obliv&lt;/code&gt; qualified values.
-The loop in &lt;code&gt;toObliv()&lt;/code&gt; goes through each value in each party&amp;rsquo;s respective array.
-You may notice that while both parties call &lt;code&gt;toObliv()&lt;/code&gt; twice, the party from which the
-local int array is selected is hardcoded into the function call, so as to prevent party 1
-from trying to convert its own y array data (which are all 0 because nothing was ever stored
-to them) into &lt;code&gt;obliv&lt;/code&gt; values, and vice versa.&lt;/p&gt;
+&lt;p&gt;The call to &lt;code&gt;feedOblivFloat()&lt;/code&gt; (see &lt;a href=&#34;../documentation&#34;&gt;documentation&lt;/a&gt;)
+allows both parties to share their data over their network connection
+as &lt;code&gt;obliv&lt;/code&gt; qualified values.&lt;/p&gt;
 
-&lt;h3 id=&#34;3-computing-linear-regression-and-using-fixed-point-math&#34;&gt;3. Computing linear regression and using fixed point math&lt;/h3&gt;
+&lt;p&gt;The loop in &lt;code&gt;toObliv()&lt;/code&gt; goes through each value in each party&amp;rsquo;s
+respective array.  You may notice that while both parties call
+&lt;code&gt;toObliv()&lt;/code&gt; twice, the party from which the local float array is
+selected is hardcoded into the function call, so as to prevent party 1
+from trying to convert its own y array data (which are all 0 because
+nothing was ever stored to them) into &lt;code&gt;obliv&lt;/code&gt; values, and vice versa.&lt;/p&gt;
 
-&lt;h4 id=&#34;fixed-point-math-usage&#34;&gt;Fixed point math usage&lt;/h4&gt;
-
-&lt;p&gt;See &lt;a href=&#34;https://github.com/samee/obliv-c/pull/30&#34;&gt;forthcoming floating point support&lt;/a&gt;!&lt;/p&gt;
-
-&lt;p&gt;As mentioned in step 2, the data values that have been shared by each
-party as &lt;code&gt;obliv&lt;/code&gt; qualified values were first scaled to be integers from their
-original float values when being read in from their data files using bit shifting
-(see &lt;a href=&#34;https://github.com/havron/obliv-c/blob/linReg/tutorial/olinReg/linReg.h&#34;&gt;linReg.h&lt;/a&gt;
-for &lt;code&gt;#define SCALE&lt;/code&gt; and &lt;code&gt;#define DESCALE()&lt;/code&gt;). This changes how multiplication and
-division can be done on scaled values; see &lt;code&gt;fixed_div()&lt;/code&gt; and &lt;code&gt;fixed_mul()&lt;/code&gt;
-in &lt;a href=&#34;https://github.com/havron/obliv-c/blob/linReg/tutorial/olinReg/linReg.oc&#34;&gt;linReg.oc&lt;/a&gt;
- to look at the fixes needed (essentially, temporary obliv long long ints had to be used
-in order to handle the large numbers that result from multiplying the already
-very high scaled ints, and then adjusting the scale appropriately).&lt;/p&gt;
+&lt;h3 id=&#34;3-computing-linear-regression&#34;&gt;3. Computing linear regression&lt;/h3&gt;
 
 &lt;h4 id=&#34;computing-the-function-of-two-parties-linear-regression&#34;&gt;Computing the function of two parties (linear regression)&lt;/h4&gt;
 
-&lt;p&gt;Our data has been shared obliviously into two arrays, and we are now ready to
-perform our joint function on our private data (linear regression):&lt;/p&gt;
+&lt;p&gt;Our data has been shared obliviously into two arrays, and we are now
+ready to perform our joint function on our private data (linear
+regression). The code is very similar to what would be done in a
+non-private implementation using standard C, except for the use of
+&lt;code&gt;obliv&lt;/code&gt; type qualifiers for the oblivious data.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;// code ...
 int n = io-&amp;gt;n;
-obliv int sumx = sum(ox, n); // sum of x
-obliv int sumxx = dotProd(ox, ox, n); // sum of each x squared
-obliv int sumy = sum(oy, n); // sum of y
-obliv int sumyy = dotProd(oy, oy, n); // sum of each y squared
-obliv int sumxy = dotProd(ox, oy, n); // sum of each x * y
+obliv float sumx = sum(ox, n); // sum of x
+obliv float sumxx = dotProd(ox, ox, n); // sum of each x squared
+obliv float sumy = sum(oy, n); // sum of y
+obliv float sumyy = dotProd(oy, oy, n); // sum of each y squared
+obliv float sumxy = dotProd(ox, oy, n); // sum of each x * y
 
 // Compute least-squares best fit straight line
-om = fixed_div(n * sumxy - fixed_mul(sumx, sumy), n * sumxx - osqr(sumx)); // slope
-ob = fixed_div(fixed_mul(sumy, sumxx) - fixed_mul(sumx, sumxy), n * sumxx - osqr(sumx)); // y-intercept
+om = (n * sumxy - (sumx * sumy)) / (n * sumxx - osqr(sumx)); // slope
+ob = ((sumy * sumxx) - (sumx * sumxy)) / (n * sumxx - osqr(sumx)); // y-intercept
 
-obliv int ocov = (n*sumxy - fixed_mul(sumx, sumy));
-obliv int ostddevs = fixed_mul((n*sumxx) - osqr(sumx), (n*sumyy) - osqr(sumy));
-obliv int orsqr = fixed_div(osqr(ocov), ostddevs); // sqrt(revealed rsqr) = r
+obliv float ocov = (n * sumxy) - (sumx * sumy);
+obliv float ostddevs = ((n * sumxx) - osqr(sumx)) * ((n * sumyy) - osqr(sumy));
+obliv float orsqr = osqr(ocov) * ostddevs; // sqrt(revealed rsqr) = r
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;First, notice the &lt;code&gt;sum()&lt;/code&gt; and &lt;code&gt;dotProd()&lt;/code&gt; functions called, which allow us to
-obtain summations that we need in order to compute our three results: om (obliv slope),
-ob (obliv y-intercept), and orsqr (obliv correlation squared). Then we can use those
-summations to calculate our results; note that all multiplication and division is
-adjusted for fixed point math. With the results now captured as &lt;code&gt;obliv int&lt;/code&gt;s,
-we are ready to reveal them to the users and cleanup our protocol.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;sum()&lt;/code&gt; and &lt;code&gt;dotProd()&lt;/code&gt; function allow us to obtain summations
+that we need in order to compute our three (oblivious) results: &lt;code&gt;om&lt;/code&gt; (slope),
+&lt;code&gt;ob&lt;/code&gt; (obliv y-intercept), and &lt;code&gt;orsqr&lt;/code&gt; (correlation squared).&lt;/p&gt;
+
+&lt;p&gt;We then use these summations to calculate our results, which will be
+revealed at the end of the protocol execution.&lt;/p&gt;
 
 &lt;h3 id=&#34;4-revealing-results-cleaning-up&#34;&gt;4. Revealing results, cleaning up&lt;/h3&gt;
 
 &lt;h4 id=&#34;revealing-results&#34;&gt;Revealing Results&lt;/h4&gt;
 
-&lt;p&gt;With our values for om, ob, and orsqr obtained, we can reveal them:&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;revealOblivFloat&lt;/code&gt; function is used to reveal the oblivious
+results to both parties. The first parameter is the location where the
+non-obliv result value is to be stored, a field in the &lt;code&gt;protocolIO io&lt;/code&gt; struct. The second parameter is the &lt;code&gt;obliv&lt;/code&gt; result that will be revealed and stored into that location. Lastly, &amp;lsquo;0&amp;rsquo; specifies that all parties
+will receive the result (alternatively a non-zero value could be used to reveal the result to just one of the paries).&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;revealOblivInt(&amp;amp;io-&amp;gt;rsqr, orsqr, 0);
-revealOblivInt(&amp;amp;io-&amp;gt;m, om, 0);
-revealOblivInt(&amp;amp;io-&amp;gt;b, ob, 0);
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;revealOblivFloat(&amp;amp;io-&amp;gt;rsqr, orsqr, 0);
+revealOblivFloat(&amp;amp;io-&amp;gt;m, om, 0);
+revealOblivFloat(&amp;amp;io-&amp;gt;b, ob, 0);
 &lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;See the &lt;a href=&#34;../documentation&#34;&gt;documentation&lt;/a&gt; for &lt;code&gt;revealOblivInt()&lt;/code&gt;.
-The first parameter is the location where the non-obliv result value is
-stored (&lt;code&gt;protocolIO io&lt;/code&gt; is used here, as it is our struct for accessing data on
-either our C or Obliv-C files). The second parameter is our &lt;code&gt;obliv&lt;/code&gt; results that will
-have their &lt;code&gt;obliv&lt;/code&gt; qualifier removed when they are stored to the destination (&lt;code&gt;io&lt;/code&gt; struct).
- Lastly, &amp;lsquo;0&amp;rsquo; specifies that all parties will receive the result, instead of &amp;lsquo;1&amp;rsquo;
-for party 1 or &amp;lsquo;2&amp;rsquo; for party 2 receiving the results.&lt;/p&gt;
 
 &lt;h4 id=&#34;cleaning-up-recording-runtime-information&#34;&gt;Cleaning up, recording runtime information&lt;/h4&gt;
 
-&lt;p&gt;Having stored the results as non-obliv ints in the io struct, we are now ready
-to leave Yao&amp;rsquo;s protocol and print our results to the Terminal.
-After freeing our int arrays and obliv int arrays, &lt;code&gt;linReg()&lt;/code&gt; is finished,
-and as result &lt;code&gt;execYaoProtocol()&lt;/code&gt; from
-&lt;a href=&#34;https://github.com/havron/obliv-c/blob/linReg/tutorial/olinReg/linReg.c&#34;&gt;linReg.c&lt;/a&gt;
-is finished.&lt;/p&gt;
+&lt;p&gt;Having stored the results as non-obliv floats in the &lt;code&gt;io&lt;/code&gt; struct, we are now ready
+to complete Yao&amp;rsquo;s protocol and print our results to the Terminal.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;execYaoProtocol(&amp;amp;pd, linReg, &amp;amp;io); // starts &#39;linReg()&#39;
+&lt;p&gt;After freeing our &lt;code&gt;float&lt;/code&gt; arrays and &lt;code&gt;obliv float&lt;/code&gt; arrays, &lt;code&gt;linReg()&lt;/code&gt; finishes,
+and as a result &lt;code&gt;execYaoProtocol()&lt;/code&gt;, from
+&lt;a href=&#34;https://github.com/samee/obliv-c/blob/obliv-c/test/oblivc/linreg/linreg.c&#34;&gt;linreg.c&lt;/a&gt;,
+completes execution as well.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;// Execute Yao&#39;s protocol and cleanup
+execYaoProtocol(&amp;amp;pd, linReg, &amp;amp;io);
 cleanupProtocol(&amp;amp;pd);
 // code ...
-/* WARNING (July 2017): yaoGateCount() is now defined 
-    and must be implemented in linReg.oc and not here */
-int gates = yaoGateCount();
-// code ...
-log_info(&amp;quot;Slope   \tm = %15.6e\n&amp;quot;, (double) DESCALE(io.m)); // print slope
-log_info(&amp;quot;y-intercept\tb = %15.6e\n&amp;quot;, (double) DESCALE(io.b)); // print y-intercept
-log_info(&amp;quot;Correlation\tr = %15.6e\n&amp;quot;, sqrt((double) DESCALE(io.rsqr))); // print correlation
+
+log_info(&amp;quot;Slope   \tm = %15.6e\n&amp;quot;, io.m); // print slope
+log_info(&amp;quot;y-intercept\tb = %15.6e\n&amp;quot;, io.b); // print y-intercept
+log_info(&amp;quot;Correlation\tr = %15.6e\n&amp;quot;, sqrt(io.rsqr)); // print correlation
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;As noted in step 1, &lt;code&gt;log_info()&lt;/code&gt; is specific to
-&lt;a href=&#34;https://github.com/havron/obliv-c/blob/linReg/tutorial/olinReg/dbg.h&#34;&gt;dbg.h&lt;/a&gt;
- and is not necessary to include in your own files for the purpose of making an
-Obliv-C program (&lt;code&gt;printf()&lt;/code&gt; works just fine). First, &lt;code&gt;cleanupProtocol()&lt;/code&gt; is called;
- see the documentation for this function, it is necessary to be called just as &lt;code&gt;free()&lt;/code&gt;
- needs to be called after &lt;code&gt;malloc()&lt;/code&gt; on a given variable. A useful built in function
-to Obliv-C is &lt;code&gt;yaoGateCount()&lt;/code&gt;, which measures the amount of gates needed for
-executing Yao&amp;rsquo;s protocol. After printing some of this information, we are ready to
-print our results from the linear regression. Notice that &lt;code&gt;DESCALE()&lt;/code&gt; is needed to
-scale the results back down to floats, and &lt;code&gt;sqrt()&lt;/code&gt; is called on &lt;code&gt;rsqr()&lt;/code&gt; to obtain
-r (there is currently no supported &lt;code&gt;osqrt()&lt;/code&gt; function in Obliv-C, making it necessary
-to perform &lt;code&gt;sqrt()&lt;/code&gt; outside of Yao&amp;rsquo;s protocol. Although this is considered performing
-a computation on values whose reveal was intended to be final, no intermediate information
-can be reverse engineered as a result of calling &lt;code&gt;sqrt()&lt;/code&gt; outside of Yao&amp;rsquo;s protocol).&lt;/p&gt;
+&lt;p&gt;To conclude, &lt;code&gt;cleanupProtocol()&lt;/code&gt;, serving a similar purpose to use of &lt;code&gt;free()&lt;/code&gt;
+after calling &lt;code&gt;malloc()&lt;/code&gt; on a given variable.
+(Another useful built in function
+to Obliv-C is &lt;code&gt;yaoGateCount()&lt;/code&gt;, which gives the number gates executed in the protocol). Finally, we print our results from the linear regression.&lt;/p&gt;
 
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 
-&lt;p&gt;We hope that using the walkthrough tutorial of the linear regression
-implementation in Obliv-C will be a useful guide in starting to write
-your own Obliv-C programs!&lt;/p&gt;
+&lt;p&gt;We hope that this tutorial of how to implement linear regression
+ in Obliv-C will be a useful guide for starting to write
+your own Obliv-C programs!  You&amp;rsquo;ll find many more example Obliv-C programs in the repository as well as the other repositories linked for other &lt;a href=&#34;//oblivc.org/#projects&#34;&gt;Obliv-C Projects&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Please let us know if you have any suggestions for improving Obliv-C
 or this tutorial.  We also welcome issues and pull requests to the
-&lt;a href=&#34;https://github.com/samee/obliv-c&#34;&gt;Obliv-C repository&lt;/a&gt;, and hearing
+&lt;a href=&#34;https://github.com/samee/obliv-c&#34;&gt;Obliv-C repository&lt;/a&gt; and deeply appreciate hearing
 about your experiences building applications with Obliv-C.&lt;/p&gt;
+
+&lt;div class=&#34;credits&#34;&gt;
+This tutorial was developed by Sam Havron, Nathaniel Grevatt, and David Evans.
+&lt;/div&gt;
 </description>
     </item>
     
@@ -762,6 +735,8 @@ Data-Oblivious Computation&lt;/em&gt;&lt;/a&gt;,
 &lt;p&gt;Calling Obliv-C protocols from Rust programs (&lt;a href=&#34;https://www.informatik.hu-berlin.de/de/Members/schopmaf/&#34;&gt;Phillipp
 Schoppmann&lt;/a&gt;)&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a name=&#34;projects&#34;&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;projects-using-obliv-c&#34;&gt;Projects Using Obliv-C&lt;/h2&gt;
 
