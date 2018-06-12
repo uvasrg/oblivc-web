@@ -114,6 +114,9 @@ Bargav Jayaraman (Accenture Technology Labs, Bangalore &rarr; now at UVA)
 
 ### Applications Built with Obliv-C by Others
 
+[Private Nearest Neighbors Classification in Federated Databases](https://eprint.iacr.org/2018/289.pdf), Phillipp Schoppmann, Adria Gascon, and Borja Balle.  
+[Cryptology ePrint Archive: Report 2018/289](https://eprint.iacr.org/2018/289). March 2018.
+
 [Pretzel: Email encryption and provider-supplied functions are
 compatible](http://www.cs.nyu.edu/~mwalfish/papers/pretzel-sigcomm17.pdf),
 Trinabh Gupta, Henrique Fingler, Lorenzo Alvisi, and Michael
