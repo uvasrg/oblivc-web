@@ -114,6 +114,9 @@ Bargav Jayaraman (Accenture Technology Labs, Bangalore &rarr; now at UVA)
 
 ### Applications Built with Obliv-C by Others
 
+[Blind Justice: Fairness with Encrypted Sensitive Attributes](https://arxiv.org/abs/1806.03281).
+Niki Kilbertus, Adri&agrave;  Gasc&oacute;n, Matt J. Kusner, Michael Veale, Krishna P. Gummadi, Adrian Weller. ICML 2018. [PDF](https://arxiv.org/pdf/1806.03281.pdf). 
+
 [Private Nearest Neighbors Classification in Federated Databases](https://eprint.iacr.org/2018/289.pdf), Phillipp Schoppmann, Adri&agrave;  Gasc&oacute;n, and Borja Balle.  
 [Cryptology ePrint Archive: Report 2018 / 289](https://eprint.iacr.org/2018/289). March 2018.
 
