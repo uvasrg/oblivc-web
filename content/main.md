@@ -24,7 +24,7 @@ Data-Oblivious Computation_](http://eprint.iacr.org/2015/1153.pdf),
 
 This mini-book provides an introduction to secure multi-party computation:
 
-> David Evans, Vladimir Kolesnikov and Mike Rosulek. [_A Pragmatic Introduction toSecure Multi-Party Computation_](https://www.cs.virginia.edu/~evans/pragmaticmpc/), NOW Publishers, December 2018. [[PDF](https://www.cs.virginia.edu/~evans/pragmaticmpc/pragmaticmpc.pdf)]
+> David Evans, Vladimir Kolesnikov and Mike Rosulek. [_A Pragmatic Introduction to Secure Multi-Party Computation_](https://www.securecomputation.org/), NOW Publishers, December 2018. [[PDF](https://www.securecomputation.org/docs/pragmaticmpc.pdf)]
 
 ## Getting Started
 
