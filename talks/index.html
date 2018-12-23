@@ -3,7 +3,7 @@
 
 <head>
   <title>
-    Revisiting Square Root ORAM // Obliv-C
+    Obliv-C Talks // Obliv-C
   </title>
 
   <link href="//gmpg.org/xfn/11" rel="profile">
@@ -18,11 +18,11 @@
 <meta name="generator" content="Hugo 0.17" />
 
 
-  <meta property="og:title" content="Revisiting Square Root ORAM" />
+  <meta property="og:title" content="Obliv-C Talks" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="en_US" />
-<meta property="og:url" content="//oblivc.org/sqoram/" />
+<meta property="og:url" content="//oblivc.org/talks/" />
 
 
   
@@ -102,7 +102,7 @@ A Language for Extensible Data&#8209;Oblivious Computation
 		
   		<section class="post">
             <h1 class="post-title">
-              <a href="/sqoram/">Revisiting Square Root ORAM</a>
+              <a href="/talks/">Obliv-C Talks</a>
             </h1>
             <h3 class="post-subtitle">
             	
@@ -119,53 +119,39 @@ A Language for Extensible Data&#8209;Oblivious Computation
 
 			
 
-            
+            <p>David Evans. <a href="https://www.jeffersonswheel.org/2017/secure-multi-party-computation-promises-protocols-and-practicalities"><em>Secure Multi-Party Computation: Promises, Protocols, and Practicalities</em></a>. <a href="http://crypto-events.di.ens.fr/ecryptnet/">ECRYPT NET Workshop
+on Crypto for the Cloud &amp; Implementation</a>, Paris, France, 27 June
+2017. [<a
+href="https://speakerdeck.com/evansuva/secure-multi-party-computation-promises-protocols-and-practicalities">Speaker&nbsp;Deck</a>]</p>
 
-<h2 id="efficient-random-access-in-multi-party-computation">Efficient Random Access in Multi-Party Computation</h2>
+<p>David Evans and Denis Nekipelov. <a href="https://www.jeffersonswheel.org/2016/ftc-visit"><em>Private Data Analysis using Multi-Party Computation</em></a>.
+Federal Trade Commission (joint presentation), 18 August 2016.</p>
 
-<p>Hiding memory access patterns is required for secure computation, but
-remains prohibitively expensive for many interesting applications. Prior
-work has either developed custom algorithms that minimize the need for
-data-dependant memory access, or proposed the use of Oblivious RAM
-(ORAM) to provide a general-purpose solution. However, most ORAMs are
-designed for client-server scenarios, and provide only asymptotic
-benefits in secure computation.</p>
+<p>David Evans. <a href="https://www.jeffersonswheel.org/2016/shanghaitech-symposium"><em>Memory for Data Oblivious Computation</em></a>.  <a href="http://ssist2016.shanghaitech.edu.cn/index.html">ShanghaiTech Symposium</a>, 25 June
+  2016. [<a href="https://speakerdeck.com/evansuva/memory-for-data-oblivious-computation">Speaker Deck</a>]</p>
 
-<p>We show how the classical square-root ORAM of Goldreich and Ostrovsky
-can be modified to provide a practical ORAM for use in secure
-computation, even though it is asymptotically worse than the best known
-schemes. Specifically, we show a design that has over 100<em>x</em> lower
-initialization cost, and provides benefits over linear scan for just 8
-blocks of data. Our scheme outperforms alternate approaches across a
-wide range of parameters, often by several orders of magnitude.</p>
+<p>David Evans. <a href="https://www.jeffersonswheel.org/2016/aarhus-workshop-on-theory-and-practice-of-secure-multiparty-computation"><em>From Mercury Delay Lines to Magnetic Core Memories: Progress in Oblivious Memories</em></a>.
+<a href="http://ctic.au.dk/events/workshops-conferences/mpc-2016/">Workshop
+  on Theory and Practice of Secure Multiparty Computation</a>, Aarhus
+  University, Denmark. 1 June 2016. [<a href="https://speakerdeck.com/evansuva/from-mercury-delay-lines-to-magnetic-core-memories-progress-in-oblivious-memories">Speaker Deck</a>]</p>
 
-<p><img src="/images/sqoramcompare.png" align="center" width="70%"></p>
+<p>Samee Zahur. <a href="http://www.humangenomeprivacy.org/2015/slides/UV.pdf"><em>Obliv-C: A Simple C Extension for
+SMC</em></a>, iDash
+Privacy &amp; Security Workshop 2015.  (Won award for fasted &ldquo;Hamming
+Distance&rdquo; execution.)</p>
 
-<h2 id="code">Code</h2>
+<p>David Evans. <a href="http://www.cs.virginia.edu/~evans/talks/crossing2015/"><em>Multi-Party Computation for the
+Masses</em></a>
+(includes video).  <a href="https://www.crossing.tu-darmstadt.de/en/news-events/crossing-conference-2015/">CROSSING Conference 2015: Where Quantum Physics,
+Cryptography, System Security and Software Engineering
+Meet</a>. Darmstadt. 1 June 2015</p>
 
-<p><a href="https://github.com/samee/sqrtOram">https://github.com/samee/sqrtOram</a></p>
-
-<p>This repository includes the implementation of Square-Root ORAM in
-<a href="/">Obliv-C</a>, as well as several example applications and benchmarks.</p>
-
-<h2 id="paper">Paper</h2>
-
-<p>Samee Zahur, Xiao Wang, Mariana Raykova, Adrià Gascón, Jack Doerner,
-David Evans, Jonathan Katz. <a href="/docs/sqoram.pdf"><em>Revisiting Square-Root ORAM Efficient
-Random Access in Multi-Party Computation</em></a>. In <a href="http://www.ieee-security.org/TC/SP2016/"><em>37<sup>th</sup> IEEE
-Symposium on Security and
-Privacy</em></a> (&ldquo;Oakland&rdquo;). San
-Jose, CA. 23-25 May 2016.</p>
-
-<h2 id="people">People</h2>
-
-<p><a href="https://www.cs.virginia.edu/~sza4uq/">Samee Zahur</a> (University of Virginia), Project Founder and Leader<br />
-<a href="https://github.com/wangxiao1254">Xiao Wang</a> (University of Maryland)<br />
-<a href="http://cpsc.yale.edu/people/mariana-raykova">Mariana Raykova</a> (Yale University)<br />
-<a href="http://www.cs.upc.edu/~agascon/">Adrià Gascón</a> (University of Edinburgh)<br />
-<a href="https://jackdoerner.net/">Jack Doerner</a> (University of Virginia)<br />
-<a href="https://www.cs.virginia.edu/evans">David Evans</a> (University of Virginia)<br />
-<a href="https://www.cs.umd.edu/~jkatz/">Jonathan Katz</a> (University of Maryland)</p>
+<p>Samee Zahur. <a href="http://research.microsoft.com/apps/video/dl.aspx?id=20989"><em>Obliv-C: A Lightweight Compiler for Data-Oblivious
+Computation</em></a>
+(includes video). Applied Multi-Party Computation.  Microsoft Research,
+Redmond, WA. 20 February 2014.
+   </div>
+   </div></p>
 
 	
 			
