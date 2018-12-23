@@ -22,6 +22,9 @@ Data-Oblivious Computation_](http://eprint.iacr.org/2015/1153.pdf),
 2015:1153](http://eprint.iacr.org/2015/1153)
 [[PDF](http://eprint.iacr.org/2015/1153)], November 2015.
 
+This mini-book provides an introduction to secure multi-party computation:
+
+> David Evans, Vladimir Kolesnikov and Mike Rosulek. [_A Pragmatic Introduction toSecure Multi-Party Computation_](https://www.cs.virginia.edu/~evans/pragmaticmpc/), NOW Publishers, December 2018. [[PDF](https://www.cs.virginia.edu/~evans/pragmaticmpc/pragmaticmpc.pdf)]
 
 ## Getting Started
 
@@ -43,127 +46,99 @@ Data-Oblivious Computation_](http://eprint.iacr.org/2015/1153.pdf),
 > Calling Obliv-C protocols from Rust programs ([Phillipp
 Schoppmann](https://www.informatik.hu-berlin.de/de/Members/schopmaf/))
 
-<a name="projects">
+<a name="projects"></a>
+
 ## Projects Using Obliv-C 
 
+   <div class="row3">
+   <div class="column3">
 ### Libraries and Protocols
 
-#### [floram](https://gitlab.com/neucrypt/floram)
+Fast Oblivious Memories:  
+[**floram**](https://gitlab.com/neucrypt/floram)  
+[**SqORAM**](/sqoram)
 
-Jack Doerner and abhi shelat. [_Scaling ORAM for Secure
-Computation_](https://acmccs.github.io/papers/p523-doernerA.pdf). In
-[_24<sup>th</sup> ACM Conference on Computer and Communications
-Security_](https://ccs2017.sigsac.org/). Dallas, TX. 31 Oct-3 November
-2017. (Best Paper Award)
+Cryptographic library:  
+[**Absentminded Crypto Kit**](https://bitbucket.org/jackdoerner/absentminded-crypto-kit)
 
-#### [SqORAM](/sqoram)
-
-Samee Zahur, Xiao Wang, Mariana Raykova, Adrià Gascón, Jack Doerner,
-David Evans, Jonathan Katz. [_Revisiting Square-Root ORAM Efficient
-Random Access in Multi-Party Computation_](/docs/sqoram.pdf) In
-[_37<sup>th</sup> IEEE Symposium on Security and
-Privacy_](http://www.ieee-security.org/TC/SP2016/) ("Oakland"). San
-Jose, CA. 23-25 May 2016.
-
-#### [Absentminded Crypto Kit](https://bitbucket.org/jackdoerner/absentminded-crypto-kit)
-
-Jack Doerner.  Library of oblivious implementations of cryptographic
-primitives implemented in Obliv-C.  Includes big integer math, hash
-functions, sorting, graph algorithms, oblivious data structures, and
-ORAM implementations.  [Code:&nbsp;[https://bitbucket.org/jackdoerner/absentminded-crypto-kit](https://bitbucket.org/jackdoerner/absentminded-crypto-kit)]
-
-
-#### Half-Gates
-
-Samee Zahur, Mike Rosulek, and David Evans.  <a href="http://mightbeevil.com/halfgates/"><em>Two Halves Make a Whole: Reducing Data Transfer in Garbled Circuits using Half Gates</em></a>.  In <a href="https://www.cosic.esat.kuleuven.be/eurocrypt_2015/papers.shtml">EuroCrypt 2015</a>.  Sofia, Bulgaria.  26-30 April 2015. [<a href="http://www.cs.virginia.edu/evans/pubs/ec2015/halfgates.pdf">PDF</a>, 28 pages] [<a href="http://github.com/samee/obliv-c">Code</a>]
-
+[**Half-Gates**](https://mightbeevil.com/halfgates/)
+   </div>
+   <div class="column3">
 ### Applications
 
-#### [Oblivious Knuth-Morris-Pratt Sub-String Search](https://github.com/jnayak1/kmp-mpc)
+[**Distributed Learning**](/ppml)  
+[Distributed Linear Regression](https://eprint.iacr.org/2016/892)  
+[Secure Deep Learning](https://github.com/bargavjayaraman/SecureDeepLearning)  
 
-Jesse Nayak (capstone project). Code: [_https://github.com/jnayak1/kmp-mpc_](https://github.com/jnayak1/kmp-mpc).
 
-#### [Privacy-Preserving Distributed Linear Regression on High-Dimensional Data](https://eprint.iacr.org/2016/892)
+[**Secure Stable Matching**](/matching)
 
-Adria&#768; Gasco&#769;n and Phillipp Schoppmann and Borja Balle and
-Mariana Raykova and Jack Doerner and Samee Zahur and David Evans. In [Privacy Enhancing Technologies Symposium](https://petsymposium.org/2017/) (PETS).  Minneapolis, Minnesota, 18 &ndash; 21 July 2017. [<a href="/docs/distributedregression.pdf">PDF</a>]
+[Decentralized CAs](/dca)
 
-#### [Decentralized Certificate Authorities](/dca)
+Sub-String Search:  
+[Oblivious Knuth-Morris-Pratt](https://github.com/jnayak1/kmp-mpc)
 
-Bargav Jayaraman, Hannah Li, David Evans. <a
-href="/docs/dca.pdf"><em>Decentralized Certificate
-Authorities</em></a>. 11 June 2017. (updated 10 October 2017) (The first two
-authors both contributed as co-equal first authors.) [<a href="/docs/dca.pdf">PDF</a>]
 
-#### [Privacy-Preserving Machine Learning](/ppml)
+   </div>
+   <div class="column3">
+### Applications by Others   
+   </div>
+   </div>
 
-Lu Tian, Bargav Jayaraman, Quanquan Gu, and David Evans. [_Aggregating
-Private Sparse Learning Models Using Multi-Party
-Computation_](/docs/pmpml.pdf). In [Private Multi‑Party Machine
-Learning](https://pmpml.github.io/PMPML16/) (NIPS 2016 Workshop),
-Barcelona, 9 December 2016. [<a href="/docs/pmpml.pdf">PDF</a>]
+[Blind Justice: Fairness with Encrypted Sensitive Attributes](https://arxiv.org/abs/1806.03281)
 
-#### [Secure Stable Matching](/matching)
+[Private Nearest Neighbors](https://eprint.iacr.org/2018/289.pdf)
 
-Jack Doerner, David Evans, abhi shelat. [_Secure Stable Matching at Scale_](http://oblivc.org/docs/matching.pdf).  In [_23<sup>rd</sup> ACM Conference on Computer and Communications Security_](https://www.sigsac.org/ccs/CCS2016/) (CCS). Vienna, Austria. 24-28 October 2016. [<a href="/docs/matching.pdf">PDF</a>]
-
-#### Secure Deep Learning
-
-[https://github.com/bargavjayaraman/SecureDeepLearning](https://github.com/bargavjayaraman/SecureDeepLearning)  
-Bargav Jayaraman (Accenture Technology Labs, Bangalore &rarr; now at UVA)
-
-### Applications Built with Obliv-C by Others
-
-[Blind Justice: Fairness with Encrypted Sensitive Attributes](https://arxiv.org/abs/1806.03281).
-Niki Kilbertus, Adri&agrave;  Gasc&oacute;n, Matt J. Kusner, Michael Veale, Krishna P. Gummadi, Adrian Weller. ICML 2018. [PDF](https://arxiv.org/pdf/1806.03281.pdf). 
-
-[Private Nearest Neighbors Classification in Federated Databases](https://eprint.iacr.org/2018/289.pdf), Phillipp Schoppmann, Adri&agrave;  Gasc&oacute;n, and Borja Balle.  
-[Cryptology ePrint Archive: Report 2018 / 289](https://eprint.iacr.org/2018/289). March 2018.
-
-[Pretzel: Email encryption and provider-supplied functions are
-compatible](http://www.cs.nyu.edu/~mwalfish/papers/pretzel-sigcomm17.pdf),
-Trinabh Gupta, Henrique Fingler, Lorenzo Alvisi, and Michael
-Walfish. ACM SIGCOMM 2017.
+Encrypted email: [**Pretzel**](http://www.cs.nyu.edu/~mwalfish/papers/pretzel-sigcomm17.pdf) (SIGCOMM 2017)
 
 [SECCOMP - The Secure Spreadsheet](https://calctopia.com), Calctopia, 2017.
 
-## Selected Talks
+## Publications and Talks
 
-David Evans. [_Secure Multi-Party Computation: Promises, Protocols, and Practicalities_](https://www.jeffersonswheel.org/2017/secure-multi-party-computation-promises-protocols-and-practicalities). <a href="http://crypto-events.di.ens.fr/ecryptnet/">ECRYPT NET Workshop
-on Crypto for the Cloud &amp; Implementation</a>, Paris, France, 27 June
-2017. [<a
-href="https://speakerdeck.com/evansuva/secure-multi-party-computation-promises-protocols-and-practicalities">Speaker&nbsp;Deck</a>]
+   <div class="row">
+   <div class="column">
 
-David Evans and Denis Nekipelov. <a href="https://www.jeffersonswheel.org/2016/ftc-visit"><em>Private Data Analysis using Multi-Party Computation</em></a>.
-Federal Trade Commission (joint presentation), 18 August 2016.
+**NeurIPS 2018**: [_Distributed Learning without Distress:
+Privacy-Preserving Empirical Risk Minimization_](//www.cs.virginia.edu/evans/pubs/neurips2018/neurips2018.pdf)
 
-David Evans. <a href="https://www.jeffersonswheel.org/2016/shanghaitech-symposium"><em>Memory for Data Oblivious Computation</em></a>.  <a href="http://ssist2016.shanghaitech.edu.cn/index.html">ShanghaiTech Symposium</a>, 25 June
-  2016. [<a href="https://speakerdeck.com/evansuva/memory-for-data-oblivious-computation">Speaker Deck</a>]
+**PETS 2017**: [_Privacy-Preserving Distributed Linear Regression on High-Dimensional Data_](/docs/distributedregression.pdf)
 
-David Evans. <a href="https://www.jeffersonswheel.org/2016/aarhus-workshop-on-theory-and-practice-of-secure-multiparty-computation"><em>From Mercury Delay Lines to Magnetic Core Memories: Progress in Oblivious Memories</em></a>.
-<a href="http://ctic.au.dk/events/workshops-conferences/mpc-2016/">Workshop
-  on Theory and Practice of Secure Multiparty Computation</a>, Aarhus
-  University, Denmark. 1 June 2016. [<a href="https://speakerdeck.com/evansuva/from-mercury-delay-lines-to-magnetic-core-memories-progress-in-oblivious-memories">Speaker Deck</a>]
+**CCS 2016**: [_Secure Stable Matching at Scale_](http://oblivc.org/docs/matching.pdf)
 
-Samee Zahur. [_Obliv-C: A Simple C Extension for
-SMC_](http://www.humangenomeprivacy.org/2015/slides/UV.pdf), iDash
-Privacy & Security Workshop 2015.  (Won award for fasted "Hamming
-Distance" execution.)
+**S&amp;P 2016**: [_Revisiting Square-Root ORAM Efficient
+Random Access in Multi-Party Computation_](/docs/sqoram.pdf) 
 
-David Evans. [_Multi-Party Computation for the
+**EuroCrypt 2015**: [_Two Halves Make a Whole: Reducing Data Transfer in Garbled Circuits using Half Gates_](//www.cs.virginia.edu/evans/pubs/ec2015/halfgates.pdf">PDF</a>)
+
+**Obliv-C 2015**: [_Obliv-C: A Language for Extensible
+Data-Oblivious Computation_](http://eprint.iacr.org/2015/1153.pdf)
+
+
+[Full publications list...](/pubs)
+   </div>
+   <div class="column">
+
+**ECRYPT NET**: [_Secure Multi-Party Computation: Promises, Protocols, and Practicalities_](https://www.jeffersonswheel.org/2017/secure-multi-party-computation-promises-protocols-and-practicalities) (Paris, 27 June 2017) [[SpeakerDeck](https://speakerdeck.com/evansuva/secure-multi-party-computation-promises-protocols-and-practicalities)]
+
+**Federal Trade Commission**: <a href="https://www.jeffersonswheel.org/2016/ftc-visit"><em>Private Data Analysis using Multi-Party Computation</em></a> (joint presentation with Denis Nekipelov, 18 August 2016)
+
+**Aarhus**: <a href="https://www.jeffersonswheel.org/2016/aarhus-workshop-on-theory-and-practice-of-secure-multiparty-computation"><em>From Mercury Delay Lines to Magnetic Core Memories: Progress in Oblivious Memories</em></a> (<a href="http://ctic.au.dk/events/workshops-conferences/mpc-2016/">MPC Workshop</a>, June 2016) [<a href="https://speakerdeck.com/evansuva/from-mercury-delay-lines-to-magnetic-core-memories-progress-in-oblivious-memories">Speaker Deck</a>]
+
+**iDash**: [_Obliv-C: A Simple C Extension for
+SMC_](http://www.humangenomeprivacy.org/2015/slides/UV.pdf) (Samee
+Zahur's talk at _iDash Privacy &amp; Security Workshop_ 2015, won award
+for fastest "Hamming Distance" execution)
+
+**CROSSING**: [_Multi-Party Computation for the
 Masses_](http://www.cs.virginia.edu/~evans/talks/crossing2015/)
-(includes video).  [CROSSING Conference 2015: Where Quantum Physics,
-Cryptography, System Security and Software Engineering
-Meet](https://www.crossing.tu-darmstadt.de/en/news-events/crossing-conference-2015/). Darmstadt. 1 June 2015
+(includes video) (CROSSING Conference, Darmstadt, June 2015)
 
-Samee Zahur. [_Obliv-C: A Lightweight Compiler for Data-Oblivious
-Computation_](http://research.microsoft.com/apps/video/dl.aspx?id=20989)
-(includes video). Applied Multi-Party Computation.  Microsoft Research,
-Redmond, WA. 20 February 2014.
+[Full talks list...](/talks)
+   </div>
+   </div>
 
 ## People
 
-[Samee Zahur](https://www.cs.virginia.edu/~sza4uq/), Project Founder and Leader (now at Google)  
 [Bargav Jayaraman](https://bargavjayaraman.github.io/), PhD Student  
 Nathaniel Grevatt, Undergraduate Researcher
 
@@ -172,6 +147,7 @@ Nathaniel Grevatt, Undergraduate Researcher
 
 ### Alumni
 
+[**Samee Zahur**](https://www.cs.virginia.edu/~sza4uq/), Project Founder and Leader (now at Google)  
 [Darion Cassel](http://darioncassel.me/), Undergraduate Researcher (now at CMU)  
 [Natnatee ("Ko") Dokmai](https://github.com/ndokmai), Undergraduate Researcher (now at Indiana University)  
 [Jack Doerner](https://jackdoerner.net/), Wizard of Oblivion (now at Northeastern)  
@@ -180,7 +156,8 @@ Nathaniel Grevatt, Undergraduate Researcher
 [Jesse Nayak](https://github.com/jnayak1), Undergraduate Researcher
     
 
-Other Contributors: [Richard
+Other Notable Contributors:  
+[Richard
 Li](https://github.com/Lichard), [Michael Mahoney](https://github.com/mdh3hc), [Xiao Wang](https://github.com/wangxiao1254).
 
 
