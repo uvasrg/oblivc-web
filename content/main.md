@@ -99,7 +99,7 @@ Encrypted email: [**Pretzel**](http://www.cs.nyu.edu/~mwalfish/papers/pretzel-si
    <div class="column">
 
 **NeurIPS 2018**: [_Distributed Learning without Distress:
-Privacy-Preserving Empirical Risk Minimization_](//www.cs.virginia.edu/evans/pubs/neurips2018/neurips2018.pdf)
+Privacy-Preserving Empirical Risk Minimization_](/docs/neurips2018.pdf)
 
 **PETS 2017**: [_Privacy-Preserving Distributed Linear Regression on High-Dimensional Data_](/docs/distributedregression.pdf)
 
