@@ -68,8 +68,7 @@ Cryptographic library:
 
 [**Distributed Learning**](/ppml)  
 [Distributed Linear Regression](https://eprint.iacr.org/2016/892)  
-[Secure Deep Learning](https://github.com/bargavjayaraman/SecureDeepLearning)  
-
+[MPC + Differential Privacy](/ppml)
 
 [**Secure Stable Matching**](/matching)
 
@@ -87,7 +86,8 @@ Sub-String Search:
 
 [Blind Justice: Fairness with Encrypted Sensitive Attributes](https://arxiv.org/abs/1806.03281)
 
-[Private Nearest Neighbors](https://eprint.iacr.org/2018/289.pdf)
+[Private Nearest Neighbors](https://eprint.iacr.org/2018/289.pdf)  
+[Secure Deep Learning](https://github.com/bargavjayaraman/SecureDeepLearning)  
 
 Encrypted email: [**Pretzel**](http://www.cs.nyu.edu/~mwalfish/papers/pretzel-sigcomm17.pdf) (SIGCOMM 2017)
 
