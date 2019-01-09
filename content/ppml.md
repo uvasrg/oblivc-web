@@ -44,7 +44,7 @@ requirements.
 ## Papers
 
 Bargav Jayaraman, Lingxiao Wang, David Evans and Quanquan Gu. [_Distributed Learning without Distress:
-Privacy-Preserving Empirical Risk Minimization_](//www.cs.virginia.edu/evans/pubs/neurips2018/neurips2018.pdf). <a href="https://nips.cc/Conferences/2018/">32<sup>nd</sup> Conference on Neural Information Processing Systems</a> (NeurIPS). Montreal, Canada. December 2018. (<a href="//www.cs.virginia.edu/evans/pubs/neurips2018/neurips2018.pdf">PDF</a>, 19 pages, including supplemental materials)
+Privacy-Preserving Empirical Risk Minimization_](/docs/neurips2018.pdf). <a href="https://nips.cc/Conferences/2018/">32<sup>nd</sup> Conference on Neural Information Processing Systems</a> (NeurIPS). Montreal, Canada. December 2018. (<a href="//www.cs.virginia.edu/evans/pubs/neurips2018/neurips2018.pdf">PDF</a>, 19 pages, including supplemental materials)
 
 Lu Tian, Bargav Jayaraman, Quanquan Gu, and David Evans. [_Aggregating
 Private Sparse Learning Models Using Multi-Party Computation_](/docs/pmpml.pdf). In
