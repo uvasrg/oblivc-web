@@ -50,8 +50,9 @@ Schoppmann](https://www.informatik.hu-berlin.de/de/Members/schopmaf/))
 
 ## Projects Using Obliv-C 
 
-   <div class="row3">
+   <div class="row">
    <div class="column3">
+
 ### Libraries and Protocols
 
 Fast Oblivious Memories:  
@@ -76,7 +77,6 @@ Cryptographic library:
 
 Sub-String Search:  
 [Oblivious Knuth-Morris-Pratt](https://github.com/jnayak1/kmp-mpc)
-
 
    </div>
    <div class="column3">
@@ -157,8 +157,7 @@ Nathaniel Grevatt, Undergraduate Researcher
     
 
 Other Notable Contributors:  
-[Richard
-Li](https://github.com/Lichard), [Michael Mahoney](https://github.com/mdh3hc), [Xiao Wang](https://github.com/wangxiao1254).
+[Richard Li](https://github.com/Lichard), [Michael Mahoney](https://github.com/mdh3hc), [Xiao&nbsp;Wang](https://github.com/wangxiao1254), [Weikeng&nbsp;Chen](https://www.chenweikeng.com/)
 
 
 
