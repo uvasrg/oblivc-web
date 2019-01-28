@@ -81,8 +81,6 @@ Sub-String Search:
    </div>
    <div class="column3">
 ### Applications by Others   
-   </div>
-   </div>
 
 [Blind Justice: Fairness with Encrypted Sensitive Attributes](https://arxiv.org/abs/1806.03281)
 
@@ -92,6 +90,9 @@ Sub-String Search:
 Encrypted email: [**Pretzel**](http://www.cs.nyu.edu/~mwalfish/papers/pretzel-sigcomm17.pdf) (SIGCOMM 2017)
 
 [SECCOMP - The Secure Spreadsheet](https://calctopia.com), Calctopia, 2017.
+   </div>
+</div>
+
 
 ## Publications and Talks
 
