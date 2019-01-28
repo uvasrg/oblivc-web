@@ -91,8 +91,7 @@ Encrypted email: [**Pretzel**](http://www.cs.nyu.edu/~mwalfish/papers/pretzel-si
 
 [SECCOMP - The Secure Spreadsheet](https://calctopia.com), Calctopia, 2017.
    </div>
-</div>
-
+   </div>
 
 ## Publications and Talks
 
