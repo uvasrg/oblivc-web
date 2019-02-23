@@ -87,6 +87,8 @@ Sub-String Search:
 [Private Nearest Neighbors](https://eprint.iacr.org/2018/289.pdf)  
 [Secure Deep Learning](https://github.com/bargavjayaraman/SecureDeepLearning)  
 
+Multi-party data analytics: [**Conclave**](https://arxiv.org/pdf/1902.06288.pdf) (EuroSys 2019)
+
 Encrypted email: [**Pretzel**](http://www.cs.nyu.edu/~mwalfish/papers/pretzel-sigcomm17.pdf) (SIGCOMM 2017)
 
 [SECCOMP - The Secure Spreadsheet](https://calctopia.com), Calctopia, 2017.
