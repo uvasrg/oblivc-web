@@ -5,8 +5,17 @@ nodate = "True"
 nopaging = "True"
 +++
 
+Bargav Jayaraman and David Evans. [_Evaluating Differentially Private Machine
+Learning in Practice_]. <a
+href="https://www.usenix.org/conference/usenixsecurity19">28<sup>th</sup>
+USENIX Security Symposium</em></a>. Santa&nbsp;Clara. August 2019. 
+[<a href="usenix2019/evaluatingdp.pdf">PDF</a>, 20 pages]
+[<a href="https://arxiv.org/abs/1902.08874">arXiv</a>] 
+[<A href="https://github.com/bargavj/EvaluatingDPML">code</a>]
+
+
 Bargav Jayaraman, Lingxiao Wang, David Evans and Quanquan Gu. [_Distributed Learning without Distress:
-Privacy-Preserving Empirical Risk Minimization_](//www.cs.virginia.edu/evans/pubs/neurips2018/neurips2018.pdf). <a href="https://nips.cc/Conferences/2018/">32<sup>nd</sup> Conference on Neural Information Processing Systems</a> (NeurIPS). Montreal, Canada. December 2018. (<a href="//www.cs.virginia.edu/evans/pubs/neurips2018/neurips2018.pdf">PDF</a>, 19 pages, including supplemental materials)
+Privacy-Preserving Empirical Risk Minimization_](//www.cs.virginia.edu/evans/pubs/neurips2018/neurips2018.pdf). <a href="https://nips.cc/Conferences/2018/">32<sup>nd</sup> Conference on Neural Information Processing Systems</a> (NeurIPS). Montreal, Canada. December 2018. [<a href="//www.cs.virginia.edu/evans/pubs/neurips2018/neurips2018.pdf">PDF</a>, 19 pages, including supplemental materials]
 
 
 Jack Doerner and abhi shelat. [_Scaling ORAM for Secure
@@ -32,7 +41,7 @@ David Evans, Jonathan Katz. [_Revisiting Square-Root ORAM Efficient
 Random Access in Multi-Party Computation_](/docs/sqoram.pdf) In
 [_37<sup>th</sup> IEEE Symposium on Security and
 Privacy_](http://www.ieee-security.org/TC/SP2016/) ("Oakland"). San
-Jose, CA. 23-25 May 2016.
+Jose, CA. 23-25 May 2016. [[PDF](/docs/squoram.pdf)]
 
 
 Samee Zahur, Mike Rosulek, and David Evans.  <a href="http://mightbeevil.com/halfgates/"><em>Two Halves Make a Whole: Reducing Data Transfer in Garbled Circuits using Half Gates</em></a>.  In <a href="https://www.cosic.esat.kuleuven.be/eurocrypt_2015/papers.shtml">EuroCrypt 2015</a>.  Sofia, Bulgaria.  26-30 April 2015. [<a href="http://www.cs.virginia.edu/evans/pubs/ec2015/halfgates.pdf">PDF</a>, 28 pages] [<a href="http://github.com/samee/obliv-c">Code</a>]

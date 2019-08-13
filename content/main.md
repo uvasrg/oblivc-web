@@ -100,6 +100,8 @@ Encrypted email: [**Pretzel**](http://www.cs.nyu.edu/~mwalfish/papers/pretzel-si
    <div class="row">
    <div class="column">
 
+**USENIX Sec 2019**: [_Evaluating Differentially Private Machine Learning in Practice_](/docs/evaluatingdp.pdf)
+
 **NeurIPS 2018**: [_Distributed Learning without Distress:
 Privacy-Preserving Empirical Risk Minimization_](/docs/neurips2018.pdf)
 
