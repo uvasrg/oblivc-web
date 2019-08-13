@@ -6,7 +6,7 @@ nopaging = "True"
 +++
 
 Bargav Jayaraman and David Evans. [_Evaluating Differentially Private Machine
-Learning in Practice_]. <a
+Learning in Practice_](/docs/evaluatingdp.pdf). <a
 href="https://www.usenix.org/conference/usenixsecurity19">28<sup>th</sup>
 USENIX Security Symposium</em></a>. Santa&nbsp;Clara. August 2019. 
 [<a href="usenix2019/evaluatingdp.pdf">PDF</a>, 20 pages]
