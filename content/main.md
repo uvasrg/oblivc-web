@@ -112,7 +112,7 @@ Privacy-Preserving Empirical Risk Minimization_](/docs/neurips2018.pdf)
 **S&amp;P 2016**: [_Revisiting Square-Root ORAM Efficient
 Random Access in Multi-Party Computation_](/docs/sqoram.pdf) 
 
-**EuroCrypt 2015**: [_Two Halves Make a Whole: Reducing Data Transfer in Garbled Circuits using Half Gates_](//www.cs.virginia.edu/evans/pubs/ec2015/halfgates.pdf">PDF</a>)
+**EuroCrypt 2015**: [_Two Halves Make a Whole: Reducing Data Transfer in Garbled Circuits using Half Gates_](//www.cs.virginia.edu/evans/pubs/ec2015/halfgates.pdf)
 
 **Obliv-C 2015**: [_Obliv-C: A Language for Extensible
 Data-Oblivious Computation_](http://eprint.iacr.org/2015/1153.pdf)
