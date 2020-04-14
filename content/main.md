@@ -82,7 +82,7 @@ Sub-String Search:
    <div class="column3">
 ### Applications by Others   
 
-[Blind Justice: Fairness with Encrypted Sensitive Attributes](https://arxiv.org/abs/1806.03281)
+[Blind Justice: Fairness with Encrypted Sensitive Attributes](https://arxiv.org/abs/1806.03281) (ICML 2018)
 
 [Private Nearest Neighbors](https://eprint.iacr.org/2018/289.pdf)  
 [Secure Deep Learning](https://github.com/bargavjayaraman/SecureDeepLearning)  
