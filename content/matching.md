@@ -18,6 +18,10 @@ computationally intensive and involve complex data-dependent memory
 access patterns, so they have previously been considered infeasible for
 execution in a secure multiparty context on non-trivial inputs.
 
+<center>
+<A href="/images/obliviouslinkedlist.png"><img src="/images/obliviouslinkedlist.png" width=600></a>
+</center>
+
 We adapt the classic Gale-Shapley algorithm for use in such a
 context, and show experimentally that our modifications yield a
 lower asymptotic complexity and more than an order of magnitude

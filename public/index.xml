@@ -1197,6 +1197,10 @@ computationally intensive and involve complex data-dependent memory
 access patterns, so they have previously been considered infeasible for
 execution in a secure multiparty context on non-trivial inputs.&lt;/p&gt;
 
+&lt;p&gt;&lt;center&gt;
+&lt;A href=&#34;//oblivc.org/images/obliviouslinkedlist.png&#34;&gt;&lt;img src=&#34;//oblivc.org/images/obliviouslinkedlist.png&#34; width=600&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+
 &lt;p&gt;We adapt the classic Gale-Shapley algorithm for use in such a
 context, and show experimentally that our modifications yield a
 lower asymptotic complexity and more than an order of magnitude
