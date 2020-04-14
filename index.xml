@@ -934,13 +934,13 @@ Schoppmann&lt;/a&gt;)&lt;/p&gt;
 &lt;h3 id=&#34;libraries-and-protocols&#34;&gt;Libraries and Protocols&lt;/h3&gt;
 
 &lt;p&gt;Fast Oblivious Memories:&lt;br /&gt;
-&lt;a href=&#34;https://gitlab.com/neucrypt/floram&#34;&gt;&lt;strong&gt;floram&lt;/strong&gt;&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;//oblivc.org/sqoram&#34;&gt;&lt;strong&gt;SqORAM&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;https://gitlab.com/neucrypt/floram&#34;&gt;&lt;strong&gt;floram&lt;/strong&gt;&lt;/a&gt; (CCS 2017)&lt;br /&gt;
+&lt;a href=&#34;//oblivc.org/sqoram&#34;&gt;&lt;strong&gt;SqORAM&lt;/strong&gt;&lt;/a&gt; (S&amp;amp;P 2016)&lt;/p&gt;
 
 &lt;p&gt;Cryptographic library:&lt;br /&gt;
 &lt;a href=&#34;https://bitbucket.org/jackdoerner/absentminded-crypto-kit&#34;&gt;&lt;strong&gt;Absentminded Crypto Kit&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://mightbeevil.com/halfgates/&#34;&gt;&lt;strong&gt;Half-Gates&lt;/strong&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a href=&#34;https://mightbeevil.com/halfgates/&#34;&gt;&lt;strong&gt;Half-Gates&lt;/strong&gt;&lt;/a&gt; (EuroCrypt 2015)
    &lt;/div&gt;
    &lt;div class=&#34;column3&#34;&gt;&lt;/p&gt;
 
@@ -948,7 +948,7 @@ Schoppmann&lt;/a&gt;)&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;//oblivc.org/ppml&#34;&gt;&lt;strong&gt;Distributed Learning&lt;/strong&gt;&lt;/a&gt;&lt;br /&gt;
 &lt;a href=&#34;https://eprint.iacr.org/2016/892&#34;&gt;Distributed Linear Regression&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;//oblivc.org/ppml&#34;&gt;MPC + Differential Privacy&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;//oblivc.org/ppml&#34;&gt;MPC + Differential Privacy&lt;/a&gt; (NeurIPS 2018)&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;//oblivc.org/matching&#34;&gt;&lt;strong&gt;Secure Stable Matching&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -967,11 +967,13 @@ Schoppmann&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://eprint.iacr.org/2018/289.pdf&#34;&gt;Private Nearest Neighbors&lt;/a&gt;&lt;br /&gt;
 &lt;a href=&#34;https://github.com/bargavjayaraman/SecureDeepLearning&#34;&gt;Secure Deep Learning&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Multi-party data analytics: &lt;a href=&#34;https://arxiv.org/pdf/1902.06288.pdf&#34;&gt;&lt;strong&gt;Conclave&lt;/strong&gt;&lt;/a&gt; (EuroSys 2019)&lt;/p&gt;
+&lt;p&gt;Multi-party data analytics:&lt;br /&gt;
+&lt;a href=&#34;https://arxiv.org/pdf/1902.06288.pdf&#34;&gt;&lt;strong&gt;Conclave&lt;/strong&gt;&lt;/a&gt; (EuroSys 2019)&lt;/p&gt;
 
-&lt;p&gt;Encrypted email: &lt;a href=&#34;http://www.cs.nyu.edu/~mwalfish/papers/pretzel-sigcomm17.pdf&#34;&gt;&lt;strong&gt;Pretzel&lt;/strong&gt;&lt;/a&gt; (SIGCOMM 2017)&lt;/p&gt;
+&lt;p&gt;Encrypted email:&lt;br /&gt;
+&lt;a href=&#34;http://www.cs.nyu.edu/~mwalfish/papers/pretzel-sigcomm17.pdf&#34;&gt;&lt;strong&gt;Pretzel&lt;/strong&gt;&lt;/a&gt; (SIGCOMM 2017)&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://calctopia.com&#34;&gt;SECCOMP - The Secure Spreadsheet&lt;/a&gt;, Calctopia, 2017.
+&lt;p&gt;&lt;a href=&#34;https://calctopia.com&#34;&gt;Secure Spreadsheet&lt;/a&gt;, Calctopia, 2017.
    &lt;/div&gt;
    &lt;/div&gt;&lt;/p&gt;
 
@@ -1022,20 +1024,24 @@ Masses&lt;/em&gt;&lt;/a&gt;
 
 &lt;h2 id=&#34;people&#34;&gt;People&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://bargavjayaraman.github.io/&#34;&gt;Bargav Jayaraman&lt;/a&gt;, PhD Student&lt;br /&gt;
-Nathaniel Grevatt, Undergraduate Researcher&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://bargavjayaraman.github.io/&#34;&gt;Bargav Jayaraman&lt;/a&gt;, PhD Student&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://www.cs.virginia.edu/evans&#34;&gt;David Evans&lt;/a&gt;, Faculty Advisor&lt;/p&gt;
+&lt;p&gt;Youssef Errami, Undergraduate Researcher&lt;br /&gt;
+Kush Patel, Undergraduate Researcher&lt;br /&gt;
+&lt;a href=&#34;https://www.cs.virginia.edu/evans&#34;&gt;David Evans&lt;/a&gt;, Faculty Advisor&lt;/p&gt;
 
 &lt;h3 id=&#34;alumni&#34;&gt;Alumni&lt;/h3&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://www.cs.virginia.edu/~sza4uq/&#34;&gt;&lt;strong&gt;Samee Zahur&lt;/strong&gt;&lt;/a&gt;, Project Founder and Leader (now at Google)&lt;br /&gt;
-&lt;a href=&#34;http://darioncassel.me/&#34;&gt;Darion Cassel&lt;/a&gt;, Undergraduate Researcher (now at CMU)&lt;br /&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.cs.virginia.edu/~sza4uq/&#34;&gt;&lt;strong&gt;Samee Zahur&lt;/strong&gt;&lt;/a&gt;, Project Founder and Leader (now at Google)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://darioncassel.me/&#34;&gt;Darion Cassel&lt;/a&gt;, Undergraduate Researcher (now at CMU)&lt;br /&gt;
 &lt;a href=&#34;https://github.com/ndokmai&#34;&gt;Natnatee (&amp;ldquo;Ko&amp;rdquo;) Dokmai&lt;/a&gt;, Undergraduate Researcher (now at Indiana University)&lt;br /&gt;
 &lt;a href=&#34;https://jackdoerner.net/&#34;&gt;Jack Doerner&lt;/a&gt;, Wizard of Oblivion (now at Northeastern)&lt;br /&gt;
 &lt;a href=&#34;https://havron.xyz&#34;&gt;Samuel Havron&lt;/a&gt;, Undergraduate Researcher (now at Cornell)&lt;br /&gt;
-&lt;a href=&#34;https://github.com/HainaLi&#34;&gt;Hannah Li&lt;/a&gt;, Undergraduate at Masters Student (now at Facebook)&lt;br /&gt;
-&lt;a href=&#34;https://github.com/jnayak1&#34;&gt;Jesse Nayak&lt;/a&gt;, Undergraduate Researcher&lt;/p&gt;
+&lt;a href=&#34;https://github.com/HainaLi&#34;&gt;Hannah Li&lt;/a&gt;, Undergraduate and Masters Student (now at Facebook)&lt;br /&gt;
+&lt;a href=&#34;https://github.com/jnayak1&#34;&gt;Jesse Nayak&lt;/a&gt;, Undergraduate Researcher
+Nathaniel Grevatt, Undergraduate Researcher (2018-2019)&lt;br /&gt;
+Jonah Weissman, Undergraduate Researcher (summer 2019)&lt;/p&gt;
 
 &lt;p&gt;Other Notable Contributors:&lt;br /&gt;
 &lt;a href=&#34;https://github.com/Lichard&#34;&gt;Richard Li&lt;/a&gt;, &lt;a href=&#34;https://github.com/mdh3hc&#34;&gt;Michael Mahoney&lt;/a&gt;, &lt;a href=&#34;https://github.com/wangxiao1254&#34;&gt;Xiao&amp;nbsp;Wang&lt;/a&gt;, &lt;a href=&#34;https://www.chenweikeng.com/&#34;&gt;Weikeng&amp;nbsp;Chen&lt;/a&gt;&lt;/p&gt;
