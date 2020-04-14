@@ -1184,8 +1184,6 @@ protocols implemented in Obliv-C.&lt;/p&gt;
       <guid>//oblivc.org/matching/</guid>
       <description>
 
-&lt;h2 id=&#34;secure-stable-matching-at-scale&#34;&gt;Secure Stable Matching at Scale&lt;/h2&gt;
-
 &lt;p&gt;When a group of individuals and organizations wish to compute a &lt;em&gt;stable
 matching&lt;/em&gt; &amp;mdash; for example, when medical students are matched to
 medical residency programs &amp;mdash; they often outsource the computation
