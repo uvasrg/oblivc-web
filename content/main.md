@@ -68,10 +68,10 @@ Cryptographic library:
 ### Applications
 
 [**Distributed Learning**](/ppml)  
-[Distributed Linear Regression](https://eprint.iacr.org/2016/892)  
+[Distributed Linear Regression](https://eprint.iacr.org/2016/892) (PETS 2017)  
 [MPC + Differential Privacy](/ppml) (NeurIPS 2018)
 
-[**Secure Stable Matching**](/matching)
+[**Secure Stable Matching**](/matching) (CCS 2016)
 
 [Decentralized CAs](/dca)
 
