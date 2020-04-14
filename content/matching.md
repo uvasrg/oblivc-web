@@ -5,8 +5,6 @@ nodate = "True"
 nopaging = "True"
 +++
 
-## Secure Stable Matching at Scale
-
 When a group of individuals and organizations wish to compute a _stable
 matching_ &mdash; for example, when medical students are matched to
 medical residency programs &mdash; they often outsource the computation
