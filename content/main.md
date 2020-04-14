@@ -56,20 +56,20 @@ Schoppmann](https://www.informatik.hu-berlin.de/de/Members/schopmaf/))
 ### Libraries and Protocols
 
 Fast Oblivious Memories:  
-[**floram**](https://gitlab.com/neucrypt/floram)  
-[**SqORAM**](/sqoram)
+[**floram**](https://gitlab.com/neucrypt/floram) (CCS 2017)  
+[**SqORAM**](/sqoram) (S&P 2016)
 
 Cryptographic library:  
 [**Absentminded Crypto Kit**](https://bitbucket.org/jackdoerner/absentminded-crypto-kit)
 
-[**Half-Gates**](https://mightbeevil.com/halfgates/)
+[**Half-Gates**](https://mightbeevil.com/halfgates/) (EuroCrypt 2015)
    </div>
    <div class="column3">
 ### Applications
 
 [**Distributed Learning**](/ppml)  
 [Distributed Linear Regression](https://eprint.iacr.org/2016/892)  
-[MPC + Differential Privacy](/ppml)
+[MPC + Differential Privacy](/ppml) (NeurIPS 2018)
 
 [**Secure Stable Matching**](/matching)
 
@@ -87,11 +87,13 @@ Sub-String Search:
 [Private Nearest Neighbors](https://eprint.iacr.org/2018/289.pdf)  
 [Secure Deep Learning](https://github.com/bargavjayaraman/SecureDeepLearning)  
 
-Multi-party data analytics: [**Conclave**](https://arxiv.org/pdf/1902.06288.pdf) (EuroSys 2019)
+Multi-party data analytics:  
+[**Conclave**](https://arxiv.org/pdf/1902.06288.pdf) (EuroSys 2019)
 
-Encrypted email: [**Pretzel**](http://www.cs.nyu.edu/~mwalfish/papers/pretzel-sigcomm17.pdf) (SIGCOMM 2017)
+Encrypted email:  
+[**Pretzel**](http://www.cs.nyu.edu/~mwalfish/papers/pretzel-sigcomm17.pdf) (SIGCOMM 2017)
 
-[SECCOMP - The Secure Spreadsheet](https://calctopia.com), Calctopia, 2017.
+[Secure Spreadsheet](https://calctopia.com), Calctopia, 2017.
    </div>
    </div>
 
@@ -144,21 +146,24 @@ Masses_](http://www.cs.virginia.edu/~evans/talks/crossing2015/)
 ## People
 
 [Bargav Jayaraman](https://bargavjayaraman.github.io/), PhD Student  
-Nathaniel Grevatt, Undergraduate Researcher
 
+Youssef Errami, Undergraduate Researcher  
+Kush Patel, Undergraduate Researcher  
 [David Evans](https://www.cs.virginia.edu/evans), Faculty Advisor  
 
 
 ### Alumni
 
 [**Samee Zahur**](https://www.cs.virginia.edu/~sza4uq/), Project Founder and Leader (now at Google)  
+
 [Darion Cassel](http://darioncassel.me/), Undergraduate Researcher (now at CMU)  
 [Natnatee ("Ko") Dokmai](https://github.com/ndokmai), Undergraduate Researcher (now at Indiana University)  
 [Jack Doerner](https://jackdoerner.net/), Wizard of Oblivion (now at Northeastern)  
 [Samuel Havron](https://havron.xyz), Undergraduate Researcher (now at Cornell)  
-[Hannah Li](https://github.com/HainaLi), Undergraduate at Masters Student (now at Facebook)  
+[Hannah Li](https://github.com/HainaLi), Undergraduate and Masters Student (now at Facebook)  
 [Jesse Nayak](https://github.com/jnayak1), Undergraduate Researcher
-    
+Nathaniel Grevatt, Undergraduate Researcher (2018-2019)  
+Jonah Weissman, Undergraduate Researcher (summer 2019)  
 
 Other Notable Contributors:  
 [Richard Li](https://github.com/Lichard), [Michael Mahoney](https://github.com/mdh3hc), [Xiao&nbsp;Wang](https://github.com/wangxiao1254), [Weikeng&nbsp;Chen](https://www.chenweikeng.com/)
