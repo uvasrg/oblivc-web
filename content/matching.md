@@ -19,7 +19,8 @@ access patterns, so they have previously been considered infeasible for
 execution in a secure multiparty context on non-trivial inputs.
 
 <center>
-<A href="/images/obliviouslinkedlist.png"><img src="/images/obliviouslinkedlist.png" width=600></a>
+<A href="/images/obliviouslinkedlist.png"><img src="/images/obliviouslinkedlist.png" width=600></a><br>
+<b>Oblivious Linked Multi-List</b><br>
 </center>
 
 We adapt the classic Gale-Shapley algorithm for use in such a

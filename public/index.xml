@@ -1198,7 +1198,8 @@ access patterns, so they have previously been considered infeasible for
 execution in a secure multiparty context on non-trivial inputs.&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
-&lt;A href=&#34;//oblivc.org/images/obliviouslinkedlist.png&#34;&gt;&lt;img src=&#34;//oblivc.org/images/obliviouslinkedlist.png&#34; width=600&gt;&lt;/a&gt;
+&lt;A href=&#34;//oblivc.org/images/obliviouslinkedlist.png&#34;&gt;&lt;img src=&#34;//oblivc.org/images/obliviouslinkedlist.png&#34; width=600&gt;&lt;/a&gt;&lt;br&gt;
+&lt;b&gt;Oblivious Linked Multi-List&lt;/b&gt;&lt;br&gt;
 &lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;We adapt the classic Gale-Shapley algorithm for use in such a
