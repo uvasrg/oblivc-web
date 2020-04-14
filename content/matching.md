@@ -53,7 +53,7 @@ Austria. 24-28 October 2016.
 
 [Jack Doerner](https://jackdoerner.net/) (University of Virginia)  
 [David Evans](https://www.cs.virginia.edu/evans) (University of Virginia)  
-abhi shelat (Northeastern University)
+[abhi shelat](https://shelat.ccis.neu.edu/) (Northeastern University)
 
 
 
