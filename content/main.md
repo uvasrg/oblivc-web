@@ -46,6 +46,10 @@ This mini-book provides an introduction to secure multi-party computation:
 > Calling Obliv-C protocols from Rust programs ([Phillipp
 Schoppmann](https://www.informatik.hu-berlin.de/de/Members/schopmaf/))
 
+**Obliv-Java**
+
+> Faithful reimplementation of Java for secure computation ([Calctopia](https://github.com/calctopia-opensource/jdk10u))
+
 <a name="projects"></a>
 
 ## Projects Using Obliv-C 
