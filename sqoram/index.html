@@ -15,14 +15,14 @@
 <meta name="description" content="">
 <meta name="keywords" content="">
 <meta name="author" content="">
-<meta name="generator" content="Hugo 0.17" />
+<meta name="generator" content="Hugo 0.87.0" />
 
 
   <meta property="og:title" content="Revisiting Square Root ORAM" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="en_US" />
-<meta property="og:url" content="//oblivc.org/sqoram/" />
+<meta property="og:url" content="//oblivc.org/sqrtoram/" />
 
 
   
@@ -42,9 +42,6 @@
   
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/rotunda.png">
   <link rel="shortcut icon" href="/rotunda.png">
-
-  
-  <link href="" rel="alternate" type="application/rss+xml" title="Obliv-C" />
 
     
   
@@ -102,7 +99,7 @@ A Language for Extensible Data&#8209;Oblivious Computation
 		
   		<section class="post">
             <h1 class="post-title">
-              <a href="/sqoram/">Revisiting Square Root ORAM</a>
+              <a href="/sqrtoram/">Revisiting Square Root ORAM</a>
             </h1>
             <h3 class="post-subtitle">
             	
@@ -119,10 +116,7 @@ A Language for Extensible Data&#8209;Oblivious Computation
 
 			
 
-            
-
-<h2 id="efficient-random-access-in-multi-party-computation">Efficient Random Access in Multi-Party Computation</h2>
-
+            <h2 id="efficient-random-access-in-multi-party-computation">Efficient Random Access in Multi-Party Computation</h2>
 <p>Hiding memory access patterns is required for secure computation, but
 remains prohibitively expensive for many interesting applications. Prior
 work has either developed custom algorithms that minimize the need for
@@ -130,41 +124,32 @@ data-dependant memory access, or proposed the use of Oblivious RAM
 (ORAM) to provide a general-purpose solution. However, most ORAMs are
 designed for client-server scenarios, and provide only asymptotic
 benefits in secure computation.</p>
-
 <p>We show how the classical square-root ORAM of Goldreich and Ostrovsky
 can be modified to provide a practical ORAM for use in secure
 computation, even though it is asymptotically worse than the best known
-schemes. Specifically, we show a design that has over 100<em>x</em> lower
+schemes. Specifically, we show a design that has over 100_x_ lower
 initialization cost, and provides benefits over linear scan for just 8
 blocks of data. Our scheme outperforms alternate approaches across a
 wide range of parameters, often by several orders of magnitude.</p>
-
-<p><img src="/images/sqoramcompare.png" align="center" width="70%"></p>
-
+<!-- raw HTML omitted -->
 <h2 id="code">Code</h2>
-
 <p><a href="https://github.com/samee/sqrtOram">https://github.com/samee/sqrtOram</a></p>
-
 <p>This repository includes the implementation of Square-Root ORAM in
 <a href="/">Obliv-C</a>, as well as several example applications and benchmarks.</p>
-
 <h2 id="paper">Paper</h2>
-
 <p>Samee Zahur, Xiao Wang, Mariana Raykova, Adrià Gascón, Jack Doerner,
 David Evans, Jonathan Katz. <a href="/docs/sqoram.pdf"><em>Revisiting Square-Root ORAM Efficient
-Random Access in Multi-Party Computation</em></a>. In <a href="http://www.ieee-security.org/TC/SP2016/"><em>37<sup>th</sup> IEEE
+Random Access in Multi-Party Computation</em></a>. In <a href="http://www.ieee-security.org/TC/SP2016/"><em>37<!-- raw HTML omitted -->th<!-- raw HTML omitted --> IEEE
 Symposium on Security and
 Privacy</em></a> (&ldquo;Oakland&rdquo;). San
 Jose, CA. 23-25 May 2016.</p>
-
 <h2 id="people">People</h2>
-
-<p><a href="https://www.cs.virginia.edu/~sza4uq/">Samee Zahur</a> (University of Virginia), Project Founder and Leader<br />
-<a href="https://github.com/wangxiao1254">Xiao Wang</a> (University of Maryland)<br />
-<a href="http://cpsc.yale.edu/people/mariana-raykova">Mariana Raykova</a> (Yale University)<br />
-<a href="http://www.cs.upc.edu/~agascon/">Adrià Gascón</a> (University of Edinburgh)<br />
-<a href="https://jackdoerner.net/">Jack Doerner</a> (University of Virginia)<br />
-<a href="https://www.cs.virginia.edu/evans">David Evans</a> (University of Virginia)<br />
+<p><a href="https://www.cs.virginia.edu/~sza4uq/">Samee Zahur</a> (University of Virginia), Project Founder and Leader<br>
+<a href="https://github.com/wangxiao1254">Xiao Wang</a> (University of Maryland)<br>
+<a href="http://cpsc.yale.edu/people/mariana-raykova">Mariana Raykova</a> (Yale University)<br>
+<a href="http://www.cs.upc.edu/~agascon/">Adrià Gascón</a> (University of Edinburgh)<br>
+<a href="https://jackdoerner.net/">Jack Doerner</a> (University of Virginia)<br>
+<a href="https://www.cs.virginia.edu/evans">David Evans</a> (University of Virginia)<br>
 <a href="https://www.cs.umd.edu/~jkatz/">Jonathan Katz</a> (University of Maryland)</p>
 
 	

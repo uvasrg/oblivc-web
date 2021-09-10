@@ -1,54 +1,37 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <url>
-    <loc>//oblivc.org/</loc>
-    <lastmod>2017-07-06T16:05:58-04:00</lastmod>
-  </url>
-  
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>//oblivc.org/documentation/</loc>
     <lastmod>2017-07-06T16:05:58-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>//oblivc.org/projects/</loc>
-  </url>
-  
-  <url>
+    <priority>0</priority>
+  </url><url>
+    <loc>//oblivc.org/categories/</loc>
+  </url><url>
     <loc>//oblivc.org/dca/</loc>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>//oblivc.org/</loc>
+  </url><url>
     <loc>//oblivc.org/pubs/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>//oblivc.org/talks/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>//oblivc.org/tutorial/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>//oblivc.org/main/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>//oblivc.org/ppml/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>//oblivc.org/sqoram/</loc>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>//oblivc.org/sqrtoram/</loc>
+  </url><url>
     <loc>//oblivc.org/rust/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>//oblivc.org/matching/</loc>
+  </url><url>
+    <loc>//oblivc.org/tags/</loc>
   </url>
-  
 </urlset>

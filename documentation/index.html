@@ -15,7 +15,7 @@
 <meta name="description" content="">
 <meta name="keywords" content="">
 <meta name="author" content="">
-<meta name="generator" content="Hugo 0.17" />
+<meta name="generator" content="Hugo 0.87.0" />
 
 
   <meta property="og:title" content="Obliv-C - Documentation" />
@@ -42,9 +42,6 @@
   
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/rotunda.png">
   <link rel="shortcut icon" href="/rotunda.png">
-
-  
-  <link href="" rel="alternate" type="application/rss+xml" title="Obliv-C" />
 
     
   
@@ -119,47 +116,31 @@ A Language for Extensible Data&#8209;Oblivious Computation
 
 			
 
-            
-
-<h4 id="about-this-documentation">About this Documentation</h4>
-
+            <h4 id="about-this-documentation">About this Documentation</h4>
 <p>This documention is provided to make the Obliv-C API simpler for users to understand in order to write programs in Obliv-C successfully, and uses  an informal tone to achieve this purpose. For a more formal introduction to Obliv-C, read <a href="http://eprint.iacr.org/2015/1153.pdf"><em>Obliv-C: A Language for Extensible
 Data-Oblivious Computation</em></a>.  For getting started quickly programming with Obliv-C, we recommend using the <a href="../tutorial">tutorial</a>.</p>
-
 <blockquote>
-<p><font size="-1">This documentation is generated from <a href="https://github.com/uvasrg/oblivc-web/">https://github.com/uvasrg/oblivc-web/</a>; please submit an Issue or PR if you have suggestions on improving it.</font></p>
+<p><!-- raw HTML omitted -->This documentation is generated from <a href="https://github.com/uvasrg/oblivc-web/;">https://github.com/uvasrg/oblivc-web/;</a> please submit an Issue or PR if you have suggestions on improving it.<!-- raw HTML omitted --></p>
 </blockquote>
-
 <h1 id="introduction">Introduction</h1>
-
 <p>Obliv-C was designed to provide a convenient bridge between users of secure computation protocols and protocol developers. Programmers who want to use secure computation, but are not experts in cryptography, should be able to use it easily and securely. On the other hand, experts should be able to provide extra primitives as simple library functions without having to invent a full language/compiler from scratch. This is intended to rectify the current situation where a new language needs to be invented every time someone decides to develop a new cryptographic protocol (e.g., ORAM for random access, private set intersection protocols, or protocols for other adversarial models). This way researchers can test new cryptographic techniques without having to be experts in language design/compilers.</p>
-
 <p>The way this language is supposed to be used is as follows: we start with a code written in this Obliv-C, a strict extension of standard C. All parties agree to execute this program in a secure execution protocol, where most inputs are private, and only the output of the computation are to be revealed to all (or some) parties. The intermediate results stay hidden, protected by the underlying cryptographic protocols.</p>
-
 <h2 id="oblivious-types">Oblivious Types</h2>
-
 <h3 id="the-obliv-qualifier">The <code>obliv</code> qualifier</h3>
-
 <p>The <code>obliv</code> qualifier should be declared on any variable that is
 supposed to depend on unknown inputs in any way; <code>obliv</code>-qualified
 values implement secure encryption on the variable, and can only be
 declared in an Obliv-C file (<code>.oc</code>).</p>
-
 <p>Supported data types for the <code>obliv</code> qualifier are <code>bool</code>, <code>int</code>,
 <code>char</code>, <code>short</code>, <code>long</code>, <code>long long</code>, and <code>float</code>. Non-obliv values
 can be implicitly converted into <code>obliv</code>, but <code>obliv</code> values cannot be
 implicitly converted to non-obliv. Doing this requires
 <code>revealObliv&lt;Tname&gt;()</code> (described below) to be called to indicate that
 previously-oblivious data is now being revealed.</p>
-
 <h2 id="control-structures">Control Structures</h2>
-
 <p>For oblivious execution, program control can never depend on <code>obliv</code> values, which are not (semantically) accessible to the execution. In general, we cannot hide the length of time a protocol takes to run, and in the same vein, the number of iterations of a loop is also known to all parties (since they are all executing the protocol). Hence, Obliv-C will not allow an <code>obliv</code> variable to be ever used in the condition of any existing control structure (e.g., <code>for</code>, <code>while</code>, <code>if</code>, etc.).</p>
-
 <h3 id="oblivious-conditionals-obliv-if">Oblivious conditionals: <code>obliv if</code></h3>
-
 <p>The new control structure ‘obliv if’ can be used with <code>obliv</code> values in the predicate. Its syntax is exactly like the normal if structure:</p>
-
 <pre><code>obliv if(...) {
   ...
 } else obliv if(...) {
@@ -167,49 +148,30 @@ previously-oblivious data is now being revealed.</p>
 } else {
   ...
 }
-</code></pre>
-
-<p>This control structure allows you to use <code>obliv</code> variables in if conditions, and works a lot like normal if blocks.</p>
-
+</code></pre><p>This control structure allows you to use <code>obliv</code> variables in if conditions, and works a lot like normal if blocks.</p>
 <p>However, while it allows you to use obliv variables as a condition, you must realize some obvious differences. For one, during execution, it is not known (to the system executing this program) if the condition is true or not &mdash; that is the whole point of <code>obliv</code>-qualified variables. So the blocks will be actually executed <em>regardless</em> of the condition: it doesn’t matter if the condition is true or not. So consider this:</p>
-
 <pre><code>obliv int x, y;
 ...
 obliv if (x &gt; 0) y = 4;
-</code></pre>
-
-<p>The body of the <code>obliv if</code> will be executed regardless of whether <code>x</code> is positive or not. However, none of the parties would know if their execution actually changed the value of <code>y</code> or not. If <code>x</code> was positive, <code>y</code> is now 4 after this is executed. If not, <code>y</code> still has the same value as before. But the actual value of <code>y</code> is stored encrypted in the circuit, and unknown to the executions. The assignment operation simply has no impact on the semantic value of <code>y</code> if the condition is false.</p>
-
+</code></pre><p>The body of the <code>obliv if</code> will be executed regardless of whether <code>x</code> is positive or not. However, none of the parties would know if their execution actually changed the value of <code>y</code> or not. If <code>x</code> was positive, <code>y</code> is now 4 after this is executed. If not, <code>y</code> still has the same value as before. But the actual value of <code>y</code> is stored encrypted in the circuit, and unknown to the executions. The assignment operation simply has no impact on the semantic value of <code>y</code> if the condition is false.</p>
 <p>While <code>obliv if</code> allows you to use <code>obliv</code> variables in a condition, it does come with its own set of restrictions. For example, this is not allowed:</p>
-
 <pre><code>int x=0;
 obliv int y;
 obliv if (y &gt; 0) x = 1; // error x is not obliv
-</code></pre>
-
-<p>In general, inside a given <code>obliv if</code> context, the program cannot modify any non-obliv variable that was declared outside the block, since that would betray the value of obliv condition.</p>
-
+</code></pre><p>In general, inside a given <code>obliv if</code> context, the program cannot modify any non-obliv variable that was declared outside the block, since that would betray the value of obliv condition.</p>
 <p>If you find yourself wanting to do this, you probably want <code>x</code> to be
 an <code>obliv int</code> in the first place. (If you really want to do this, you
 can escape the type system using <code>~obliv</code> to create an unconditional
 segment.)</p>
-
 <p>However, this is legal:</p>
-
 <pre><code>obliv if (...) {
   for (int i = 0; i &lt; n; i++) { … }
 }
-</code></pre>
-
-<p>Even though both <code>i</code> and <code>n</code> are non-obliv, this is okay, since <code>i</code> was declared inside the <code>obliv if</code> block and <code>n</code> is never modified. The requirement is that any changes made to non-obliv variables while inside an oblivious conditional scope are never visible from the outside.</p>
-
+</code></pre><p>Even though both <code>i</code> and <code>n</code> are non-obliv, this is okay, since <code>i</code> was declared inside the <code>obliv if</code> block and <code>n</code> is never modified. The requirement is that any changes made to non-obliv variables while inside an oblivious conditional scope are never visible from the outside.</p>
 <p>Control statements like <code>break</code>, <code>continue</code>, <code>return</code>, <code>goto</code>, and
 case labels, etc. cannot be used to jump across <code>obliv if</code> boundaries. Jump-like statements can only move control flow within the same <code>obliv if</code> block.</p>
-
 <h2 id="functions">Functions</h2>
-
 <p>Consider the following code:</p>
-
 <pre><code>int x;
 void func() { x++; }
 …
@@ -217,40 +179,22 @@ void protocolMain() {
   obliv if (...) 
     func(); // Not valid code!
 }
-</code></pre>
-
-<p>This is obviously problematic, since it would violate the restrictions on <code>obliv if</code>: we are modifying a global, non-obliv variable <code>x</code> inside an oblivious context.</p>
-
+</code></pre><p>This is obviously problematic, since it would violate the restrictions on <code>obliv if</code>: we are modifying a global, non-obliv variable <code>x</code> inside an oblivious context.</p>
 <p>To accommodate function calls in oblivious contexts, Obliv-C introduces <code>obliv</code> functions. We now have two kinds of functions:</p>
-
 <pre><code>void func() { … }
 void func2() obliv { … }
-</code></pre>
-
-<p>The difference is simple: you are allowed to perform any operation inside a normal (non-obliv) function (<code>func()</code>), but it may not be invoked from inside an oblivious context (which includes any <code>obliv if</code> block, as well as inside other <code>obliv</code> functions).</p>
-
+</code></pre><p>The difference is simple: you are allowed to perform any operation inside a normal (non-obliv) function (<code>func()</code>), but it may not be invoked from inside an oblivious context (which includes any <code>obliv if</code> block, as well as inside other <code>obliv</code> functions).</p>
 <p>On the other hand, <code>func2</code> is an <code>obliv</code> function &mdash; it can be called from anywhere, but may not modify any non-obliv variables not declared inside the function.</p>
-
 <p>There is one more issue related to calling functions that comes up when passing parameters by reference. Consider this:</p>
-
 <pre><code>void ofunc(int* p1, const int* p2) obliv { … }
-</code></pre>
-
-<p>When this function is invoked, there are restrictions on what <code>p1</code> can point to. For example, this is problematic:</p>
-
+</code></pre><p>When this function is invoked, there are restrictions on what <code>p1</code> can point to. For example, this is problematic:</p>
 <pre><code>int n, m;
 obliv if (...) { ofunc(&amp;n,&amp;m); } // error
 obliv if (...) { int i; ofunc(&amp;i,&amp;m); } // ok
-</code></pre>
-
-<p>When compiling, the compiler sees <code>n</code> being passed by reference. So it assumes that <code>ofunc</code> may be used to modify <code>n</code>. The variable <code>i</code> is declared inside, so the second invocation is okay, since i can be modified in this scope. Non-obliv variables declared outside becomes something like a <code>const</code> variable when entering an oblivious scope. We say “something like a const” because there is a slight difference between C’s notion of <code>const</code>, and our notion here of a <code>frozen</code> variable.</p>
-
+</code></pre><p>When compiling, the compiler sees <code>n</code> being passed by reference. So it assumes that <code>ofunc</code> may be used to modify <code>n</code>. The variable <code>i</code> is declared inside, so the second invocation is okay, since i can be modified in this scope. Non-obliv variables declared outside becomes something like a <code>const</code> variable when entering an oblivious scope. We say “something like a const” because there is a slight difference between C’s notion of <code>const</code>, and our notion here of a <code>frozen</code> variable.</p>
 <h2 id="frozen"><code>frozen</code></h2>
-
 <p>For simple variables, <code>frozen</code> may be implicitly converted to <code>const</code>: <code>frozen int*</code> can be used whenever a function really expects <code>const int*</code>. The difference, however, shows up in case of structs, where they are not implicitly convertible. Here, <code>frozen struct foo*</code> refers to the “deep-const” version of <code>foo</code>.</p>
-
 <p>Consider the following code fragment:</p>
-
 <pre><code>struct S { int x, *p; };
 void func(const struct S* a, frozen struct S* b) {
   // Neither a-&gt;x nor b-&gt;x can be modified here, as expected
@@ -262,18 +206,11 @@ void func(const struct S* a, frozen struct S* b) {
   *b-&gt;p = 5; // still error; frozen is recursively applied 
              //   to all pointer fields in a struct/union
 }
-</code></pre>
-
-<p>This slight difference is the reason Obliv-C introducing the new keyword <code>frozen</code>.</p>
-
+</code></pre><p>This slight difference is the reason Obliv-C introducing the new keyword <code>frozen</code>.</p>
 <p>In general, any non-obliv variable becomes frozen-qualified when entering an oblivious scope. For simpler types, this distinction between <code>const</code> and <code>frozen</code> does not matter. But for structs, unions, pointer-to-pointers, etc., it does. For example, <code>int **frozen</code> is actually the same as <code>const int *const *const</code>, which is different from <code>const int**</code> or <code>int **const</code>.</p>
-
 <h2 id="unconditional-segments">Unconditional Segments</h2>
-
 <p>This is the one part of Obliv-C that looks very different from anything in C. Essentially, it chalks out a block of code for <em>unconditional</em> execution even though the surrounding code is conditional on some oblivious data.</p>
-
 <p>For example,</p>
-
 <pre><code>int n = …;
 obliv if (cond) { // line 1
   n = 5; // error: cannot modify outer non-obliv n in obliv scope
@@ -281,24 +218,15 @@ obliv if (cond) { // line 1
     n = 5; // valid: but the assignment happens even if c is false
   }
 }
-</code></pre>
-
-<p>Since the execution of the <code>~obliv</code> block does not depend on any obliv value, it gets rid of all restrictions on frozen variable modification. The restrictions can be later reinstated by using a nested obliv-if structure, if desired.</p>
-
+</code></pre><p>Since the execution of the <code>~obliv</code> block does not depend on any obliv value, it gets rid of all restrictions on frozen variable modification. The restrictions can be later reinstated by using a nested obliv-if structure, if desired.</p>
 <p>However, remember that we are in an oblivious context, and the contents of the <code>~obliv</code> block will be executed regardless of the value of the condition. So, <code>n</code> will be modified inside the <code>~obliv</code> even if the condition is false!</p>
-
 <p>The value of the parameter <code>c</code> in <code>~obliv(c)</code> will hold the condition. The <code>~obliv(varname)</code> syntax declares a new variable, <code>varname</code> of type <code>obliv bool</code> that indicate whether the enclosing oblivious condition is true or false.</p>
-
 <p>This syntax is useful for library developers when they know that there is a more efficient way of executing obliv functions than what one can otherwise write. Many of the standard library functions (for example, ORAM designs) use this feature, so you can find useful examples of its use there. In general, when this is used, it is the responsibility of the programmer to make it look like nothing is being executed even when the condition is false (i.e., its execution should not have any visible non-obliv side effects if cond is false, or such side-effects should be constrained to implementation-internal variables only). On the other hand, neither should the programmer assume that it will always be executed even if the condition is false, since the compiler is allowed to optimize it away.</p>
-
 <p>The <code>~obliv</code> escapes the normal type system for Obliv-C, allowing programmers write code that could make no sense if you are not careful. But, it poses no security risk &mdash; the value of the oblivious condition (and all obliv variables) is not known to the execution and protected by the protocol, so there is no risk of leaking oblivious data by using <code>~obliv</code>.</p>
-
 <h1 id="api-documentation">API Documentation</h1>
-
 <p>Take a look through the <a href="../tutorial">tutorial</a> to get started. In order to start running your
 Obliv-C program between two parties, ensure that the following Obliv-C library
 functions are called in order:</p>
-
 <ol>
 <li><code>int protocolAcceptTcp2P(ProtocolDesc* pd, const char* port)</code></li>
 <li><code>int protocolConnectTcp2P(ProtocolDesc* pd, const char* server, const char* port)</code></li>
@@ -307,49 +235,33 @@ functions are called in order:</p>
 <li>Any Obliv-C functions needed in your <code>.oc</code> files</li>
 <li><code>void cleanupProtocol(ProtocolDesc* pd)</code></li>
 </ol>
-
 <h2 id="c-functions">C Functions</h2>
-
 <p>These functions should be called in a C file, and require using <code>#include &lt;obliv.h&gt;</code>.</p>
-
-<h3 id="int-protocolaccepttcp2p-protocoldesc-pd-const-char-port">int protocolAcceptTcp2P(ProtocolDesc* pd, const char* port)</h3>
-
+<h3 id="int-protocolaccepttcp2pprotocoldesc-pd-const-char-port">int protocolAcceptTcp2P(ProtocolDesc* pd, const char* port)</h3>
 <p>The first party calls this function to listen for a second party on
 the supplied port parameter. Use conditional logic to ensure only the
 first party calls this function.</p>
-
-<h3 id="int-protocolconnecttcp2p-protocoldesc-pd-const-char-server-const-char-port">int protocolConnectTcp2P(ProtocolDesc* pd, const char* server, const char* port)</h3>
-
+<h3 id="int-protocolconnecttcp2pprotocoldesc-pd-const-char-server-const-char-port">int protocolConnectTcp2P(ProtocolDesc* pd, const char* server, const char* port)</h3>
 <p>The second party should call this function after the first party calls
 <code>protocolAcceptTcp2P()</code>; use conditional logic to ensure this. Supply
 either &lsquo;localhost&rsquo;, the IP address, or the DNS name of the first party
 to the <code>const char* server</code> parameter.</p>
-
-<h3 id="void-setcurrentparty-protocoldesc-pd-int-party">void setCurrentParty(ProtocolDesc* pd, int party)</h3>
-
+<h3 id="void-setcurrentpartyprotocoldesc-pd-int-party">void setCurrentParty(ProtocolDesc* pd, int party)</h3>
 <p>Sets the proper parties into the <code>ProtocolDesc</code>. Call this before
 calling <code>execYaoProtocol()</code>.</p>
-
-<h3 id="void-execyaoprotocol-protocoldesc-pd-protocol-run-start-void-arg">void execYaoProtocol(ProtocolDesc* pd, protocol_run start, void* arg)</h3>
-
+<h3 id="void-execyaoprotocolprotocoldesc-pd-protocol_run-start-void-arg">void execYaoProtocol(ProtocolDesc* pd, protocol_run start, void* arg)</h3>
 <p>Call this function in your C file&rsquo;s <code>main()</code> function to execute Yao&rsquo;s
 garbled circuits protocol. Supply the starting function name (without
-parentheses) in the Obliv-C file as the parameter for <code>protocol_run
-start</code>. Supply any arguments for the Obliv-C starting function in
+parentheses) in the Obliv-C file as the parameter for <code>protocol_run start</code>. Supply any arguments for the Obliv-C starting function in
 <code>void* arg</code>; pass in a struct to supply multiple parameters. Before
 calling this function, establish a connection between parties with
 <code>protocolAcceptTcp2P()</code> and <code>protocolConnectTcp2P()</code>, and call
 <code>setCurrentParty()</code>.</p>
-
-<h3 id="void-cleanupprotocol-protocoldesc-pd">void cleanupProtocol(ProtocolDesc* pd)</h3>
-
+<h3 id="void-cleanupprotocolprotocoldesc-pd">void cleanupProtocol(ProtocolDesc* pd)</h3>
 <p>Call this function in your C file after <code>execYaoProtocol()</code> has been
 called. This function will clean up the <code>ProtocolDesc</code> object.</p>
-
 <h2 id="obliv-c-functions">Obliv-C Functions</h2>
-
-<p>These functions should be used in Obliv-C (<code>.oc</code>) files. They require `#include <obliv.oh>&rsquo;.</p>
-
+<p>These functions should be used in Obliv-C (<code>.oc</code>) files. They require `#include &lt;obliv.oh&gt;'.</p>
 <p>Valid substitutions for <em><code>tname</code></em> are <code>bool</code>, <code>char</code>, <code>int</code>, <code>short</code>,
 <code>long</code>, <code>long long</code>, or <code>float</code>.  The value of _<code>&lt;Tname&gt;</code> is the
 corresponding type name with its first letter capitalized. (As of
@@ -357,34 +269,23 @@ March 2018, the <code>obliv</code> qualifier is not supported for
 double-precision floating point, however, <a href="https://github.com/samee/obliv-c/pull/30">single-precision floating
 point support is
 available</a>.)</p>
-
-<h3 id="obliv-tname-feedobliv-tname-tname-v-int-party">obliv <em>tname</em> feedObliv&lt;<em>Tname</em>&gt;(<em>tname</em> v, int party)</h3>
-
+<h3 id="obliv-_tname_-feedobliv_tname__tname_-v-int-party">obliv <em>tname</em> feedObliv&lt;<em>Tname</em>&gt;(<em>tname</em> v, int party)</h3>
 <p>This function returns an <code>obliv</code>-qualified type from the specified
 party to both parties.  For example, for <code>float</code>, there is:</p>
-
 <pre><code>   obliv float feedOblivFloat(float v, int party)
-</code></pre>
-
-<p>Sample code for using this function to feed an int array from the specified
+</code></pre><p>Sample code for using this function to feed an int array from the specified
 party into an obliv int array to both parties:</p>
-
 <pre><code>void toObliv(int n, obliv int *oa, int *a, int party) {
   int i, res;
   for(i = 0; i &lt; n; i++) {
     oa[i] = feedOblivInt(a[i], party);
   }
 }
-</code></pre>
-
-<h3 id="name-ocbroadcast-tname-tname-v-int-source">name ocBroadcast&lt;<em>Tname</em>&gt;(<em>tname</em> v, int source)</h3>
-
+</code></pre><h3 id="name-ocbroadcast_tname__tname_-v-int-source">name ocBroadcast&lt;<em>Tname</em>&gt;(<em>tname</em> v, int source)</h3>
 <p>Returns <em>v</em> from the specified source (party). This function allows
 non-obliv data to be transferred across parties, similar to
 <code>feedObliv&lt;Tname&gt;()</code>.</p>
-
-<h3 id="bool-revealobliv-tname-tname-dest-obliv-tname-src-int-party">bool revealObliv&lt;<em>Tname</em>&gt;(<em>tname</em>* dest, obliv <em>tname</em> src, int party)</h3>
-
+<h3 id="bool-revealobliv_tname__tname_-dest-obliv-_tname_-src-int-party">bool revealObliv&lt;<em>Tname</em>&gt;(<em>tname</em>* dest, obliv <em>tname</em> src, int party)</h3>
 <p>Return value true indicated that <code>dest</code> was written to
 successfully. <code>party</code> indicates which party will receive the revealed
 obliv value; use <code>0</code> for all parties to receive the revealed value. It

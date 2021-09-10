@@ -15,7 +15,7 @@
 <meta name="description" content="">
 <meta name="keywords" content="">
 <meta name="author" content="">
-<meta name="generator" content="Hugo 0.17" />
+<meta name="generator" content="Hugo 0.87.0" />
 
 
   <meta property="og:title" content="Secure Stable Matching at Scale" />
@@ -42,9 +42,6 @@
   
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/rotunda.png">
   <link rel="shortcut icon" href="/rotunda.png">
-
-  
-  <link href="" rel="alternate" type="application/rss+xml" title="Obliv-C" />
 
     
   
@@ -119,11 +116,9 @@ A Language for Extensible Data&#8209;Oblivious Computation
 
 			
 
-            
-
-<p>When a group of individuals and organizations wish to compute a <em>stable
-matching</em> &mdash; for example, when medical students are matched to
-medical residency programs &mdash; they often outsource the computation
+            <p>When a group of individuals and organizations wish to compute a <em>stable
+matching</em> — for example, when medical students are matched to
+medical residency programs — they often outsource the computation
 to a trusted arbiter to preserve the privacy of participants’ preference
 rankings. Secure multi-party computation presents an alternative that
 offers the possibility of private matching processes that do not rely on
@@ -131,12 +126,7 @@ any common trusted third party. However, stable matching algorithms are
 computationally intensive and involve complex data-dependent memory
 access patterns, so they have previously been considered infeasible for
 execution in a secure multiparty context on non-trivial inputs.</p>
-
-<p><center>
-<A href="/images/obliviouslinkedlist.png"><img src="/images/obliviouslinkedlist.png" width=600></a><br>
-<b>Oblivious Linked Multi-List</b><br>
-</center></p>
-
+<!-- raw HTML omitted -->
 <p>We adapt the classic Gale-Shapley algorithm for use in such a
 context, and show experimentally that our modifications yield a
 lower asymptotic complexity and more than an order of magnitude
@@ -150,23 +140,17 @@ be useful at the scale required for matching medical residents nationwide,
 taking just over 17 hours to complete an execution simulating
 the 2016 NRMP match with more than 35,000 participants
 and 30,000 residency slots.</p>
-
 <h2 id="code">Code</h2>
-
 <p><a href="https://github.com/jackdoerner/secure-stable-matching"><em>https://github.com/jackdoerner/secure-stable-matching</em></a></p>
-
 <h2 id="paper">Paper</h2>
-
 <p>Jack Doerner, David Evans, and abhi shelat. <a href="/docs/matching.pdf"><em>Secure Stable Matching at
-Scale</em></a>.  In <a href="https://www.sigsac.org/ccs/CCS2016/"><em>23<sup>rd</sup> ACM Conference on
+Scale</em></a>.  In <a href="https://www.sigsac.org/ccs/CCS2016/"><em>23<!-- raw HTML omitted -->rd<!-- raw HTML omitted --> ACM Conference on
 Computer and Communications
 Security</em></a> (CCS). Vienna,
 Austria. 24-28 October 2016.</p>
-
 <h2 id="people">People</h2>
-
-<p><a href="https://jackdoerner.net/">Jack Doerner</a> (University of Virginia)<br />
-<a href="https://www.cs.virginia.edu/evans">David Evans</a> (University of Virginia)<br />
+<p><a href="https://jackdoerner.net/">Jack Doerner</a> (University of Virginia)<br>
+<a href="https://www.cs.virginia.edu/evans">David Evans</a> (University of Virginia)<br>
 <a href="https://shelat.ccis.neu.edu/">abhi shelat</a> (Northeastern University)</p>
 
 	
