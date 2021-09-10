@@ -15,7 +15,7 @@
 <meta name="description" content="">
 <meta name="keywords" content="">
 <meta name="author" content="">
-<meta name="generator" content="Hugo 0.17" />
+<meta name="generator" content="Hugo 0.87.0" />
 
 
   <meta property="og:title" content="Obliv-C: A Language for Extensible Data-Oblivious Computation" />
@@ -42,9 +42,6 @@
   
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/rotunda.png">
   <link rel="shortcut icon" href="/rotunda.png">
-
-  
-  <link href="" rel="alternate" type="application/rss+xml" title="Obliv-C" />
 
     
   
@@ -104,23 +101,20 @@ A Language for Extensible Data&#8209;Oblivious Computation
 		    <div id="toc" class="pure-u-1 pure-u-md-1-4">
 				<small class="toc-label">Contents</small>
 		   	 	<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#getting-started">Getting Started</a></li>
-<li><a href="#projects-using-obliv-c">Projects Using Obliv-C</a>
-<ul>
-<li><a href="#libraries-and-protocols">Libraries and Protocols</a></li>
-<li><a href="#applications">Applications</a></li>
-<li><a href="#applications-by-others">Applications by Others</a></li>
-</ul></li>
-<li><a href="#publications-and-talks">Publications and Talks</a></li>
-<li><a href="#people">People</a>
-<ul>
-<li><a href="#alumni">Alumni</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#getting-started">Getting Started</a></li>
+    <li><a href="#projects-using-obliv-c">Projects Using Obliv-C</a>
+      <ul>
+        <li><a href="#libraries-and-protocols">Libraries and Protocols</a></li>
+      </ul>
+    </li>
+    <li><a href="#publications-and-talks">Publications and Talks</a></li>
+    <li><a href="#people">People</a>
+      <ul>
+        <li><a href="#alumni">Alumni</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 		    </div>
 		    
@@ -148,22 +142,16 @@ A Language for Extensible Data&#8209;Oblivious Computation
 
 			
 
-            
-
-<p><center><img src="/images/oblivc-cropped.png" align="center" width="90%"></center></p>
-
+            <!-- raw HTML omitted -->
 <p><strong>Obliv-C</strong> is a simple GCC wrapper that makes it easy to embed secure
 computation protocols inside regular C programs.</p>
-
 <p>The idea is simple: if you are performing a multi-party distributed
 computation with sensitive data, just write it in our Obliv-C langauge
 and compile/link it with your project. The result will be a secure
 multi-party cryptographic protocol that performs this operation without
 revealing any of the inputs or intermediate values of the computation to
 any of the parties. Only the final outputs are revealed.</p>
-
 <p>This paper motivates and describes Obliv-C:</p>
-
 <blockquote>
 <p>Samee Zahur and David Evans. <a href="http://eprint.iacr.org/2015/1153.pdf"><em>Obliv-C: A Language for Extensible
 Data-Oblivious Computation</em></a>,
@@ -171,167 +159,103 @@ Data-Oblivious Computation</em></a>,
 2015:1153</a>
 [<a href="http://eprint.iacr.org/2015/1153">PDF</a>], November 2015.</p>
 </blockquote>
-
 <p>This mini-book provides an introduction to secure multi-party computation:</p>
-
 <blockquote>
-<p>David Evans, Vladimir Kolesnikov and Mike Rosulek. <a href="https://www.securecomputation.org/"><em>A Pragmatic Introduction to Secure Multi-Party Computation</em></a>, NOW Publishers, December 2018. [<a href="https://www.securecomputation.org/docs/pragmaticmpc.pdf">PDF</a>]</p>
+<p>David Evans, Vladimir Kolesnikov and Mike Rosulek. <a href="https://www.securecomputation.org/"><em>A Pragmatic Introduction to Secure Multi-Party Computation</em></a>, NOW Publishers, December 2018. [<a href="https://www.securecomputation.org/docs/pragmaticmpc.pdf">PDF</a>] (<a href="https://item.jd.com/13302742.html">Chinese translation</a> also available)</p>
 </blockquote>
-
 <h2 id="getting-started">Getting Started</h2>
-
 <p><strong>Code: <a href="https://github.com/samee/obliv-c">https://github.com/samee/obliv-c</a></strong></p>
-
 <blockquote>
 <p>This repository includes the implementation of Obliv-C and several example applications and benchmarks.</p>
 </blockquote>
-
 <p><a href="/tutorial"><strong>Tutorial</strong></a></p>
-
 <blockquote>
 <p>Walks through how to install Obliv-C and build your first data-oblivious application using a simple linear regression example application.</p>
 </blockquote>
-
 <p><a href="/documentation"><strong>Documentation</strong></a></p>
-
 <blockquote>
 <p>Documentation on Obliv-C&rsquo;s language extensions and library functions.</p>
 </blockquote>
-
 <p><a href="/rust"><strong>Rust Wrapper</strong></a></p>
-
 <blockquote>
 <p>Calling Obliv-C protocols from Rust programs (<a href="https://www.informatik.hu-berlin.de/de/Members/schopmaf/">Phillipp
 Schoppmann</a>)</p>
 </blockquote>
-
-<p><strong>Obliv-Java</strong></p>
-
+<p><a href="https://github.com/calctopia-opensource/jdk10u"><strong>Obliv-Java</strong></a></p>
 <blockquote>
-<p>Faithful reimplementation of Java for secure computation (<a href="https://github.com/calctopia-opensource/jdk10u">Calctopia</a>)</p>
+<p>Faithful reimplementation of Obliv-C in Java (<a href="https://github.com/calctopia-opensource/jdk10u">Calctopia</a>)</p>
 </blockquote>
-
-<p><a name="projects"></a></p>
-
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <h2 id="projects-using-obliv-c">Projects Using Obliv-C</h2>
-
-<p><div class="row">
-   <div class="column3"></p>
-
+<!-- raw HTML omitted -->
 <h3 id="libraries-and-protocols">Libraries and Protocols</h3>
-
-<p>Fast Oblivious Memories:<br />
-<a href="https://gitlab.com/neucrypt/floram"><strong>floram</strong></a> (CCS 2017)<br />
+<p>Fast Oblivious Memories:<br>
+<a href="https://gitlab.com/neucrypt/floram"><strong>floram</strong></a> (CCS 2017)<br>
 <a href="/sqoram"><strong>SqORAM</strong></a> (S&amp;P 2016)</p>
-
-<p>Cryptographic library:<br />
+<p>Cryptographic library:<br>
 <a href="https://bitbucket.org/jackdoerner/absentminded-crypto-kit"><strong>Absentminded Crypto Kit</strong></a></p>
-
-<p><a href="https://mightbeevil.com/halfgates/"><strong>Half-Gates</strong></a> (EuroCrypt 2015)
-   </div>
-   <div class="column3"></p>
-
-<h3 id="applications">Applications</h3>
-
-<p><a href="/ppml"><strong>Distributed Learning</strong></a><br />
-<a href="https://eprint.iacr.org/2016/892">Distributed Linear Regression</a> (PETS 2017)<br />
+<p><a href="https://mightbeevil.com/halfgates/"><strong>Half-Gates</strong></a> (EuroCrypt 2015)</p>
+<!-- raw HTML omitted -->
+<p><a href="/ppml"><strong>Distributed Learning</strong></a><br>
+<a href="https://eprint.iacr.org/2016/892">Distributed Linear Regression</a> (PETS 2017)<br>
 <a href="/ppml">MPC + Differential Privacy</a> (NeurIPS 2018)</p>
-
 <p><a href="/matching"><strong>Secure Stable Matching</strong></a> (CCS 2016)</p>
-
 <p><a href="/dca">Decentralized CAs</a></p>
-
-<p>Sub-String Search:<br />
+<p>Sub-String Search:<br>
 <a href="https://github.com/jnayak1/kmp-mpc">Oblivious Knuth-Morris-Pratt</a></p>
-
-<p></div>
-   <div class="column3"></p>
-
-<h3 id="applications-by-others">Applications by Others</h3>
-
+<!-- raw HTML omitted -->
 <p><a href="https://arxiv.org/abs/1806.03281">Blind Justice: Fairness with Encrypted Sensitive Attributes</a> (ICML 2018)</p>
-
-<p><a href="https://eprint.iacr.org/2018/289.pdf">Private Nearest Neighbors</a><br />
+<p><a href="https://eprint.iacr.org/2018/289.pdf">Private Nearest Neighbors</a><br>
 <a href="https://github.com/bargavjayaraman/SecureDeepLearning">Secure Deep Learning</a></p>
-
-<p>Multi-party data analytics:<br />
+<p>Multi-party data analytics:<br>
 <a href="https://arxiv.org/pdf/1902.06288.pdf"><strong>Conclave</strong></a> (EuroSys 2019)</p>
-
-<p>Encrypted email:<br />
+<p>Encrypted email:<br>
 <a href="http://www.cs.nyu.edu/~mwalfish/papers/pretzel-sigcomm17.pdf"><strong>Pretzel</strong></a> (SIGCOMM 2017)</p>
-
-<p><a href="https://calctopia.com">Secure Spreadsheet</a>, Calctopia, 2017.
-   </div>
-   </div></p>
-
+<p><a href="https://calctopia.com">Secure Spreadsheet</a>, Calctopia, 2017.</p>
+<!-- raw HTML omitted -->
 <h2 id="publications-and-talks">Publications and Talks</h2>
-
-<p><div class="row">
-   <div class="column"></p>
-
+<!-- raw HTML omitted -->
 <p><strong>USENIX Sec 2019</strong>: <a href="/docs/evaluatingdp.pdf"><em>Evaluating Differentially Private Machine Learning in Practice</em></a></p>
-
 <p><strong>NeurIPS 2018</strong>: <a href="/docs/neurips2018.pdf"><em>Distributed Learning without Distress:
 Privacy-Preserving Empirical Risk Minimization</em></a></p>
-
 <p><strong>PETS 2017</strong>: <a href="/docs/distributedregression.pdf"><em>Privacy-Preserving Distributed Linear Regression on High-Dimensional Data</em></a></p>
-
 <p><strong>CCS 2016</strong>: <a href="http://oblivc.org/docs/matching.pdf"><em>Secure Stable Matching at Scale</em></a></p>
-
 <p><strong>S&amp;P 2016</strong>: <a href="/docs/sqoram.pdf"><em>Revisiting Square-Root ORAM Efficient
 Random Access in Multi-Party Computation</em></a></p>
-
 <p><strong>EuroCrypt 2015</strong>: <a href="//www.cs.virginia.edu/evans/pubs/ec2015/halfgates.pdf"><em>Two Halves Make a Whole: Reducing Data Transfer in Garbled Circuits using Half Gates</em></a></p>
-
 <p><strong>Obliv-C 2015</strong>: <a href="http://eprint.iacr.org/2015/1153.pdf"><em>Obliv-C: A Language for Extensible
 Data-Oblivious Computation</em></a></p>
-
-<p><a href="/pubs">Full publications list&hellip;</a>
-   </div>
-   <div class="column"></p>
-
+<p><a href="/pubs">Full publications list&hellip;</a></p>
+<!-- raw HTML omitted -->
 <p><strong>ECRYPT NET</strong>: <a href="https://www.jeffersonswheel.org/2017/secure-multi-party-computation-promises-protocols-and-practicalities"><em>Secure Multi-Party Computation: Promises, Protocols, and Practicalities</em></a> (Paris, 27 June 2017) [<a href="https://speakerdeck.com/evansuva/secure-multi-party-computation-promises-protocols-and-practicalities">SpeakerDeck</a>]</p>
-
-<p><strong>Federal Trade Commission</strong>: <a href="https://www.jeffersonswheel.org/2016/ftc-visit"><em>Private Data Analysis using Multi-Party Computation</em></a> (joint presentation with Denis Nekipelov, 18 August 2016)</p>
-
-<p><strong>Aarhus</strong>: <a href="https://www.jeffersonswheel.org/2016/aarhus-workshop-on-theory-and-practice-of-secure-multiparty-computation"><em>From Mercury Delay Lines to Magnetic Core Memories: Progress in Oblivious Memories</em></a> (<a href="http://ctic.au.dk/events/workshops-conferences/mpc-2016/">MPC Workshop</a>, June 2016) [<a href="https://speakerdeck.com/evansuva/from-mercury-delay-lines-to-magnetic-core-memories-progress-in-oblivious-memories">Speaker Deck</a>]</p>
-
+<p><strong>Federal Trade Commission</strong>: <!-- raw HTML omitted --><!-- raw HTML omitted -->Private Data Analysis using Multi-Party Computation<!-- raw HTML omitted --><!-- raw HTML omitted --> (joint presentation with Denis Nekipelov, 18 August 2016)</p>
+<p><strong>Aarhus</strong>: <!-- raw HTML omitted --><!-- raw HTML omitted -->From Mercury Delay Lines to Magnetic Core Memories: Progress in Oblivious Memories<!-- raw HTML omitted --><!-- raw HTML omitted --> (<!-- raw HTML omitted -->MPC Workshop<!-- raw HTML omitted -->, June 2016) [<!-- raw HTML omitted -->Speaker Deck<!-- raw HTML omitted -->]</p>
 <p><strong>iDash</strong>: <a href="http://www.humangenomeprivacy.org/2015/slides/UV.pdf"><em>Obliv-C: A Simple C Extension for
 SMC</em></a> (Samee
 Zahur&rsquo;s talk at <em>iDash Privacy &amp; Security Workshop</em> 2015, won award
 for fastest &ldquo;Hamming Distance&rdquo; execution)</p>
-
 <p><strong>CROSSING</strong>: <a href="http://www.cs.virginia.edu/~evans/talks/crossing2015/"><em>Multi-Party Computation for the
 Masses</em></a>
 (includes video) (CROSSING Conference, Darmstadt, June 2015)</p>
-
-<p><a href="/talks">Full talks list&hellip;</a>
-   </div>
-   </div></p>
-
+<p><a href="/talks">Full talks list&hellip;</a></p>
+<!-- raw HTML omitted -->
 <h2 id="people">People</h2>
-
 <p><a href="https://bargavjayaraman.github.io/">Bargav Jayaraman</a>, PhD Student</p>
-
-<p>Youssef Errami, Undergraduate Researcher<br />
-Kush Patel, Undergraduate Researcher<br />
+<p>Youssef Errami, Undergraduate Researcher<br>
+Kush Patel, Undergraduate Researcher<br>
 <a href="https://www.cs.virginia.edu/evans">David Evans</a>, Faculty Advisor</p>
-
 <h3 id="alumni">Alumni</h3>
-
 <p><a href="https://www.cs.virginia.edu/~sza4uq/"><strong>Samee Zahur</strong></a>, Project Founder and Leader (now at Google)</p>
-
-<p><a href="http://darioncassel.me/">Darion Cassel</a>, Undergraduate Researcher (now at CMU)<br />
-<a href="https://github.com/ndokmai">Natnatee (&ldquo;Ko&rdquo;) Dokmai</a>, Undergraduate Researcher (now at Indiana University)<br />
-<a href="https://jackdoerner.net/">Jack Doerner</a>, Wizard of Oblivion (now at Northeastern)<br />
-<a href="https://havron.xyz">Samuel Havron</a>, Undergraduate Researcher (now at Cornell)<br />
-<a href="https://github.com/HainaLi">Hannah Li</a>, Undergraduate and Masters Student (now at Facebook)<br />
+<p><a href="http://darioncassel.me/">Darion Cassel</a>, Undergraduate Researcher (now at CMU)<br>
+<a href="https://github.com/ndokmai">Natnatee (&ldquo;Ko&rdquo;) Dokmai</a>, Undergraduate Researcher (now at Indiana University)<br>
+<a href="https://jackdoerner.net/">Jack Doerner</a>, Wizard of Oblivion (now at Northeastern)<br>
+<a href="https://havron.xyz">Samuel Havron</a>, Undergraduate Researcher (now at Cornell)<br>
+<a href="https://github.com/HainaLi">Hannah Li</a>, Undergraduate and Masters Student (now at Facebook)<br>
 <a href="https://github.com/jnayak1">Jesse Nayak</a>, Undergraduate Researcher
-Nathaniel Grevatt, Undergraduate Researcher (2018-2019)<br />
+Nathaniel Grevatt, Undergraduate Researcher (2018-2019)<br>
 Jonah Weissman, Undergraduate Researcher (summer 2019)</p>
-
-<p>Other Notable Contributors:<br />
-<a href="https://github.com/Lichard">Richard Li</a>, <a href="https://github.com/mdh3hc">Michael Mahoney</a>, <a href="https://github.com/wangxiao1254">Xiao&nbsp;Wang</a>, <a href="https://www.chenweikeng.com/">Weikeng&nbsp;Chen</a></p>
+<p>Other Notable Contributors:<br>
+<a href="https://github.com/Lichard">Richard Li</a>, <a href="https://github.com/mdh3hc">Michael Mahoney</a>, <a href="https://github.com/wangxiao1254">Xiao Wang</a>, <a href="https://www.chenweikeng.com/">Weikeng Chen</a></p>
 
 	
 			
@@ -344,14 +268,14 @@ Jonah Weissman, Undergraduate Researcher (summer 2019)</p>
 					
 					<div class="paging-newer">
 						<span class="dark-red">Newer</span><span class="decorative-marker">//</span>
-						<a class="paging-link" href="/tutorial/">Obliv-C Tutorial</a>
+						<a class="paging-link" href="/ppml/">Privacy-Preserving Machine Learning</a>
 		            </div>
 		            
 
 					
 					<div class="paging-older">
 						<span class="dark-red">Older</span><span class="decorative-marker">//</span>
-			            <a class="paging-link" href="/ppml/">Privacy-Preserving Machine Learning</a>
+			            <a class="paging-link" href="/tutorial/">Obliv-C Tutorial</a>
 		            </div>
 		            
 	            </div>

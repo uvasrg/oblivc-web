@@ -24,7 +24,7 @@ Data-Oblivious Computation_](http://eprint.iacr.org/2015/1153.pdf),
 
 This mini-book provides an introduction to secure multi-party computation:
 
-> David Evans, Vladimir Kolesnikov and Mike Rosulek. [_A Pragmatic Introduction to Secure Multi-Party Computation_](https://www.securecomputation.org/), NOW Publishers, December 2018. [[PDF](https://www.securecomputation.org/docs/pragmaticmpc.pdf)]
+> David Evans, Vladimir Kolesnikov and Mike Rosulek. [_A Pragmatic Introduction to Secure Multi-Party Computation_](https://www.securecomputation.org/), NOW Publishers, December 2018. [[PDF](https://www.securecomputation.org/docs/pragmaticmpc.pdf)] ([Chinese translation](https://item.jd.com/13302742.html) also available)
 
 ## Getting Started
 
@@ -46,9 +46,9 @@ This mini-book provides an introduction to secure multi-party computation:
 > Calling Obliv-C protocols from Rust programs ([Phillipp
 Schoppmann](https://www.informatik.hu-berlin.de/de/Members/schopmaf/))
 
-**Obliv-Java**
+[**Obliv-Java**](https://github.com/calctopia-opensource/jdk10u)
 
-> Faithful reimplementation of Java for secure computation ([Calctopia](https://github.com/calctopia-opensource/jdk10u))
+> Faithful reimplementation of Obliv-C in Java ([Calctopia](https://github.com/calctopia-opensource/jdk10u))
 
 <a name="projects"></a>
 
