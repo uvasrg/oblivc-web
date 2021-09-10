@@ -924,6 +924,12 @@ Data-Oblivious Computation&lt;/em&gt;&lt;/a&gt;,
 Schoppmann&lt;/a&gt;)&lt;/p&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;&lt;strong&gt;Obliv-Java&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Faithful reimplementation of Java for secure computation (&lt;a href=&#34;https://github.com/calctopia-opensource/jdk10u&#34;&gt;Calctopia&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+
 &lt;p&gt;&lt;a name=&#34;projects&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;projects-using-obliv-c&#34;&gt;Projects Using Obliv-C&lt;/h2&gt;
